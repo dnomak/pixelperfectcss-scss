@@ -1,1 +1,311 @@
 /*! Flexible Front End Framework 1.0.0 | Scss | MIT License | flexible.gs */
+
+$base: ("true");
+@if $base == "true" {
+  *, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+    resize: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  html {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    text-decoration: none;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  input[type="radio"] {
+    -webkit-appearance: radio;
+    -moz-appearance: radio;
+    appearance: radio;
+  }
+  input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+  }
+  [placeholder]:empty:before {
+    content: attr(placeholder);
+  }
+}
+
+$property-font-family: (
+  open-sans: "Open Sans",
+  source-code-pro: "Source Code Pro"
+);
+// https://css-tricks.com/almanac/properties/f/font-family/
+@each $prop, $val in $property-font-family {
+  .#{$prop} { font-family: #{$val}; }
+}
+
+$breakpoint: (
+  xl : "",
+  lg : "(max-width: 1024px)",
+  md : "(max-width: 768px)",
+  sm : "(max-width: 667px)"
+);
+
+$selectors: ("focus", "hover");
+// https://css-tricks.com/almanac/selectors/a/active/
+// https://css-tricks.com/almanac/selectors/d/disabled/
+// https://css-tricks.com/almanac/selectors/f/focus/
+// https://css-tricks.com/almanac/selectors/h/hover/
+// https://css-tricks.com/almanac/selectors/p/placeholder/
+// https://css-tricks.com/almanac/selectors/s/selection/
+
+// $property-color: (
+//   white : "#FFFFFF"
+//   black : "#222222",
+// );
+// https://css-tricks.com/almanac/properties/c/color/
+// .xl-co-white { color: white; }
+// https://css-tricks.com/almanac/properties/b/background-color/
+// .xl-ba-white { background-color: white; }
+// https://css-tricks.com/almanac/properties/b/border/
+// .xl-bo-white { border-color: white; }
+
+// $property-border: (0, 1, 2);
+// $property-border-style: (solid, dashed, dotted);
+// $property-border-radius: (8, 16, 24, 40);
+// $property-position: (relative, absolute, fixed, static);
+// $property-left: (100%, 0);
+// $property-right: (100%, 0);
+// $property-top: (100%, 0);
+// $property-bottom: (100%, 0);
+// $property-width: (16);
+// $property-height: (16);
+$property-margin: (24);
+// $property-padding: (24);
+// $property-font-size: (16);
+// $property-line-height: (16);
+// $property-text-align: (left, right, center, justify);
+// $property-opacity: (25, 50, 75);
+// $property-letter-spacing: (2);
+// $property-z-index: (1, 2, 3);
+// $property-display: (block, inline-block);
+// $property-font-weight: (extra-light, light, normal, medium, semi-bold, bold, extra-bold, ultra-bold);
+// $property-font-style: (italic);
+// $property-vertical-align: (top, middle, bottom);
+// $property-text-transform: (uppercase, lowercase, capitalize);
+// $property-text-decoration: (underline, line-through);
+// $property-text-overflow: (ellipsis);
+// $property-whitespace: (nowrap, pre-wrap);
+// $property-word-break: (break-word);
+// $property-cursor: (auto, default, pointer, text, not-allowed);
+// $property-user-select: (none, text);
+// $property-pointer-events: (none, auto);
+
+@each $prop, $val in $breakpoint {
+  @if $val == "" {
+    @each $item in $property-margin {
+      .#{$prop}-m#{$item}  { margin:        #{$item}px; }
+      .#{$prop}-ml#{$item} { margin-left:   #{$item}px; }
+      .#{$prop}-mr#{$item} { margin-right:  #{$item}px; }
+      .#{$prop}-mt#{$item} { margin-top:    #{$item}px; }
+      .#{$prop}-mb#{$item} { margin-bottom: #{$item}px; }
+      .#{$prop}-mx#{$item} { margin-left:   #{$item}px; margin-right:  #{$item}px; }
+      .#{$prop}-my#{$item} { margin-top:    #{$item}px; margin-bottom: #{$item}px; }
+    }
+  }
+  @else if $val != "" {
+    @media #{$val} {
+      @each $item in $property-margin {
+        .#{$prop}-m#{$item}  { margin:        #{$item}px; }
+        .#{$prop}-ml#{$item} { margin-left:   #{$item}px; }
+        .#{$prop}-mr#{$item} { margin-right:  #{$item}px; }
+        .#{$prop}-mt#{$item} { margin-top:    #{$item}px; }
+        .#{$prop}-mb#{$item} { margin-bottom: #{$item}px; }
+        .#{$prop}-mx#{$item} { margin-left:   #{$item}px; margin-right:  #{$item}px; }
+        .#{$prop}-my#{$item} { margin-top:    #{$item}px; margin-bottom: #{$item}px; }
+      }
+    }
+  }
+}
+
+// container
+  .container-1280 { max-width: 1280px; width: 100%; margin-right: auto; margin-left: auto; }
+
+// https://css-tricks.com/almanac/properties/b/border/
+  .xl-b2  { border-width:        2px; }
+  .xl-bl2 { border-left-width:   2px; }
+  .xl-br2 { border-right-width:  2px; }
+  .xl-bt2 { border-top-width:    2px; }
+  .xl-bb2 { border-bottom-width: 2px; }
+  .xl-bx2 { border-left-width:   2px; border-right-width:  2px; }
+  .xl-by2 { border-top-width:    2px; border-bottom-width: 2px; }
+  .xl-bso { border-style: solid;  }
+  .xl-bda { border-style: dashed; }
+  .xl-bdo { border-style: dotted; }
+
+// https://css-tricks.com/almanac/properties/b/border-radius/
+  .xl-br24   { border-radius: 24px; }
+  .xl-brtl24 { border-radius: 0px; border-top-left-radius:     24px; }
+  .xl-brtr24 { border-radius: 0px; border-top-right-radius:    24px; }
+  .xl-brbl24 { border-radius: 0px; border-bottom-left-radius:  24px; }
+  .xl-brbr24 { border-radius: 0px; border-bottom-right-radius: 24px; }
+  .xl-brl24  { border-radius: 24px; border-top-right-radius:    0px;  border-bottom-right-radius: 0px;  }
+  .xl-brr24  { border-radius: 0px;  border-top-right-radius:    24px; border-bottom-right-radius: 24px; }
+  .xl-brt24  { border-radius: 24px; border-bottom-right-radius: 0px;  border-bottom-left-radius:  0px;  }
+  .xl-brb24  { border-radius: 0px;  border-bottom-right-radius: 24px; border-bottom-left-radius:  24px; }
+
+// https://css-tricks.com/almanac/properties/p/position/
+  .xl-pr { position: relative; }
+  .xl-pa { position: absolute; }
+  .xl-pf { position: fixed;    }
+  .xl-ps { position: static;   }
+
+// https://css-tricks.com/almanac/properties/l/left/
+  .xl-le { left: 100%; }
+  .xl-l0 { left: 0;    }
+
+// https://css-tricks.com/almanac/properties/r/right/
+  .xl-re { right: 100%; }
+  .xl-r0 { right: 0;    }
+
+// https://css-tricks.com/almanac/properties/t/top/
+  .xl-te { top: 100%; }
+  .xl-t0 { top: 0;    }
+
+// https://css-tricks.com/almanac/properties/b/bottom/
+  .xl-be { bottom: 100%; }
+  .xl-b0 { bottom: 0;    }
+
+// https://css-tricks.com/almanac/properties/w/width/
+  .xl-w16    { width:     16px; }
+  .xl-maxw16 { max-width: 16px; }
+  .xl-min16  { min-width: 16px; }
+
+// https://css-tricks.com/almanac/properties/h/height/
+  .xl-h16    { height:     16px; }
+  .xl-maxh16 { max-height: 16px; }
+  .xl-minh16 { min-height: 16px; }
+
+// https://css-tricks.com/almanac/properties/m/margin/
+  .xl-m24  { margin:        24px; }
+  .xl-ml24 { margin-left:   24px; }
+  .xl-mr24 { margin-right:  24px; }
+  .xl-mt24 { margin-top:    24px; }
+  .xl-mb24 { margin-bottom: 24px; }
+  .xl-mx24 { margin-left:   24px; margin-right:  24px; }
+  .xl-my24 { margin-top:    24px; margin-bottom: 24px; }
+
+// https://css-tricks.com/almanac/properties/p/padding/
+  .xl-p24  { padding:        24px; }
+  .xl-pl24 { padding-left:   24px; }
+  .xl-pr24 { padding-right:  24px; }
+  .xl-pt24 { padding-top:    24px; }
+  .xl-pb24 { padding-bottom: 24px; }
+  .xl-px24 { padding-left:   24px; padding-right:  24px; }
+  .xl-py24 { padding-top:    24px; padding-bottom: 24px; }
+
+// https://css-tricks.com/almanac/properties/f/font/
+  .xl-fs16 { font-size: 16px; }
+
+// https://css-tricks.com/almanac/properties/l/line-height/
+  .xl-lh16 { line-height: 16px; }
+
+// https://css-tricks.com/almanac/properties/t/text-align/
+  .xl-tal { text-align: left;    }
+  .xl-tar { text-align: right;   }
+  .xl-tac { text-align: center;  }
+  .xl-taj { text-align: justify; }
+
+// https://css-tricks.com/almanac/properties/o/opacity/
+  .xl-o25 { opacity: 0.25; }
+  .xl-o50 { opacity: 0.50; }
+  .xl-o75 { opacity: 0.75; }
+
+// https://css-tricks.com/almanac/properties/l/letter-spacing/
+  .xl-ls1 { letter-spacing: 1px; }
+  .xl-ls2 { letter-spacing: 2px; }
+  .xl-ls3 { letter-spacing: 3px; }
+  .xl-ls4 { letter-spacing: 4px; }
+
+// https://css-tricks.com/almanac/properties/z/z-index/
+  .xl-zi1 { z-index: 1; }
+  .xl-zi2 { z-index: 2; }
+  .xl-zi3 { z-index: 3; }
+  .xl-zi4 { z-index: 4; }
+  .xl-zi5 { z-index: 5; }
+  .xl-zi6 { z-index: 6; }
+  .xl-zi7 { z-index: 7; }
+  .xl-zi8 { z-index: 8; }
+  .xl-zi9 { z-index: 9; }
+
+// https://css-tricks.com/almanac/properties/d/display/
+  .xl-db  { display: block;        }
+  .xl-dib { display: inline-block; }
+
+// https://css-tricks.com/almanac/properties/f/font-weight/
+  .xl-fw200 { font-style: normal; font-weight: 200; }
+  .xl-fw300 { font-style: normal; font-weight: 300; }
+  .xl-fw400 { font-style: normal; font-weight: 400; }
+  .xl-fw500 { font-style: normal; font-weight: 500; }
+  .xl-fw600 { font-style: normal; font-weight: 600; }
+  .xl-fw700 { font-style: normal; font-weight: 700; }
+  .xl-fw800 { font-style: normal; font-weight: 800; }
+  .xl-fw900 { font-style: normal; font-weight: 900; }
+
+// https://css-tricks.com/almanac/properties/f/font-style/
+  .xl-fsi { font-style: italic; }
+
+// https://css-tricks.com/almanac/properties/v/vertical-align/
+  .xl-vat { vertical-align: top;    }
+  .xl-vam { vertical-align: middle; }
+  .xl-vab { vertical-align: bottom; }
+
+// https://css-tricks.com/almanac/properties/t/text-transform/
+  .xl-ttu { text-transform: uppercase;  }
+  .xl-ttl { text-transform: lowercase;  }
+  .xl-ttc { text-transform: capitalize; }
+
+// https://css-tricks.com/almanac/properties/t/text-decoration/
+  .xl-tdu  { text-decoration: underline;    }
+  .xl-tdlt { text-decoration: line-through; }
+
+// https://css-tricks.com/almanac/properties/t/text-overflow/
+  .xl-toe { text-overflow: ellipsis; }
+
+// https://css-tricks.com/almanac/properties/w/whitespace/
+  .xl-wsnw  { white-space: nowrap;    }
+  .xl-wspw { white-space: pre-wrap; }
+
+// https://css-tricks.com/almanac/properties/w/word-break/
+  .xl-wbbw { word-break: break-word; }
+
+// https://css-tricks.com/almanac/properties/o/overflow/
+  .xl-oh  { overflow: hidden; }
+  .xl-os  { overflow: scroll; }
+  .xl-oxs { overflow-x: scroll; overflow-y: hidden; }
+  .xl-oys { overflow-y: scroll; overflow-x: hidden; }
+
+// https://css-tricks.com/almanac/properties/c/cursor/
+  .xl-ca { cursor: auto;        }
+  .xl-cd { cursor: default;     }
+  .xl-cp { cursor: pointer;     }
+  .xl-ct { cursor: text;        }
+  .xl-cn { cursor: not-allowed; }
+
+// https://css-tricks.com/almanac/properties/u/user-select/
+  .xl-usn { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+  .xl-ust { -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text; }
+
+// https://css-tricks.com/almanac/properties/p/pointer-events/
+  .xl-pen { pointer-events: none; }
+  .xl-pea { pointer-events: auto; }
