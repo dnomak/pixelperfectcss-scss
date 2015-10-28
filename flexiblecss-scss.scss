@@ -1,6 +1,6 @@
 /*! Flexible Front End Framework 1.0.0 | Scss | MIT License | flexible.gs */
 
-$base: ("true");
+$base: ();
 @if $base == "true" {
   *, *:before, *:after {
     -webkit-box-sizing: border-box;
@@ -45,267 +45,1094 @@ $base: ("true");
   }
 }
 
+// font-family
 $property-font-family: (
-  open-sans: "Open Sans",
-  source-code-pro: "Source Code Pro"
+  "open-sans": "Open Sans",
+  "source-code-pro": "Source Code Pro"
 );
-// https://css-tricks.com/almanac/properties/f/font-family/
-@each $prop, $val in $property-font-family {
-  .#{$prop} { font-family: #{$val}; }
+@each $font-family-key, $font-family-val in $property-font-family {
+  .#{$font-family-key} { font-family: #{$font-family-val}; }
 }
 
 $breakpoint: (
-  xl : "",
-  lg : "(max-width: 1024px)",
-  md : "(max-width: 768px)",
-  sm : "(max-width: 667px)"
+  "xl" : "",
+  "lg" : "(max-width: 1024px)"
 );
 
-$selectors: ("focus", "hover");
-// https://css-tricks.com/almanac/selectors/a/active/
-// https://css-tricks.com/almanac/selectors/d/disabled/
-// https://css-tricks.com/almanac/selectors/f/focus/
-// https://css-tricks.com/almanac/selectors/h/hover/
-// https://css-tricks.com/almanac/selectors/p/placeholder/
-// https://css-tricks.com/almanac/selectors/s/selection/
+@each $breakpoint-key, $breakpoint-val in $breakpoint {
+  @if $breakpoint-val == "" {
 
-// $property-color: (
-//   white : "#FFFFFF"
-//   black : "#222222",
-// );
-// https://css-tricks.com/almanac/properties/c/color/
-// .xl-co-white { color: white; }
-// https://css-tricks.com/almanac/properties/b/background-color/
-// .xl-ba-white { background-color: white; }
-// https://css-tricks.com/almanac/properties/b/border/
-// .xl-bo-white { border-color: white; }
-
-// $property-border: (0, 1, 2);
-// $property-border-style: (solid, dashed, dotted);
-// $property-border-radius: (8, 16, 24, 40);
-// $property-position: (relative, absolute, fixed, static);
-// $property-left: (100%, 0);
-// $property-right: (100%, 0);
-// $property-top: (100%, 0);
-// $property-bottom: (100%, 0);
-// $property-width: (16);
-// $property-height: (16);
-$property-margin: (24);
-// $property-padding: (24);
-// $property-font-size: (16);
-// $property-line-height: (16);
-// $property-text-align: (left, right, center, justify);
-// $property-opacity: (25, 50, 75);
-// $property-letter-spacing: (2);
-// $property-z-index: (1, 2, 3);
-// $property-display: (block, inline-block);
-// $property-font-weight: (extra-light, light, normal, medium, semi-bold, bold, extra-bold, ultra-bold);
-// $property-font-style: (italic);
-// $property-vertical-align: (top, middle, bottom);
-// $property-text-transform: (uppercase, lowercase, capitalize);
-// $property-text-decoration: (underline, line-through);
-// $property-text-overflow: (ellipsis);
-// $property-whitespace: (nowrap, pre-wrap);
-// $property-word-break: (break-word);
-// $property-cursor: (auto, default, pointer, text, not-allowed);
-// $property-user-select: (none, text);
-// $property-pointer-events: (none, auto);
-
-@each $prop, $val in $breakpoint {
-  @if $val == "" {
-    @each $item in $property-margin {
-      .#{$prop}-m#{$item}  { margin:        #{$item}px; }
-      .#{$prop}-ml#{$item} { margin-left:   #{$item}px; }
-      .#{$prop}-mr#{$item} { margin-right:  #{$item}px; }
-      .#{$prop}-mt#{$item} { margin-top:    #{$item}px; }
-      .#{$prop}-mb#{$item} { margin-bottom: #{$item}px; }
-      .#{$prop}-mx#{$item} { margin-left:   #{$item}px; margin-right:  #{$item}px; }
-      .#{$prop}-my#{$item} { margin-top:    #{$item}px; margin-bottom: #{$item}px; }
-    }
-  }
-  @else if $val != "" {
-    @media #{$val} {
-      @each $item in $property-margin {
-        .#{$prop}-m#{$item}  { margin:        #{$item}px; }
-        .#{$prop}-ml#{$item} { margin-left:   #{$item}px; }
-        .#{$prop}-mr#{$item} { margin-right:  #{$item}px; }
-        .#{$prop}-mt#{$item} { margin-top:    #{$item}px; }
-        .#{$prop}-mb#{$item} { margin-bottom: #{$item}px; }
-        .#{$prop}-mx#{$item} { margin-left:   #{$item}px; margin-right:  #{$item}px; }
-        .#{$prop}-my#{$item} { margin-top:    #{$item}px; margin-bottom: #{$item}px; }
+    // color, background-color, border-color
+    $property-color: (
+      "white" : "#FFFFFF",
+      "black" : "#222222"
+    );
+    $selector-color: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active",
+      "pl": "placeholder",
+      "se": "selection"
+    );
+    @each $selector-color-key, $selector-color-val in $selector-color {
+      @each $color-key, $color-val in $property-color {
+        @if $selector-color-val == "class" {
+          .#{$breakpoint-key}-co-#{$color-key} { color:            #{$color-val}; }
+          .#{$breakpoint-key}-ba-#{$color-key} { background-color: #{$color-val}; }
+          .#{$breakpoint-key}-bo-#{$color-key} { border-color:     #{$color-val}; }
+        }
+        @else if $breakpoint-val == "" and $selector-color-val != "placeholder" and $selector-color-val != "selection" {
+          .#{$selector-color-key}-co-#{$color-key}:#{$selector-color-val} { color:            #{$color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}:#{$selector-color-val} { background-color: #{$color-val}; }
+          .#{$selector-color-key}-bo-#{$color-key}:#{$selector-color-val} { border-color:     #{$color-val}; }
+        }
+        @else if $breakpoint-val == "" and $selector-color-val == "placeholder" {
+          .#{$selector-color-key}-co-#{$color-key}::-webkit-input-placeholder { color:            #{$color-val}; }
+          .#{$selector-color-key}-co-#{$color-key}::-moz-placeholder          { color:            #{$color-val}; }
+          .#{$selector-color-key}-co-#{$color-key}:-ms-input-placeholder      { color:            #{$color-val}; }
+          .#{$selector-color-key}-co-#{$color-key}:-moz-placeholder           { color:            #{$color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}::-webkit-input-placeholder { background-color: #{$color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}::-moz-placeholder          { background-color: #{$color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}:-ms-input-placeholder      { background-color: #{$color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}:-moz-placeholder           { background-color: #{$color-val}; }
+          .#{$selector-color-key}-bo-#{$color-key}::-webkit-input-placeholder { border-color:     #{$color-val}; }
+          .#{$selector-color-key}-bo-#{$color-key}::-moz-placeholder          { border-color:     #{$color-val}; }
+          .#{$selector-color-key}-bo-#{$color-key}:-ms-input-placeholder      { border-color:     #{$color-val}; }
+          .#{$selector-color-key}-bo-#{$color-key}:-moz-placeholder           { border-color:     #{$color-val}; }
+        }
+        @else if $breakpoint-val == "" and $selector-color-val == "selection" {
+          .#{$selector-color-key}-co-#{$color-key}::-moz-selection { color:            #{$color-val}; }
+          .#{$selector-color-key}-co-#{$color-key}::selection      { color:            #{$color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}::-moz-selection { background-color: #{$color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}::selection      { background-color: #{$color-val}; }
+        }
       }
+    }
+
+    // margin
+    $property-margin: (
+      "0",
+      "8",
+      "16",
+      "24",
+      "40"
+    );
+    $selector-margin: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-margin-key, $selector-margin-val in $selector-margin {
+      @each $margin-val in $property-margin {
+        @if $selector-margin-val == "class" {
+          .#{$breakpoint-key}-m#{$margin-val}  { margin:        #{$margin-val}px; }
+          .#{$breakpoint-key}-ml#{$margin-val} { margin-left:   #{$margin-val}px; }
+          .#{$breakpoint-key}-mr#{$margin-val} { margin-right:  #{$margin-val}px; }
+          .#{$breakpoint-key}-mt#{$margin-val} { margin-top:    #{$margin-val}px; }
+          .#{$breakpoint-key}-mb#{$margin-val} { margin-bottom: #{$margin-val}px; }
+          .#{$breakpoint-key}-mx#{$margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
+          .#{$breakpoint-key}-my#{$margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
+        }
+        @else if $breakpoint-val == "" and $selector-margin-val != "placeholder" and $selector-margin-val != "selection" {
+          .#{$selector-margin-key}-m#{$margin-val}:#{$selector-margin-val}  { margin:        #{$margin-val}px; }
+          .#{$selector-margin-key}-ml#{$margin-val}:#{$selector-margin-val} { margin-left:   #{$margin-val}px; }
+          .#{$selector-margin-key}-mr#{$margin-val}:#{$selector-margin-val} { margin-right:  #{$margin-val}px; }
+          .#{$selector-margin-key}-mt#{$margin-val}:#{$selector-margin-val} { margin-top:    #{$margin-val}px; }
+          .#{$selector-margin-key}-mb#{$margin-val}:#{$selector-margin-val} { margin-bottom: #{$margin-val}px; }
+          .#{$selector-margin-key}-mx#{$margin-val}:#{$selector-margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
+          .#{$selector-margin-key}-my#{$margin-val}:#{$selector-margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
+        }
+      }
+    }
+
+  }
+  @else if $breakpoint-val != "" {
+    @media #{$breakpoint-val} {
+
+
+
     }
   }
 }
 
-// container
-  .container-1280 { max-width: 1280px; width: 100%; margin-right: auto; margin-left: auto; }
 
-// https://css-tricks.com/almanac/properties/b/border/
-  .xl-b2  { border-width:        2px; }
-  .xl-bl2 { border-left-width:   2px; }
-  .xl-br2 { border-right-width:  2px; }
-  .xl-bt2 { border-top-width:    2px; }
-  .xl-bb2 { border-bottom-width: 2px; }
-  .xl-bx2 { border-left-width:   2px; border-right-width:  2px; }
-  .xl-by2 { border-top-width:    2px; border-bottom-width: 2px; }
-  .xl-bso { border-style: solid;  }
-  .xl-bda { border-style: dashed; }
-  .xl-bdo { border-style: dotted; }
 
-// https://css-tricks.com/almanac/properties/b/border-radius/
-  .xl-br24   { border-radius: 24px; }
-  .xl-brtl24 { border-radius: 0px; border-top-left-radius:     24px; }
-  .xl-brtr24 { border-radius: 0px; border-top-right-radius:    24px; }
-  .xl-brbl24 { border-radius: 0px; border-bottom-left-radius:  24px; }
-  .xl-brbr24 { border-radius: 0px; border-bottom-right-radius: 24px; }
-  .xl-brl24  { border-radius: 24px; border-top-right-radius:    0px;  border-bottom-right-radius: 0px;  }
-  .xl-brr24  { border-radius: 0px;  border-top-right-radius:    24px; border-bottom-right-radius: 24px; }
-  .xl-brt24  { border-radius: 24px; border-bottom-right-radius: 0px;  border-bottom-left-radius:  0px;  }
-  .xl-brb24  { border-radius: 0px;  border-bottom-right-radius: 24px; border-bottom-left-radius:  24px; }
 
-// https://css-tricks.com/almanac/properties/p/position/
-  .xl-pr { position: relative; }
-  .xl-pa { position: absolute; }
-  .xl-pf { position: fixed;    }
-  .xl-ps { position: static;   }
 
-// https://css-tricks.com/almanac/properties/l/left/
-  .xl-le { left: 100%; }
-  .xl-l0 { left: 0;    }
 
-// https://css-tricks.com/almanac/properties/r/right/
-  .xl-re { right: 100%; }
-  .xl-r0 { right: 0;    }
 
-// https://css-tricks.com/almanac/properties/t/top/
-  .xl-te { top: 100%; }
-  .xl-t0 { top: 0;    }
 
-// https://css-tricks.com/almanac/properties/b/bottom/
-  .xl-be { bottom: 100%; }
-  .xl-b0 { bottom: 0;    }
 
-// https://css-tricks.com/almanac/properties/w/width/
-  .xl-w16    { width:     16px; }
-  .xl-maxw16 { max-width: 16px; }
-  .xl-min16  { min-width: 16px; }
+    // border-width
+    $property-border-width: (
+      "b": "0",
+      "b": "1",
+      "b": "2"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-b#{$xxx-val}  { border-width:        #{$xxx-val}px; }
+          .#{$breakpoint-key}-bl#{$xxx-val} { border-left-width:   #{$xxx-val}px; }
+          .#{$breakpoint-key}-br#{$xxx-val} { border-right-width:  #{$xxx-val}px; }
+          .#{$breakpoint-key}-bt#{$xxx-val} { border-top-width:    #{$xxx-val}px; }
+          .#{$breakpoint-key}-bb#{$xxx-val} { border-bottom-width: #{$xxx-val}px; }
+          .#{$breakpoint-key}-bx#{$xxx-val} { border-left-width:   #{$xxx-val}px; border-right-width:  #{$xxx-val}px; }
+          .#{$breakpoint-key}-by#{$xxx-val} { border-top-width:    #{$xxx-val}px; border-bottom-width: #{$xxx-val}px; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
 
-// https://css-tricks.com/almanac/properties/h/height/
-  .xl-h16    { height:     16px; }
-  .xl-maxh16 { max-height: 16px; }
-  .xl-minh16 { min-height: 16px; }
+        }
+      }
+    }
 
-// https://css-tricks.com/almanac/properties/m/margin/
-  .xl-m24  { margin:        24px; }
-  .xl-ml24 { margin-left:   24px; }
-  .xl-mr24 { margin-right:  24px; }
-  .xl-mt24 { margin-top:    24px; }
-  .xl-mb24 { margin-bottom: 24px; }
-  .xl-mx24 { margin-left:   24px; margin-right:  24px; }
-  .xl-my24 { margin-top:    24px; margin-bottom: 24px; }
 
-// https://css-tricks.com/almanac/properties/p/padding/
-  .xl-p24  { padding:        24px; }
-  .xl-pl24 { padding-left:   24px; }
-  .xl-pr24 { padding-right:  24px; }
-  .xl-pt24 { padding-top:    24px; }
-  .xl-pb24 { padding-bottom: 24px; }
-  .xl-px24 { padding-left:   24px; padding-right:  24px; }
-  .xl-py24 { padding-top:    24px; padding-bottom: 24px; }
 
-// https://css-tricks.com/almanac/properties/f/font/
-  .xl-fs16 { font-size: 16px; }
 
-// https://css-tricks.com/almanac/properties/l/line-height/
-  .xl-lh16 { line-height: 16px; }
+    // border-style
+    $property-border-style: (
+      "bso": "solid",
+      "bda": "dashed",
+      "bdo": "dotted"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-bso { border-style: solid;  }
+          .#{$breakpoint-key}-bda { border-style: dashed; }
+          .#{$breakpoint-key}-bdo { border-style: dotted; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
 
-// https://css-tricks.com/almanac/properties/t/text-align/
-  .xl-tal { text-align: left;    }
-  .xl-tar { text-align: right;   }
-  .xl-tac { text-align: center;  }
-  .xl-taj { text-align: justify; }
+        }
+      }
+    }
 
-// https://css-tricks.com/almanac/properties/o/opacity/
-  .xl-o25 { opacity: 0.25; }
-  .xl-o50 { opacity: 0.50; }
-  .xl-o75 { opacity: 0.75; }
 
-// https://css-tricks.com/almanac/properties/l/letter-spacing/
-  .xl-ls1 { letter-spacing: 1px; }
-  .xl-ls2 { letter-spacing: 2px; }
-  .xl-ls3 { letter-spacing: 3px; }
-  .xl-ls4 { letter-spacing: 4px; }
 
-// https://css-tricks.com/almanac/properties/z/z-index/
-  .xl-zi1 { z-index: 1; }
-  .xl-zi2 { z-index: 2; }
-  .xl-zi3 { z-index: 3; }
-  .xl-zi4 { z-index: 4; }
-  .xl-zi5 { z-index: 5; }
-  .xl-zi6 { z-index: 6; }
-  .xl-zi7 { z-index: 7; }
-  .xl-zi8 { z-index: 8; }
-  .xl-zi9 { z-index: 9; }
 
-// https://css-tricks.com/almanac/properties/d/display/
-  .xl-db  { display: block;        }
-  .xl-dib { display: inline-block; }
+    // border-radius
+    $property-border-radius: (
+      "br": "0",
+      "br": "8",
+      "br": "16",
+      "br": "24",
+      "br": "40"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-br#{$xxx-val}   { border-radius: #{$xxx-val}px; }
+          .#{$breakpoint-key}-brtl#{$xxx-val} { border-top-left-radius:     #{$xxx-val}px; }
+          .#{$breakpoint-key}-brtr#{$xxx-val} { border-top-right-radius:    #{$xxx-val}px; }
+          .#{$breakpoint-key}-brbl#{$xxx-val} { border-bottom-left-radius:  #{$xxx-val}px; }
+          .#{$breakpoint-key}-brbr#{$xxx-val} { border-bottom-right-radius: #{$xxx-val}px; }
+          .#{$breakpoint-key}-brl#{$xxx-val}  { border-top-left-radius:     #{$xxx-val}px; border-bottom-left-radius:  #{$xxx-val}px; }
+          .#{$breakpoint-key}-brr#{$xxx-val}  { border-top-right-radius:    #{$xxx-val}px; border-bottom-right-radius: #{$xxx-val}px; }
+          .#{$breakpoint-key}-brt#{$xxx-val}  { border-top-left-radius:     #{$xxx-val}px; border-top-right-radius:    #{$xxx-val}px; }
+          .#{$breakpoint-key}-brb#{$xxx-val}  { border-bottom-left-radius:  #{$xxx-val}px; border-bottom-right-radius: #{$xxx-val}px; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
 
-// https://css-tricks.com/almanac/properties/f/font-weight/
-  .xl-fw200 { font-style: normal; font-weight: 200; }
-  .xl-fw300 { font-style: normal; font-weight: 300; }
-  .xl-fw400 { font-style: normal; font-weight: 400; }
-  .xl-fw500 { font-style: normal; font-weight: 500; }
-  .xl-fw600 { font-style: normal; font-weight: 600; }
-  .xl-fw700 { font-style: normal; font-weight: 700; }
-  .xl-fw800 { font-style: normal; font-weight: 800; }
-  .xl-fw900 { font-style: normal; font-weight: 900; }
+        }
+      }
+    }
 
-// https://css-tricks.com/almanac/properties/f/font-style/
-  .xl-fsi { font-style: italic; }
 
-// https://css-tricks.com/almanac/properties/v/vertical-align/
-  .xl-vat { vertical-align: top;    }
-  .xl-vam { vertical-align: middle; }
-  .xl-vab { vertical-align: bottom; }
 
-// https://css-tricks.com/almanac/properties/t/text-transform/
-  .xl-ttu { text-transform: uppercase;  }
-  .xl-ttl { text-transform: lowercase;  }
-  .xl-ttc { text-transform: capitalize; }
 
-// https://css-tricks.com/almanac/properties/t/text-decoration/
-  .xl-tdu  { text-decoration: underline;    }
-  .xl-tdlt { text-decoration: line-through; }
+    // position
+    $property-position: (
+      "pr": "relative",
+      "pa": "absolute",
+      "pf": "fixed",
+      "ps": "static"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-pr { position: relative; }
+          .#{$breakpoint-key}-pa { position: absolute; }
+          .#{$breakpoint-key}-pf { position: fixed;    }
+          .#{$breakpoint-key}-ps { position: static;   }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
 
-// https://css-tricks.com/almanac/properties/t/text-overflow/
-  .xl-toe { text-overflow: ellipsis; }
+        }
+      }
+    }
 
-// https://css-tricks.com/almanac/properties/w/whitespace/
-  .xl-wsnw  { white-space: nowrap;    }
-  .xl-wspw { white-space: pre-wrap; }
 
-// https://css-tricks.com/almanac/properties/w/word-break/
-  .xl-wbbw { word-break: break-word; }
 
-// https://css-tricks.com/almanac/properties/o/overflow/
-  .xl-oh  { overflow: hidden; }
-  .xl-os  { overflow: scroll; }
-  .xl-oxs { overflow-x: scroll; overflow-y: hidden; }
-  .xl-oys { overflow-y: scroll; overflow-x: hidden; }
 
-// https://css-tricks.com/almanac/properties/c/cursor/
-  .xl-ca { cursor: auto;        }
-  .xl-cd { cursor: default;     }
-  .xl-cp { cursor: pointer;     }
-  .xl-ct { cursor: text;        }
-  .xl-cn { cursor: not-allowed; }
+    // left
+    $property-left: (
+      "l": "100%",
+      "l": "0"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-le { left: 100%; }
+          .#{$breakpoint-key}-l0 { left: 0;    }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
 
-// https://css-tricks.com/almanac/properties/u/user-select/
-  .xl-usn { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-  .xl-ust { -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text; }
+        }
+      }
+    }
 
-// https://css-tricks.com/almanac/properties/p/pointer-events/
-  .xl-pen { pointer-events: none; }
-  .xl-pea { pointer-events: auto; }
+
+
+
+    // right
+    $property-right: (
+      "r": "100%",
+      "r": "0"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-re { right: 100%; }
+          .#{$breakpoint-key}-r0 { right: 0;    }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // top
+    $property-top: (
+      "t": "100%",
+      "t": "0"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-te { top: 100%; }
+          .#{$breakpoint-key}-t0 { top: 0;    }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // bottom
+    $property-bottom: (
+      "b": "100%",
+      "b": "0"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-be { bottom: 100%; }
+          .#{$breakpoint-key}-b0 { bottom: 0;    }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // width
+    $property-width: (
+      "w": "1280"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-w1280    { width:     1280px; }
+          .#{$breakpoint-key}-maxw1280 { max-width: 1280px; }
+          .#{$breakpoint-key}-min1280  { min-width: 1280px; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // height
+    $property-height: (
+      "h": "0",
+      "h": "8",
+      "h": "16",
+      "h": "24",
+      "h": "40"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-h16    { height:     16px; }
+          .#{$breakpoint-key}-maxh16 { max-height: 16px; }
+          .#{$breakpoint-key}-minh16 { min-height: 16px; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // margin
+    $property-margin: (
+      "m": "0",
+      "m": "8",
+      "m": "16",
+      "m": "24",
+      "m": "40"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-m#{$xxx-val}  { margin:        #{$xxx-val}px; }
+          .#{$breakpoint-key}-ml#{$xxx-val} { margin-left:   #{$xxx-val}px; }
+          .#{$breakpoint-key}-mr#{$xxx-val} { margin-right:  #{$xxx-val}px; }
+          .#{$breakpoint-key}-mt#{$xxx-val} { margin-top:    #{$xxx-val}px; }
+          .#{$breakpoint-key}-mb#{$xxx-val} { margin-bottom: #{$xxx-val}px; }
+          .#{$breakpoint-key}-mx#{$xxx-val} { margin-left:   #{$xxx-val}px; margin-right:  #{$xxx-val}px; }
+          .#{$breakpoint-key}-my#{$xxx-val} { margin-top:    #{$xxx-val}px; margin-bottom: #{$xxx-val}px; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // padding
+    $property-padding: (
+      "p": "0",
+      "p": "8",
+      "p": "16",
+      "p": "24",
+      "p": "40"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-p24  { padding:        24px; }
+          .#{$breakpoint-key}-pl24 { padding-left:   24px; }
+          .#{$breakpoint-key}-pr24 { padding-right:  24px; }
+          .#{$breakpoint-key}-pt24 { padding-top:    24px; }
+          .#{$breakpoint-key}-pb24 { padding-bottom: 24px; }
+          .#{$breakpoint-key}-px24 { padding-left:   24px; padding-right:  24px; }
+          .#{$breakpoint-key}-py24 { padding-top:    24px; padding-bottom: 24px; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // font-size
+    $property-font-size: (
+      "fs": "12",
+      "fs": "14",
+      "fs": "16",
+      "fs": "18",
+      "fs": "20",
+      "fs": "22",
+      "fs": "24"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-fs16 { font-size: 16px; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // line-height
+    $property-line-height: (
+      "lh": "0",
+      "lh": "12",
+      "lh": "14",
+      "lh": "16",
+      "lh": "18",
+      "lh": "20",
+      "lh": "22",
+      "lh": "24"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-lh16 { line-height: 16px; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // text-align
+    $property-text-align: (
+      "tal": "left",
+      "tar": "right",
+      "tac": "center",
+      "taj": "justify"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-tal { text-align: left;    }
+          .#{$breakpoint-key}-tar { text-align: right;   }
+          .#{$breakpoint-key}-tac { text-align: center;  }
+          .#{$breakpoint-key}-taj { text-align: justify; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // opacity
+    $property-opacity: (
+      "o": "25",
+      "o": "50",
+      "o": "75"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-o25 { opacity: 0.25; }
+          .#{$breakpoint-key}-o50 { opacity: 0.50; }
+          .#{$breakpoint-key}-o75 { opacity: 0.75; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // letter-spacing
+    $property-letter-spacing: (
+      "ls": "1",
+      "ls": "2"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-ls1 { letter-spacing: 1px; }
+          .#{$breakpoint-key}-ls2 { letter-spacing: 2px; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // z-index
+    $property-z-index: (
+      "zi": "1",
+      "zi": "2",
+      "zi": "3"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-zi1 { z-index: 1; }
+          .#{$breakpoint-key}-zi2 { z-index: 2; }
+          .#{$breakpoint-key}-zi3 { z-index: 3; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // display
+    $property-display: (
+      "db": "block",
+      "dib": "inline-block"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-db  { display: block;        }
+          .#{$breakpoint-key}-dib { display: inline-block; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // font-weight
+    $property-font-weight: (
+      "fw": "200",
+      "fw": "300",
+      "fw": "400",
+      "fw": "500",
+      "fw": "600",
+      "fw": "700",
+      "fw": "800",
+      "fw": "900"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-fw200 { font-style: normal; font-weight: 200; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // font-style
+    $property-font-style: (
+      "fsi": "italic"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-fsi { font-style: italic; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // vertical-align
+    $property-vertical-align: (
+      "vat": "top",
+      "vam": "middle",
+      "vab": "bottom"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-vat { vertical-align: top;    }
+          .#{$breakpoint-key}-vam { vertical-align: middle; }
+          .#{$breakpoint-key}-vab { vertical-align: bottom; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // text-transform
+    $property-text-transform: (
+      "ttu": "uppercase",
+      "ttl": "lowercase",
+      "ttc": "capitalize"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-ttu { text-transform: uppercase;  }
+          .#{$breakpoint-key}-ttl { text-transform: lowercase;  }
+          .#{$breakpoint-key}-ttc { text-transform: capitalize; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // text-decoration
+    $property-text-decoration: (
+      "tdu": "underline",
+      "tdlt": "line-through"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-tdu  { text-decoration: underline;    }
+          .#{$breakpoint-key}-tdlt { text-decoration: line-through; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // text-overflow
+    $property-text-overflow: (
+      "toe": "ellipsis"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-toe { text-overflow: ellipsis; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // white-space
+    $property-white-space: (
+      "wsnw": "nowrap",
+      "wspw": "pre-wrap"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-wsnw  { white-space: nowrap;  }
+          .#{$breakpoint-key}-wspw { white-space: pre-wrap; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // word-break
+    $property-word-break: (
+      "wbbw": "break-word"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-wbbw { word-break: break-word; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // overflow
+    $property-overflow: (
+      "ov": "visible",
+      "oh": "hidden",
+      "oa": "auto",
+      "os": "scroll"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-ov  { overflow:   visible; }
+          .#{$breakpoint-key}-oh  { overflow:   hidden; }
+          .#{$breakpoint-key}-oa  { overflow:   auto;   }
+          .#{$breakpoint-key}-os  { overflow:   scroll; }
+          .#{$breakpoint-key}-osx { overflow-x: scroll; overflow-y: hidden; }
+          .#{$breakpoint-key}-osy { overflow-y: scroll; overflow-x: hidden; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // cursor
+    $property-cursor: (
+      "ca": "auto",
+      "cd": "default",
+      "cp": "pointer",
+      "ct": "text",
+      "cn": "not-allowed"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-ca { cursor: auto;        }
+          .#{$breakpoint-key}-cd { cursor: default;     }
+          .#{$breakpoint-key}-cp { cursor: pointer;     }
+          .#{$breakpoint-key}-ct { cursor: text;        }
+          .#{$breakpoint-key}-cn { cursor: not-allowed; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // user-select
+    $property-user-select: (
+      "usn": "none",
+      "ust": "text"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-usn { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+          .#{$breakpoint-key}-ust { -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
+
+
+
+
+    // pointer-events
+    $property-pointer-events: (
+      "pen": "none",
+      "pea": "auto"
+    );
+    $selector-xxx: (
+      "cl": "class",
+      "ho": "hover",
+      // "fo": "focus",
+      // "di": "disabled",
+      // "ac": "active"
+    );
+    @each $selector-xxx-key, $selector-xxx-val in $selector-xxx {
+      @each $xxx-key, $xxx-val in $property-xxx {
+        @if $selector-xxx-val == "class" {
+          .#{$breakpoint-key}-pen { pointer-events: none; }
+          .#{$breakpoint-key}-pea { pointer-events: auto; }
+        }
+        @else if $breakpoint-val == "" {
+          // .#{$selector-xxx-key}
+          // :#{$selector-xxx-val}
+
+        }
+      }
+    }
