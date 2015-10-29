@@ -28,10 +28,7 @@ $property-color: (
 );
 $selector-color: (
   "cl": "class",
-  "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active",
+  "ho": "hover",,
   "pl": "placeholder",
   "se": "selection"
 );
@@ -43,10 +40,7 @@ $property-background-color: (
 );
 $selector-background-color: (
   "cl": "class",
-  "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active",
+  "ho": "hover",,
   "pl": "placeholder",
   "se": "selection"
 );
@@ -58,10 +52,7 @@ $property-border-color: (
 );
 $selector-border-color: (
   "cl": "class",
-  "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active",
+  "ho": "hover",,
   "pl": "placeholder",
 );
 
@@ -74,9 +65,6 @@ $property-border-width: (
 $selector-border-width: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // border-style
@@ -88,9 +76,6 @@ $property-border-style: (
 $selector-border-style: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // border-radius
@@ -104,9 +89,6 @@ $property-border-radius: (
 $selector-border-radius: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // position
@@ -119,9 +101,6 @@ $property-position: (
 $selector-position: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // left
@@ -132,9 +111,6 @@ $property-left: (
 $selector-left: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // right
@@ -145,9 +121,6 @@ $property-right: (
 $selector-right: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // top
@@ -159,9 +132,6 @@ $property-top: (
 $selector-top: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // bottom
@@ -173,9 +143,6 @@ $property-bottom: (
 $selector-bottom: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // width
@@ -185,9 +152,6 @@ $property-width: (
 $selector-width: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // height
@@ -201,9 +165,6 @@ $property-height: (
 $selector-height: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // margin
@@ -217,9 +178,6 @@ $property-margin: (
 $selector-margin: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // padding
@@ -233,9 +191,6 @@ $property-padding: (
 $selector-padding: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // font-size
@@ -251,9 +206,6 @@ $property-font-size: (
 $selector-font-size: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // line-height
@@ -270,9 +222,6 @@ $property-line-height: (
 $selector-line-height: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // text-align
@@ -285,9 +234,6 @@ $property-text-align: (
 $selector-text-align: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // opacity
@@ -299,9 +245,6 @@ $property-opacity: (
 $selector-opacity: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // letter-spacing
@@ -312,9 +255,6 @@ $property-letter-spacing: (
 $selector-letter-spacing: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // z-index
@@ -326,9 +266,6 @@ $property-z-index: (
 $selector-z-index: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // display
@@ -339,9 +276,6 @@ $property-display: (
 $selector-display: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // font-weight
@@ -358,9 +292,6 @@ $property-font-weight: (
 $selector-font-weight: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // font-style
@@ -370,9 +301,6 @@ $property-font-style: (
 $selector-font-style: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // vertical-align
@@ -384,9 +312,6 @@ $property-vertical-align: (
 $selector-vertical-align: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // text-transform
@@ -398,9 +323,6 @@ $property-text-transform: (
 $selector-text-transform: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // text-decoration
@@ -411,9 +333,6 @@ $property-text-decoration: (
 $selector-text-decoration: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // text-overflow
@@ -423,9 +342,6 @@ $property-text-overflow: (
 $selector-text-overflow: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // white-space
@@ -436,9 +352,6 @@ $property-white-space: (
 $selector-white-space: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // word-break
@@ -448,9 +361,6 @@ $property-word-break: (
 $selector-word-break: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // overflow
@@ -463,9 +373,6 @@ $property-overflow: (
 $selector-overflow: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // cursor
@@ -479,9 +386,6 @@ $property-cursor: (
 $selector-cursor: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // user-select
@@ -492,9 +396,6 @@ $property-user-select: (
 $selector-user-select: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 // pointer-events
@@ -505,9 +406,6 @@ $property-pointer-events: (
 $selector-pointer-events: (
   "cl": "class",
   "ho": "hover",
-  // "fo": "focus",
-  // "di": "disabled",
-  // "ac": "active"
 );
 
 @import "flexiblecss-scss";
