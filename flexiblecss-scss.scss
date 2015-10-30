@@ -1,4 +1,4 @@
-/*! Flexible Front End Framework 0.1.1 | Scss | MIT License | flexible.gs */
+/*! Flexible Front End Framework 0.1.2 | Scss | MIT License | flexible.gs */
 
 @if $flexiblecss-base == "true" {
   *, *:before, *:after {
@@ -119,31 +119,31 @@
     @each $selector-border-width-key, $selector-border-width-val in $selector-border-width {
       @each $border-width-val in $property-border-width {
         @if $selector-border-width-val == "breakpoint-class" {
-          .#{$flexiblecss-breakpoint-key}-b#{$border-width-val}  { border-width:        #{$border-width-val}px; }
-          .#{$flexiblecss-breakpoint-key}-bl#{$border-width-val} { border-left-width:   #{$border-width-val}px; }
-          .#{$flexiblecss-breakpoint-key}-br#{$border-width-val} { border-right-width:  #{$border-width-val}px; }
-          .#{$flexiblecss-breakpoint-key}-bt#{$border-width-val} { border-top-width:    #{$border-width-val}px; }
-          .#{$flexiblecss-breakpoint-key}-bb#{$border-width-val} { border-bottom-width: #{$border-width-val}px; }
-          .#{$flexiblecss-breakpoint-key}-bx#{$border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
-          .#{$flexiblecss-breakpoint-key}-by#{$border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bw#{$border-width-val}  { border-width:        #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bwl#{$border-width-val} { border-left-width:   #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bwr#{$border-width-val} { border-right-width:  #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bwt#{$border-width-val} { border-top-width:    #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bwb#{$border-width-val} { border-bottom-width: #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bwx#{$border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bwy#{$border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
         }
         @else if $flexiblecss-breakpoint-val == "" and $selector-border-width-val == "not-breakpoint-class" {
-          .#{$flexiblecss-breakpoint-key}-b#{$border-width-val}  { border-width:        #{$border-width-val}px; }
-          .#{$flexiblecss-breakpoint-key}-bl#{$border-width-val} { border-left-width:   #{$border-width-val}px; }
-          .#{$flexiblecss-breakpoint-key}-br#{$border-width-val} { border-right-width:  #{$border-width-val}px; }
-          .#{$flexiblecss-breakpoint-key}-bt#{$border-width-val} { border-top-width:    #{$border-width-val}px; }
-          .#{$flexiblecss-breakpoint-key}-bb#{$border-width-val} { border-bottom-width: #{$border-width-val}px; }
-          .#{$flexiblecss-breakpoint-key}-bx#{$border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
-          .#{$flexiblecss-breakpoint-key}-by#{$border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bw#{$border-width-val}  { border-width:        #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bwl#{$border-width-val} { border-left-width:   #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bwr#{$border-width-val} { border-right-width:  #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bwt#{$border-width-val} { border-top-width:    #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bwb#{$border-width-val} { border-bottom-width: #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bwx#{$border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
+          .#{$flexiblecss-breakpoint-key}-bwy#{$border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
         }
         @else if $flexiblecss-breakpoint-val == "" {
-          .#{$selector-border-width-key}-b#{$border-width-val}:#{$selector-border-width-val}  { border-width:        #{$border-width-val}px; }
-          .#{$selector-border-width-key}-bl#{$border-width-val}:#{$selector-border-width-val} { border-left-width:   #{$border-width-val}px; }
-          .#{$selector-border-width-key}-br#{$border-width-val}:#{$selector-border-width-val} { border-right-width:  #{$border-width-val}px; }
-          .#{$selector-border-width-key}-bt#{$border-width-val}:#{$selector-border-width-val} { border-top-width:    #{$border-width-val}px; }
-          .#{$selector-border-width-key}-bb#{$border-width-val}:#{$selector-border-width-val} { border-bottom-width: #{$border-width-val}px; }
-          .#{$selector-border-width-key}-bx#{$border-width-val}:#{$selector-border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
-          .#{$selector-border-width-key}-by#{$border-width-val}:#{$selector-border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
+          .#{$selector-border-width-key}-bw#{$border-width-val}:#{$selector-border-width-val}  { border-width:        #{$border-width-val}px; }
+          .#{$selector-border-width-key}-bwl#{$border-width-val}:#{$selector-border-width-val} { border-left-width:   #{$border-width-val}px; }
+          .#{$selector-border-width-key}-bwr#{$border-width-val}:#{$selector-border-width-val} { border-right-width:  #{$border-width-val}px; }
+          .#{$selector-border-width-key}-bwt#{$border-width-val}:#{$selector-border-width-val} { border-top-width:    #{$border-width-val}px; }
+          .#{$selector-border-width-key}-bwb#{$border-width-val}:#{$selector-border-width-val} { border-bottom-width: #{$border-width-val}px; }
+          .#{$selector-border-width-key}-bwx#{$border-width-val}:#{$selector-border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
+          .#{$selector-border-width-key}-bwy#{$border-width-val}:#{$selector-border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
         }
       }
     }
@@ -782,31 +782,31 @@
       @each $selector-border-width-key, $selector-border-width-val in $selector-border-width {
         @each $border-width-val in $property-border-width {
           @if $selector-border-width-val == "breakpoint-class" {
-            .#{$flexiblecss-breakpoint-key}-b#{$border-width-val}  { border-width:        #{$border-width-val}px; }
-            .#{$flexiblecss-breakpoint-key}-bl#{$border-width-val} { border-left-width:   #{$border-width-val}px; }
-            .#{$flexiblecss-breakpoint-key}-br#{$border-width-val} { border-right-width:  #{$border-width-val}px; }
-            .#{$flexiblecss-breakpoint-key}-bt#{$border-width-val} { border-top-width:    #{$border-width-val}px; }
-            .#{$flexiblecss-breakpoint-key}-bb#{$border-width-val} { border-bottom-width: #{$border-width-val}px; }
-            .#{$flexiblecss-breakpoint-key}-bx#{$border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
-            .#{$flexiblecss-breakpoint-key}-by#{$border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bw#{$border-width-val}  { border-width:        #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bwl#{$border-width-val} { border-left-width:   #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bwr#{$border-width-val} { border-right-width:  #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bwt#{$border-width-val} { border-top-width:    #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bwb#{$border-width-val} { border-bottom-width: #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bwx#{$border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bwy#{$border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
           }
           @else if $flexiblecss-breakpoint-val == "" and $selector-border-width-val == "not-breakpoint-class" {
-            .#{$flexiblecss-breakpoint-key}-b#{$border-width-val}  { border-width:        #{$border-width-val}px; }
-            .#{$flexiblecss-breakpoint-key}-bl#{$border-width-val} { border-left-width:   #{$border-width-val}px; }
-            .#{$flexiblecss-breakpoint-key}-br#{$border-width-val} { border-right-width:  #{$border-width-val}px; }
-            .#{$flexiblecss-breakpoint-key}-bt#{$border-width-val} { border-top-width:    #{$border-width-val}px; }
-            .#{$flexiblecss-breakpoint-key}-bb#{$border-width-val} { border-bottom-width: #{$border-width-val}px; }
-            .#{$flexiblecss-breakpoint-key}-bx#{$border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
-            .#{$flexiblecss-breakpoint-key}-by#{$border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bw#{$border-width-val}  { border-width:        #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bwl#{$border-width-val} { border-left-width:   #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bwr#{$border-width-val} { border-right-width:  #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bwt#{$border-width-val} { border-top-width:    #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bwb#{$border-width-val} { border-bottom-width: #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bwx#{$border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
+            .#{$flexiblecss-breakpoint-key}-bwy#{$border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
           }
           @else if $flexiblecss-breakpoint-val == "" {
-            .#{$selector-border-width-key}-b#{$border-width-val}:#{$selector-border-width-val}  { border-width:        #{$border-width-val}px; }
-            .#{$selector-border-width-key}-bl#{$border-width-val}:#{$selector-border-width-val} { border-left-width:   #{$border-width-val}px; }
-            .#{$selector-border-width-key}-br#{$border-width-val}:#{$selector-border-width-val} { border-right-width:  #{$border-width-val}px; }
-            .#{$selector-border-width-key}-bt#{$border-width-val}:#{$selector-border-width-val} { border-top-width:    #{$border-width-val}px; }
-            .#{$selector-border-width-key}-bb#{$border-width-val}:#{$selector-border-width-val} { border-bottom-width: #{$border-width-val}px; }
-            .#{$selector-border-width-key}-bx#{$border-width-val}:#{$selector-border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
-            .#{$selector-border-width-key}-by#{$border-width-val}:#{$selector-border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
+            .#{$selector-border-width-key}-bw#{$border-width-val}:#{$selector-border-width-val}  { border-width:        #{$border-width-val}px; }
+            .#{$selector-border-width-key}-bwl#{$border-width-val}:#{$selector-border-width-val} { border-left-width:   #{$border-width-val}px; }
+            .#{$selector-border-width-key}-bwr#{$border-width-val}:#{$selector-border-width-val} { border-right-width:  #{$border-width-val}px; }
+            .#{$selector-border-width-key}-bwt#{$border-width-val}:#{$selector-border-width-val} { border-top-width:    #{$border-width-val}px; }
+            .#{$selector-border-width-key}-bwb#{$border-width-val}:#{$selector-border-width-val} { border-bottom-width: #{$border-width-val}px; }
+            .#{$selector-border-width-key}-bwx#{$border-width-val}:#{$selector-border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
+            .#{$selector-border-width-key}-bwy#{$border-width-val}:#{$selector-border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
           }
         }
       }

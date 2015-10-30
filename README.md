@@ -16,16 +16,16 @@ $property-font-family: (
 
 
 $flexiblecss-breakpoint: (
-  "xl" : "",
-  "lg" : "(max-width: 1024px)",
-  "md" : "(max-width: 768px)",
-  "sm" : "(max-width: 667px)"
+  "xl": "",
+  "lg": "(max-width: 1024px)",
+  "md": "(max-width: 768px)",
+  "sm": "(max-width: 667px)"
 );
 
 
 $property-color: (
-  "white" : "#FFFFFF",
-  "black" : "#222222"
+  "white": "#FFFFFF",
+  "black": "#222222"
 );
 $selector-color: (
   "cl": "breakpoint-class",
@@ -36,8 +36,8 @@ $selector-color: (
 
 
 $property-background-color: (
-  "white" : "#FFFFFF",
-  "black" : "#222222"
+  "white": "#FFFFFF",
+  "black": "#222222"
 );
 $selector-background-color: (
   "cl": "breakpoint-class",
@@ -48,8 +48,8 @@ $selector-background-color: (
 
 
 $property-border-color: (
-  "white" : "#FFFFFF",
-  "black" : "#222222"
+  "white": "#FFFFFF",
+  "black": "#222222"
 );
 $selector-border-color: (
   "cl": "breakpoint-class",
@@ -176,6 +176,7 @@ $selector-z-index: (
 
 
 $property-display: (
+  "dn": "none",
   "db": "block",
   "dib": "inline-block"
 );
