@@ -1,6 +1,6 @@
 # [flexiblecss-scss](http://flexible.gs)
 
-Flexible Front End Framework
+Flexible Front End Framework Scss
 
 ## Install
 
