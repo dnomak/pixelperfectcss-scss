@@ -1,6 +1,6 @@
 {
   "name": "flexiblecss-scss",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://flexible.gs",
   "description": "Flexible Front End Framework Scss",
   "keywords": [
@@ -12,7 +12,7 @@
     "selectors",
     "properties"
   ],
-  "main": "flexiblecss-scss.css",
+  "main": "flexiblecss-scss.scss",
   "author": "@dnomak",
   "license": "MIT",
   "repository": {
