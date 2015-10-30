@@ -16,10 +16,10 @@ $property-font-family: (
 
 
 $flexiblecss-breakpoint: (
-  xl : "",
-  lg : "(max-width: 1024px)",
-  md : "(max-width: 768px)",
-  sm : "(max-width: 667px)"
+  "xl" : "",
+  "lg" : "(max-width: 1024px)",
+  "md" : "(max-width: 768px)",
+  "sm" : "(max-width: 667px)"
 );
 
 
