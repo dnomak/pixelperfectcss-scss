@@ -1,4 +1,4 @@
-/*! Flexible Front End Framework 0.1.2 | Scss | MIT License | flexible.gs */
+/*! Flexible Front End Framework 0.1.3 | Scss | MIT License | flexible.gs */
 
 @if $flexiblecss-base == "true" {
   *, *:before, *:after {
@@ -455,22 +455,32 @@
     @each $selector-margin-key, $selector-margin-val in $selector-margin {
       @each $margin-val in $property-margin {
         @if $selector-margin-val == "breakpoint-class" {
-          .#{$flexiblecss-breakpoint-key}-m#{$margin-val}  { margin:        #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-ml#{$margin-val} { margin-left:   #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mr#{$margin-val} { margin-right:  #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mt#{$margin-val} { margin-top:    #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mb#{$margin-val} { margin-bottom: #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mx#{$margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-my#{$margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
+          @if $margin-val == "auto" {
+            .#{$flexiblecss-breakpoint-key}-ma { margin-left: #{$margin-val}; margin-right: #{$margin-val}; }
+          }
+          @else {
+            .#{$flexiblecss-breakpoint-key}-m#{$margin-val}  { margin:        #{$margin-val}px; }
+            .#{$flexiblecss-breakpoint-key}-ml#{$margin-val} { margin-left:   #{$margin-val}px; }
+            .#{$flexiblecss-breakpoint-key}-mr#{$margin-val} { margin-right:  #{$margin-val}px; }
+            .#{$flexiblecss-breakpoint-key}-mt#{$margin-val} { margin-top:    #{$margin-val}px; }
+            .#{$flexiblecss-breakpoint-key}-mb#{$margin-val} { margin-bottom: #{$margin-val}px; }
+            .#{$flexiblecss-breakpoint-key}-mx#{$margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
+            .#{$flexiblecss-breakpoint-key}-my#{$margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
+          }
         }
         @else if $flexiblecss-breakpoint-val == "" and $selector-margin-val == "not-breakpoint-class" {
-          .#{$flexiblecss-breakpoint-key}-m#{$margin-val}  { margin:        #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-ml#{$margin-val} { margin-left:   #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mr#{$margin-val} { margin-right:  #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mt#{$margin-val} { margin-top:    #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mb#{$margin-val} { margin-bottom: #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mx#{$margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-my#{$margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
+          @if $margin-val == "auto" {
+            .#{$flexiblecss-breakpoint-key}-ma { margin-left: #{$margin-val}; margin-right: #{$margin-val}; }
+          }
+          @else {
+            .#{$flexiblecss-breakpoint-key}-m#{$margin-val}  { margin:        #{$margin-val}px; }
+            .#{$flexiblecss-breakpoint-key}-ml#{$margin-val} { margin-left:   #{$margin-val}px; }
+            .#{$flexiblecss-breakpoint-key}-mr#{$margin-val} { margin-right:  #{$margin-val}px; }
+            .#{$flexiblecss-breakpoint-key}-mt#{$margin-val} { margin-top:    #{$margin-val}px; }
+            .#{$flexiblecss-breakpoint-key}-mb#{$margin-val} { margin-bottom: #{$margin-val}px; }
+            .#{$flexiblecss-breakpoint-key}-mx#{$margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
+            .#{$flexiblecss-breakpoint-key}-my#{$margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
+          }
         }
         @else if $flexiblecss-breakpoint-val == "" {
           .#{$selector-margin-key}-m#{$margin-val}:#{$selector-margin-val}  { margin:        #{$margin-val}px; }
@@ -1118,22 +1128,32 @@
       @each $selector-margin-key, $selector-margin-val in $selector-margin {
         @each $margin-val in $property-margin {
           @if $selector-margin-val == "breakpoint-class" {
-            .#{$flexiblecss-breakpoint-key}-m#{$margin-val}  { margin:        #{$margin-val}px; }
-            .#{$flexiblecss-breakpoint-key}-ml#{$margin-val} { margin-left:   #{$margin-val}px; }
-            .#{$flexiblecss-breakpoint-key}-mr#{$margin-val} { margin-right:  #{$margin-val}px; }
-            .#{$flexiblecss-breakpoint-key}-mt#{$margin-val} { margin-top:    #{$margin-val}px; }
-            .#{$flexiblecss-breakpoint-key}-mb#{$margin-val} { margin-bottom: #{$margin-val}px; }
-            .#{$flexiblecss-breakpoint-key}-mx#{$margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
-            .#{$flexiblecss-breakpoint-key}-my#{$margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
+            @if $margin-val == "auto" {
+              .#{$flexiblecss-breakpoint-key}-ma { margin-left: #{$margin-val}; margin-right: #{$margin-val}; }
+            }
+            @else {
+              .#{$flexiblecss-breakpoint-key}-m#{$margin-val}  { margin:        #{$margin-val}px; }
+              .#{$flexiblecss-breakpoint-key}-ml#{$margin-val} { margin-left:   #{$margin-val}px; }
+              .#{$flexiblecss-breakpoint-key}-mr#{$margin-val} { margin-right:  #{$margin-val}px; }
+              .#{$flexiblecss-breakpoint-key}-mt#{$margin-val} { margin-top:    #{$margin-val}px; }
+              .#{$flexiblecss-breakpoint-key}-mb#{$margin-val} { margin-bottom: #{$margin-val}px; }
+              .#{$flexiblecss-breakpoint-key}-mx#{$margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
+              .#{$flexiblecss-breakpoint-key}-my#{$margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
+            }
           }
           @else if $flexiblecss-breakpoint-val == "" and $selector-margin-val == "not-breakpoint-class" {
-            .#{$flexiblecss-breakpoint-key}-m#{$margin-val}  { margin:        #{$margin-val}px; }
-            .#{$flexiblecss-breakpoint-key}-ml#{$margin-val} { margin-left:   #{$margin-val}px; }
-            .#{$flexiblecss-breakpoint-key}-mr#{$margin-val} { margin-right:  #{$margin-val}px; }
-            .#{$flexiblecss-breakpoint-key}-mt#{$margin-val} { margin-top:    #{$margin-val}px; }
-            .#{$flexiblecss-breakpoint-key}-mb#{$margin-val} { margin-bottom: #{$margin-val}px; }
-            .#{$flexiblecss-breakpoint-key}-mx#{$margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
-            .#{$flexiblecss-breakpoint-key}-my#{$margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
+            @if $margin-val == "auto" {
+              .#{$flexiblecss-breakpoint-key}-ma { margin-left: #{$margin-val}; margin-right: #{$margin-val}; }
+            }
+            @else {
+              .#{$flexiblecss-breakpoint-key}-m#{$margin-val}  { margin:        #{$margin-val}px; }
+              .#{$flexiblecss-breakpoint-key}-ml#{$margin-val} { margin-left:   #{$margin-val}px; }
+              .#{$flexiblecss-breakpoint-key}-mr#{$margin-val} { margin-right:  #{$margin-val}px; }
+              .#{$flexiblecss-breakpoint-key}-mt#{$margin-val} { margin-top:    #{$margin-val}px; }
+              .#{$flexiblecss-breakpoint-key}-mb#{$margin-val} { margin-bottom: #{$margin-val}px; }
+              .#{$flexiblecss-breakpoint-key}-mx#{$margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
+              .#{$flexiblecss-breakpoint-key}-my#{$margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
+            }
           }
           @else if $flexiblecss-breakpoint-val == "" {
             .#{$selector-margin-key}-m#{$margin-val}:#{$selector-margin-val}  { margin:        #{$margin-val}px; }

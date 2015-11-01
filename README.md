@@ -24,36 +24,66 @@ $flexiblecss-breakpoint: (
 
 
 $property-color: (
-  "white": "#FFFFFF",
-  "black": "#222222"
+  "white":        "#FFFFFF",
+  "gray-lighter": "#F5F5F5",
+  "gray-light":   "#D8D8D8",
+  "gray":         "#A1A1A1",
+  "gray-dark":    "#333333",
+  "gray-darker":  "#222222",
+  "red":          "#EC1561",
+  "green":        "#12D469",
+  "blue":         "#1094F6",
+  "purple":       "#973CBD",
+  "yellow":       "#FFCC00"
 );
 $selector-color: (
   "cl": "breakpoint-class",
   "ho": "hover",
+  "fo": "focus",
   "pl": "placeholder",
   "se": "selection"
 );
 
 
 $property-background-color: (
-  "white": "#FFFFFF",
-  "black": "#222222"
+  "white":        "#FFFFFF",
+  "gray-lighter": "#F5F5F5",
+  "gray-light":   "#D8D8D8",
+  "gray":         "#A1A1A1",
+  "gray-dark":    "#333333",
+  "gray-darker":  "#222222",
+  "red":          "#EC1561",
+  "green":        "#12D469",
+  "blue":         "#1094F6",
+  "purple":       "#973CBD",
+  "yellow":       "#FFCC00"
 );
 $selector-background-color: (
   "cl": "breakpoint-class",
   "ho": "hover",
+  "fo": "focus",
   "pl": "placeholder",
   "se": "selection"
 );
 
 
 $property-border-color: (
-  "white": "#FFFFFF",
-  "black": "#222222"
+  "white":        "#FFFFFF",
+  "gray-lighter": "#F5F5F5",
+  "gray-light":   "#D8D8D8",
+  "gray":         "#A1A1A1",
+  "gray-dark":    "#333333",
+  "gray-darker":  "#222222",
+  "red":          "#EC1561",
+  "green":        "#12D469",
+  "blue":         "#1094F6",
+  "purple":       "#973CBD",
+  "yellow":       "#FFCC00"
 );
 $selector-border-color: (
   "cl": "breakpoint-class",
   "ho": "hover",
+  "fo": "focus",
   "pl": "placeholder",
 );
 
@@ -91,9 +121,7 @@ $selector-border-radius: (
 
 
 $property-opacity: (
-  "25": "0.25",
-  "50": "0.50",
-  "75": "0.75"
+  "50": "0.50"
 );
 $selector-opacity: (
   "cl": "not-breakpoint-class",
@@ -117,8 +145,8 @@ $property-left: (
   "0",
   "8",
   "16",
-  "-8",
   "-8"
+  "-16",
 );
 $selector-left: (
   "cl": "breakpoint-class"
@@ -130,8 +158,8 @@ $property-right: (
   "0",
   "8",
   "16",
-  "-8",
   "-8"
+  "-16",
 );
 $selector-right: (
   "cl": "breakpoint-class"
@@ -143,8 +171,8 @@ $property-top: (
   "0",
   "8",
   "16",
-  "-8",
   "-8"
+  "-16",
 );
 
 $selector-top: (
@@ -157,8 +185,8 @@ $property-bottom: (
   "0",
   "8",
   "16",
-  "-8",
   "-8"
+  "-16",
 );
 $selector-bottom: (
   "cl": "breakpoint-class"
@@ -167,8 +195,7 @@ $selector-bottom: (
 
 $property-z-index: (
   "1",
-  "2",
-  "3"
+  "2"
 );
 $selector-z-index: (
   "cl": "not-breakpoint-class"
@@ -178,7 +205,7 @@ $selector-z-index: (
 $property-display: (
   "dn": "none",
   "db": "block",
-  "dib": "inline-block"
+  "di": "inline-block"
 );
 $selector-display: (
   "cl": "breakpoint-class"
@@ -257,6 +284,7 @@ $selector-overflow: (
 
 
 $property-margin: (
+  "auto",
   "0",
   "8",
   "16",
