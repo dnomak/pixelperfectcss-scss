@@ -1,4 +1,4 @@
-/*! Flexible Front End Framework 0.1.3 | Scss | MIT License | flexible.gs */
+/*! Flexible Front End Framework 0.1.4 | Scss | MIT License | flexible.gs */
 
 @if $flexiblecss-base == "true" {
   *, *:before, *:after {
@@ -75,7 +75,7 @@
       }
     }
     @each $selector-background-color-key, $selector-background-color-val in $selector-background-color {
-      @each $background-color-key, $background-color-val in $property-color {
+      @each $background-color-key, $background-color-val in $property-background-color {
         @if $selector-background-color-val == "breakpoint-class" {
           .#{$flexiblecss-breakpoint-key}-ba-#{$background-color-key} { background-color: #{$background-color-val}; }
         }
@@ -98,7 +98,7 @@
       }
     }
     @each $selector-border-color-key, $selector-border-color-val in $selector-border-color {
-      @each $border-color-key, $border-color-val in $property-color {
+      @each $border-color-key, $border-color-val in $property-border-color {
         @if $selector-border-color-val == "breakpoint-class" {
           .#{$flexiblecss-breakpoint-key}-bo-#{$border-color-key} { border-color: #{$border-color-val}; }
         }
@@ -375,7 +375,7 @@
       }
     }
     @each $selector-max-width-key, $selector-max-width-val in $selector-max-width {
-      @each $max-width-val in $property-width {
+      @each $max-width-val in $property-max-width {
         @if $selector-max-width-val == "breakpoint-class" {
           .#{$flexiblecss-breakpoint-key}-maw#{$max-width-val} { max-width: #{$max-width-val}px; }
         }
@@ -388,7 +388,7 @@
       }
     }
     @each $selector-min-width-key, $selector-min-width-val in $selector-min-width {
-      @each $min-width-val in $property-width {
+      @each $min-width-val in $property-min-width {
         @if $selector-min-width-val == "breakpoint-class" {
           .#{$flexiblecss-breakpoint-key}-miw#{$min-width-val} { min-width: #{$min-width-val}px; }
         }
@@ -414,7 +414,7 @@
       }
     }
     @each $selector-max-height-key, $selector-max-height-val in $selector-max-height {
-      @each $max-height-val in $property-height {
+      @each $max-height-val in $property-max-height {
         @if $selector-max-height-val == "breakpoint-class" {
           .#{$flexiblecss-breakpoint-key}-mah#{$max-height-val} { max-height: #{$max-height-val}px; }
         }
@@ -427,7 +427,7 @@
       }
     }
     @each $selector-min-height-key, $selector-min-height-val in $selector-min-height {
-      @each $min-height-val in $property-height {
+      @each $min-height-val in $property-min-height {
         @if $selector-min-height-val == "breakpoint-class" {
           .#{$flexiblecss-breakpoint-key}-mih#{$min-height-val} { min-height: #{$min-height-val}px; }
         }
@@ -748,7 +748,7 @@
         }
       }
       @each $selector-background-color-key, $selector-background-color-val in $selector-background-color {
-        @each $background-color-key, $background-color-val in $property-color {
+        @each $background-color-key, $background-color-val in $property-background-color {
           @if $selector-background-color-val == "breakpoint-class" {
             .#{$flexiblecss-breakpoint-key}-ba-#{$background-color-key} { background-color: #{$background-color-val}; }
           }
@@ -771,7 +771,7 @@
         }
       }
       @each $selector-border-color-key, $selector-border-color-val in $selector-border-color {
-        @each $border-color-key, $border-color-val in $property-color {
+        @each $border-color-key, $border-color-val in $property-border-color {
           @if $selector-border-color-val == "breakpoint-class" {
             .#{$flexiblecss-breakpoint-key}-bo-#{$border-color-key} { border-color: #{$border-color-val}; }
           }
@@ -1048,7 +1048,7 @@
         }
       }
       @each $selector-max-width-key, $selector-max-width-val in $selector-max-width {
-        @each $max-width-val in $property-width {
+        @each $max-width-val in $property-max-width {
           @if $selector-max-width-val == "breakpoint-class" {
             .#{$flexiblecss-breakpoint-key}-maw#{$max-width-val} { max-width: #{$max-width-val}px; }
           }
@@ -1061,7 +1061,7 @@
         }
       }
       @each $selector-min-width-key, $selector-min-width-val in $selector-min-width {
-        @each $min-width-val in $property-width {
+        @each $min-width-val in $property-min-width {
           @if $selector-min-width-val == "breakpoint-class" {
             .#{$flexiblecss-breakpoint-key}-miw#{$min-width-val} { min-width: #{$min-width-val}px; }
           }
@@ -1087,7 +1087,7 @@
         }
       }
       @each $selector-max-height-key, $selector-max-height-val in $selector-max-height {
-        @each $max-height-val in $property-height {
+        @each $max-height-val in $property-max-height {
           @if $selector-max-height-val == "breakpoint-class" {
             .#{$flexiblecss-breakpoint-key}-mah#{$max-height-val} { max-height: #{$max-height-val}px; }
           }
@@ -1100,7 +1100,7 @@
         }
       }
       @each $selector-min-height-key, $selector-min-height-val in $selector-min-height {
-        @each $min-height-val in $property-height {
+        @each $min-height-val in $property-min-height {
           @if $selector-min-height-val == "breakpoint-class" {
             .#{$flexiblecss-breakpoint-key}-mih#{$min-height-val} { min-height: #{$min-height-val}px; }
           }
