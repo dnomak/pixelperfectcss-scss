@@ -84,7 +84,7 @@ $selector-border-color: (
   "cl": "breakpoint-class",
   "ho": "hover",
   "fo": "focus",
-  "pl": "placeholder",
+  "pl": "placeholder"
 );
 
 
@@ -120,15 +120,6 @@ $selector-border-radius: (
 );
 
 
-$property-opacity: (
-  "50": "0.50"
-);
-$selector-opacity: (
-  "cl": "not-breakpoint-class",
-  "ho": "hover",
-);
-
-
 $property-position: (
   "pr": "relative",
   "pa": "absolute",
@@ -142,11 +133,12 @@ $selector-position: (
 
 $property-left: (
   "100%",
+  "50%",
   "0",
   "8",
   "16",
-  "-8"
-  "-16",
+  "-8",
+  "-16"
 );
 $selector-left: (
   "cl": "breakpoint-class"
@@ -155,11 +147,12 @@ $selector-left: (
 
 $property-right: (
   "100%",
+  "50%",
   "0",
   "8",
   "16",
-  "-8"
-  "-16",
+  "-8",
+  "-16"
 );
 $selector-right: (
   "cl": "breakpoint-class"
@@ -168,11 +161,12 @@ $selector-right: (
 
 $property-top: (
   "100%",
+  "50%",
   "0",
   "8",
   "16",
-  "-8"
-  "-16",
+  "-8",
+  "-16"
 );
 
 $selector-top: (
@@ -182,11 +176,12 @@ $selector-top: (
 
 $property-bottom: (
   "100%",
+  "50%",
   "0",
   "8",
   "16",
-  "-8"
-  "-16",
+  "-8",
+  "-16"
 );
 $selector-bottom: (
   "cl": "breakpoint-class"
@@ -198,6 +193,23 @@ $property-z-index: (
   "2"
 );
 $selector-z-index: (
+  "cl": "not-breakpoint-class"
+);
+
+
+$property-transform: (
+  "tn": "none"
+);
+$selector-transform: (
+  "cl": "breakpoint-class"
+);
+
+
+$property-transform-translate: (
+  "50": "50%",
+  "-50": "-50%"
+);
+$selector-transform-translate: (
   "cl": "not-breakpoint-class"
 );
 
@@ -272,17 +284,6 @@ $selector-min-height: (
 );
 
 
-$property-overflow: (
-  "ov": "visible",
-  "oh": "hidden",
-  "oa": "auto",
-  "os": "scroll"
-);
-$selector-overflow: (
-  "cl": "breakpoint-class"
-);
-
-
 $property-margin: (
   "auto",
   "0",
@@ -305,6 +306,26 @@ $property-padding: (
 );
 $selector-padding: (
   "cl": "breakpoint-class"
+);
+
+
+$property-overflow: (
+  "ov": "visible",
+  "oh": "hidden",
+  "oa": "auto",
+  "os": "scroll"
+);
+$selector-overflow: (
+  "cl": "breakpoint-class"
+);
+
+
+$property-opacity: (
+  "50": "0.50"
+);
+$selector-opacity: (
+  "cl": "not-breakpoint-class",
+  "ho": "hover"
 );
 
 
@@ -406,7 +427,7 @@ $property-text-decoration: (
 );
 $selector-text-decoration: (
   "cl": "not-breakpoint-class",
-  "ho": "hover",
+  "ho": "hover"
 );
 
 
