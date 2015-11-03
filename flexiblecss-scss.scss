@@ -1,4 +1,4 @@
-/*! Flexible Front End Framework 0.1.5 | Scss | MIT License | flexible.gs */
+/*! Flexible Front End Framework 0.1.6 | Scss | MIT License | flexible.gs */
 
 @if $flexiblecss-base == "true" {
   *, *:before, *:after {
@@ -214,10 +214,10 @@
       @each $left-val in $property-left {
         @if $selector-left-val == "breakpoint-class" {
           @if $left-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-lp100 { left: #{$left-val}; }
+            .#{$flexiblecss-breakpoint-key}-l100p { left: #{$left-val}; }
           }
           @else if $left-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-lp50 { left: #{$left-val}; }
+            .#{$flexiblecss-breakpoint-key}-l50p { left: #{$left-val}; }
           }
           @else {
             .#{$flexiblecss-breakpoint-key}-l#{$left-val} { left: #{$left-val}px; }
@@ -225,10 +225,10 @@
         }
         @else if $flexiblecss-breakpoint-val == "" and $selector-left-val == "not-breakpoint-class" {
           @if $left-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-lp100 { left: #{$left-val}; }
+            .#{$flexiblecss-breakpoint-key}-l100p { left: #{$left-val}; }
           }
           @else if $left-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-lp50 { left: #{$left-val}; }
+            .#{$flexiblecss-breakpoint-key}-l50p { left: #{$left-val}; }
           }
           @else {
             .#{$flexiblecss-breakpoint-key}-l#{$left-val} { left: #{$left-val}px; }
@@ -236,10 +236,10 @@
         }
         @else if $flexiblecss-breakpoint-val == "" {
           @if $left-val == "100%" {
-            .#{$selector-left-key}-lp100:#{$selector-left-val} { left: #{$left-val}; }
+            .#{$selector-left-key}-l100p:#{$selector-left-val} { left: #{$left-val}; }
           }
           @else if $left-val == "50%" {
-            .#{$selector-left-key}-lp50:#{$selector-left-val} { left: #{$left-val}; }
+            .#{$selector-left-key}-l50p:#{$selector-left-val} { left: #{$left-val}; }
           }
           @else {
             .#{$selector-left-key}-l#{$left-val}:#{$selector-left-val} { left: #{$left-val}px; }
@@ -251,10 +251,10 @@
       @each $right-val in $property-right {
         @if $selector-right-val == "breakpoint-class" {
           @if $right-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-rp100 { right: #{$right-val}; }
+            .#{$flexiblecss-breakpoint-key}-r100p { right: #{$right-val}; }
           }
           @else if $right-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-rp50 { right: #{$right-val}; }
+            .#{$flexiblecss-breakpoint-key}-r50p { right: #{$right-val}; }
           }
           @else {
             .#{$flexiblecss-breakpoint-key}-r#{$right-val} { right: #{$right-val}px; }
@@ -262,10 +262,10 @@
         }
         @else if $flexiblecss-breakpoint-val == "" and $selector-right-val == "not-breakpoint-class" {
           @if $right-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-rp100 { right: #{$right-val}; }
+            .#{$flexiblecss-breakpoint-key}-r100p { right: #{$right-val}; }
           }
           @else if $right-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-rp50 { right: #{$right-val}; }
+            .#{$flexiblecss-breakpoint-key}-r50p { right: #{$right-val}; }
           }
           @else {
             .#{$flexiblecss-breakpoint-key}-r#{$right-val} { right: #{$right-val}px; }
@@ -273,10 +273,10 @@
         }
         @else if $flexiblecss-breakpoint-val == "" {
           @if $right-val == "100%" {
-            .#{$selector-right-key}-rp100:#{$selector-right-val} { right: #{$right-val}; }
+            .#{$selector-right-key}-r100p:#{$selector-right-val} { right: #{$right-val}; }
           }
           @else if $right-val == "50%" {
-            .#{$selector-right-key}-rp50:#{$selector-right-val} { right: #{$right-val}; }
+            .#{$selector-right-key}-r50p:#{$selector-right-val} { right: #{$right-val}; }
           }
           @else {
             .#{$selector-right-key}-r#{$right-val}:#{$selector-right-val} { right: #{$right-val}px; }
@@ -288,10 +288,10 @@
       @each $top-val in $property-top {
         @if $selector-top-val == "breakpoint-class" {
           @if $top-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-tp100 { top: #{$top-val}; }
+            .#{$flexiblecss-breakpoint-key}-t100p { top: #{$top-val}; }
           }
           @else if $top-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-tp50 { top: #{$top-val}; }
+            .#{$flexiblecss-breakpoint-key}-t50p { top: #{$top-val}; }
           }
           @else {
             .#{$flexiblecss-breakpoint-key}-t#{$top-val} { top: #{$top-val}px; }
@@ -299,10 +299,10 @@
         }
         @else if $flexiblecss-breakpoint-val == "" and $selector-top-val == "not-breakpoint-class" {
           @if $top-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-tp100 { top: #{$top-val}; }
+            .#{$flexiblecss-breakpoint-key}-t100p { top: #{$top-val}; }
           }
           @else if $top-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-tp50 { top: #{$top-val}; }
+            .#{$flexiblecss-breakpoint-key}-t50p { top: #{$top-val}; }
           }
           @else {
             .#{$flexiblecss-breakpoint-key}-t#{$top-val} { top: #{$top-val}px; }
@@ -310,10 +310,10 @@
         }
         @else if $flexiblecss-breakpoint-val == "" {
           @if $top-val == "100%" {
-            .#{$selector-top-key}-tp100:#{$selector-top-val} { top: #{$top-val}; }
+            .#{$selector-top-key}-t100p:#{$selector-top-val} { top: #{$top-val}; }
           }
           @else if $top-val == "50%" {
-            .#{$selector-top-key}-tp50:#{$selector-top-val} { top: #{$top-val}; }
+            .#{$selector-top-key}-t50p:#{$selector-top-val} { top: #{$top-val}; }
           }
           @else {
             .#{$selector-top-key}-t#{$top-val}:#{$selector-top-val} { top: #{$top-val}px; }
@@ -325,10 +325,10 @@
       @each $bottom-val in $property-bottom {
         @if $selector-bottom-val == "breakpoint-class" {
           @if $bottom-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-bp100 { bottom: #{$bottom-val}; }
+            .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$bottom-val}; }
           }
           @else if $bottom-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-bp50 { bottom: #{$bottom-val}; }
+            .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$bottom-val}; }
           }
           @else {
             .#{$flexiblecss-breakpoint-key}-b#{$bottom-val} { bottom: #{$bottom-val}px; }
@@ -336,10 +336,10 @@
         }
         @else if $flexiblecss-breakpoint-val == "" and $selector-bottom-val == "not-breakpoint-class" {
           @if $bottom-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-bp100 { bottom: #{$bottom-val}; }
+            .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$bottom-val}; }
           }
           @else if $bottom-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-bp50 { bottom: #{$bottom-val}; }
+            .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$bottom-val}; }
           }
           @else {
             .#{$flexiblecss-breakpoint-key}-b#{$bottom-val} { bottom: #{$bottom-val}px; }
@@ -347,10 +347,10 @@
         }
         @else if $flexiblecss-breakpoint-val == "" {
           @if $bottom-val == "100%" {
-            .#{$selector-bottom-key}-bp100:#{$selector-bottom-val} { bottom: #{$bottom-val}; }
+            .#{$selector-bottom-key}-b100p:#{$selector-bottom-val} { bottom: #{$bottom-val}; }
           }
           @else if $bottom-val == "50%" {
-            .#{$selector-bottom-key}-bp50:#{$selector-bottom-val} { bottom: #{$bottom-val}; }
+            .#{$selector-bottom-key}-b50p:#{$selector-bottom-val} { bottom: #{$bottom-val}; }
           }
           @else {
             .#{$selector-bottom-key}-b#{$bottom-val}:#{$selector-bottom-val} { bottom: #{$bottom-val}px; }
@@ -388,16 +388,16 @@
     @each $selector-transform-translate-key, $selector-transform-translate-val in $selector-transform-translate {
       @each $transform-translate-key, $transform-translate-val in $property-transform-translate {
         @if $selector-transform-translate-val == "breakpoint-class" {
-          .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key} { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
-          .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key} { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
+          .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key}p { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
+          .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key}p { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
         }
         @else if $flexiblecss-breakpoint-val == "" and $selector-transform-translate-val == "not-breakpoint-class" {
-          .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key} { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
-          .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key} { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
+          .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key}p { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
+          .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key}p { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
         }
         @else if $flexiblecss-breakpoint-val == "" {
-          .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key}:#{$selector-transform-translate-val} { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
-          .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key}:#{$selector-transform-translate-val} { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
+          .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key}p:#{$selector-transform-translate-val} { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
+          .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key}p:#{$selector-transform-translate-val} { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
         }
       }
     }
@@ -953,10 +953,10 @@
         @each $left-val in $property-left {
           @if $selector-left-val == "breakpoint-class" {
             @if $left-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-lp100 { left: #{$left-val}; }
+              .#{$flexiblecss-breakpoint-key}-l100p { left: #{$left-val}; }
             }
             @else if $left-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-lp50 { left: #{$left-val}; }
+              .#{$flexiblecss-breakpoint-key}-l50p { left: #{$left-val}; }
             }
             @else {
               .#{$flexiblecss-breakpoint-key}-l#{$left-val} { left: #{$left-val}px; }
@@ -964,10 +964,10 @@
           }
           @else if $flexiblecss-breakpoint-val == "" and $selector-left-val == "not-breakpoint-class" {
             @if $left-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-lp100 { left: #{$left-val}; }
+              .#{$flexiblecss-breakpoint-key}-l100p { left: #{$left-val}; }
             }
             @else if $left-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-lp50 { left: #{$left-val}; }
+              .#{$flexiblecss-breakpoint-key}-l50p { left: #{$left-val}; }
             }
             @else {
               .#{$flexiblecss-breakpoint-key}-l#{$left-val} { left: #{$left-val}px; }
@@ -975,10 +975,10 @@
           }
           @else if $flexiblecss-breakpoint-val == "" {
             @if $left-val == "100%" {
-              .#{$selector-left-key}-lp100:#{$selector-left-val} { left: #{$left-val}; }
+              .#{$selector-left-key}-l100p:#{$selector-left-val} { left: #{$left-val}; }
             }
             @else if $left-val == "50%" {
-              .#{$selector-left-key}-lp50:#{$selector-left-val} { left: #{$left-val}; }
+              .#{$selector-left-key}-l50p:#{$selector-left-val} { left: #{$left-val}; }
             }
             @else {
               .#{$selector-left-key}-l#{$left-val}:#{$selector-left-val} { left: #{$left-val}px; }
@@ -990,10 +990,10 @@
         @each $right-val in $property-right {
           @if $selector-right-val == "breakpoint-class" {
             @if $right-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-rp100 { right: #{$right-val}; }
+              .#{$flexiblecss-breakpoint-key}-r100p { right: #{$right-val}; }
             }
             @else if $right-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-rp50 { right: #{$right-val}; }
+              .#{$flexiblecss-breakpoint-key}-r50p { right: #{$right-val}; }
             }
             @else {
               .#{$flexiblecss-breakpoint-key}-r#{$right-val} { right: #{$right-val}px; }
@@ -1001,10 +1001,10 @@
           }
           @else if $flexiblecss-breakpoint-val == "" and $selector-right-val == "not-breakpoint-class" {
             @if $right-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-rp100 { right: #{$right-val}; }
+              .#{$flexiblecss-breakpoint-key}-r100p { right: #{$right-val}; }
             }
             @else if $right-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-rp50 { right: #{$right-val}; }
+              .#{$flexiblecss-breakpoint-key}-r50p { right: #{$right-val}; }
             }
             @else {
               .#{$flexiblecss-breakpoint-key}-r#{$right-val} { right: #{$right-val}px; }
@@ -1012,10 +1012,10 @@
           }
           @else if $flexiblecss-breakpoint-val == "" {
             @if $right-val == "100%" {
-              .#{$selector-right-key}-rp100:#{$selector-right-val} { right: #{$right-val}; }
+              .#{$selector-right-key}-r100p:#{$selector-right-val} { right: #{$right-val}; }
             }
             @else if $right-val == "50%" {
-              .#{$selector-right-key}-rp50:#{$selector-right-val} { right: #{$right-val}; }
+              .#{$selector-right-key}-r50p:#{$selector-right-val} { right: #{$right-val}; }
             }
             @else {
               .#{$selector-right-key}-r#{$right-val}:#{$selector-right-val} { right: #{$right-val}px; }
@@ -1027,10 +1027,10 @@
         @each $top-val in $property-top {
           @if $selector-top-val == "breakpoint-class" {
             @if $top-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-tp100 { top: #{$top-val}; }
+              .#{$flexiblecss-breakpoint-key}-t100p { top: #{$top-val}; }
             }
             @else if $top-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-tp50 { top: #{$top-val}; }
+              .#{$flexiblecss-breakpoint-key}-t50p { top: #{$top-val}; }
             }
             @else {
               .#{$flexiblecss-breakpoint-key}-t#{$top-val} { top: #{$top-val}px; }
@@ -1038,10 +1038,10 @@
           }
           @else if $flexiblecss-breakpoint-val == "" and $selector-top-val == "not-breakpoint-class" {
             @if $top-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-tp100 { top: #{$top-val}; }
+              .#{$flexiblecss-breakpoint-key}-t100p { top: #{$top-val}; }
             }
             @else if $top-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-tp50 { top: #{$top-val}; }
+              .#{$flexiblecss-breakpoint-key}-t50p { top: #{$top-val}; }
             }
             @else {
               .#{$flexiblecss-breakpoint-key}-t#{$top-val} { top: #{$top-val}px; }
@@ -1049,10 +1049,10 @@
           }
           @else if $flexiblecss-breakpoint-val == "" {
             @if $top-val == "100%" {
-              .#{$selector-top-key}-tp100:#{$selector-top-val} { top: #{$top-val}; }
+              .#{$selector-top-key}-t100p:#{$selector-top-val} { top: #{$top-val}; }
             }
             @else if $top-val == "50%" {
-              .#{$selector-top-key}-tp50:#{$selector-top-val} { top: #{$top-val}; }
+              .#{$selector-top-key}-t50p:#{$selector-top-val} { top: #{$top-val}; }
             }
             @else {
               .#{$selector-top-key}-t#{$top-val}:#{$selector-top-val} { top: #{$top-val}px; }
@@ -1064,10 +1064,10 @@
         @each $bottom-val in $property-bottom {
           @if $selector-bottom-val == "breakpoint-class" {
             @if $bottom-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-bp100 { bottom: #{$bottom-val}; }
+              .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$bottom-val}; }
             }
             @else if $bottom-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-bp50 { bottom: #{$bottom-val}; }
+              .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$bottom-val}; }
             }
             @else {
               .#{$flexiblecss-breakpoint-key}-b#{$bottom-val} { bottom: #{$bottom-val}px; }
@@ -1075,10 +1075,10 @@
           }
           @else if $flexiblecss-breakpoint-val == "" and $selector-bottom-val == "not-breakpoint-class" {
             @if $bottom-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-bp100 { bottom: #{$bottom-val}; }
+              .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$bottom-val}; }
             }
             @else if $bottom-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-bp50 { bottom: #{$bottom-val}; }
+              .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$bottom-val}; }
             }
             @else {
               .#{$flexiblecss-breakpoint-key}-b#{$bottom-val} { bottom: #{$bottom-val}px; }
@@ -1086,10 +1086,10 @@
           }
           @else if $flexiblecss-breakpoint-val == "" {
             @if $bottom-val == "100%" {
-              .#{$selector-bottom-key}-bp100:#{$selector-bottom-val} { bottom: #{$bottom-val}; }
+              .#{$selector-bottom-key}-b100p:#{$selector-bottom-val} { bottom: #{$bottom-val}; }
             }
             @else if $bottom-val == "50%" {
-              .#{$selector-bottom-key}-bp50:#{$selector-bottom-val} { bottom: #{$bottom-val}; }
+              .#{$selector-bottom-key}-b50p:#{$selector-bottom-val} { bottom: #{$bottom-val}; }
             }
             @else {
               .#{$selector-bottom-key}-b#{$bottom-val}:#{$selector-bottom-val} { bottom: #{$bottom-val}px; }
@@ -1127,16 +1127,16 @@
       @each $selector-transform-translate-key, $selector-transform-translate-val in $selector-transform-translate {
         @each $transform-translate-key, $transform-translate-val in $property-transform-translate {
           @if $selector-transform-translate-val == "breakpoint-class" {
-            .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key} { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
-            .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key} { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
+            .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key}p { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
+            .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key}p { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
           }
           @else if $flexiblecss-breakpoint-val == "" and $selector-transform-translate-val == "not-breakpoint-class" {
-            .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key} { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
-            .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key} { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
+            .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key}p { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
+            .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key}p { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
           }
           @else if $flexiblecss-breakpoint-val == "" {
-            .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key}:#{$selector-transform-translate-val} { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
-            .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key}:#{$selector-transform-translate-val} { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
+            .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key}p:#{$selector-transform-translate-val} { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
+            .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key}p:#{$selector-transform-translate-val} { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
           }
         }
       }
