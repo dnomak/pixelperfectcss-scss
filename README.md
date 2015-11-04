@@ -1,4 +1,4 @@
-# [flexiblecss-scss](http://flexible.gs)
+# [flexiblecss-scss](http://codepen.io/dnomak/pen/GpXZVz?editors=010)
 
 Flexible Front End Framework Scss
 
