@@ -1,4 +1,4 @@
-/*! Flexible Front End Framework 0.1.6 | Scss | MIT License | flexible.gs */
+/*! Flexible Front End Framework 0.1.7 | Scss | MIT License | flexible.gs */
 
 @if $flexiblecss-base == "true" {
   *, *:before, *:after {
@@ -55,64 +55,38 @@
       @each $color-key, $color-val in $property-color {
         @if $selector-color-val == "breakpoint-class" {
           .#{$flexiblecss-breakpoint-key}-co-#{$color-key} { color: #{$color-val}; }
+          .#{$flexiblecss-breakpoint-key}-ba-#{$color-key} { background-color: #{$color-val}; }
+          .#{$flexiblecss-breakpoint-key}-bo-#{$color-key} { border-color: #{$color-val}; }
         }
         @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "not-breakpoint-class" {
           .#{$flexiblecss-breakpoint-key}-co-#{$color-key} { color: #{$color-val}; }
+          .#{$flexiblecss-breakpoint-key}-ba-#{$color-key} { background-color: #{$color-val}; }
+          .#{$flexiblecss-breakpoint-key}-bo-#{$color-key} { border-color: #{$color-val}; }
         }
         @else if $flexiblecss-breakpoint-val == "" and $selector-color-val != "breakpoint-class" and $selector-color-val != "placeholder" and $selector-color-val != "selection" {
           .#{$selector-color-key}-co-#{$color-key}:#{$selector-color-val} { color: #{$color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}:#{$selector-color-val} { background-color: #{$color-val}; }
+          .#{$selector-color-key}-bo-#{$color-key}:#{$selector-color-val} { border-color: #{$color-val}; }
         }
         @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "placeholder" {
           .#{$selector-color-key}-co-#{$color-key}::-webkit-input-placeholder { color: #{$color-val}; }
           .#{$selector-color-key}-co-#{$color-key}::-moz-placeholder          { color: #{$color-val}; }
           .#{$selector-color-key}-co-#{$color-key}:-ms-input-placeholder      { color: #{$color-val}; }
           .#{$selector-color-key}-co-#{$color-key}:-moz-placeholder           { color: #{$color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}::-webkit-input-placeholder { background-color: #{$color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}::-moz-placeholder          { background-color: #{$color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}:-ms-input-placeholder      { background-color: #{$color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}:-moz-placeholder           { background-color: #{$color-val}; }
+          .#{$selector-color-key}-bo-#{$color-key}::-webkit-input-placeholder { border-color: #{$color-val}; }
+          .#{$selector-color-key}-bo-#{$color-key}::-moz-placeholder          { border-color: #{$color-val}; }
+          .#{$selector-color-key}-bo-#{$color-key}:-ms-input-placeholder      { border-color: #{$color-val}; }
+          .#{$selector-color-key}-bo-#{$color-key}:-moz-placeholder           { border-color: #{$color-val}; }
         }
         @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "selection" {
           .#{$selector-color-key}-co-#{$color-key}::-moz-selection { color: #{$color-val}; }
           .#{$selector-color-key}-co-#{$color-key}::selection      { color: #{$color-val}; }
-        }
-      }
-    }
-    @each $selector-background-color-key, $selector-background-color-val in $selector-background-color {
-      @each $background-color-key, $background-color-val in $property-background-color {
-        @if $selector-background-color-val == "breakpoint-class" {
-          .#{$flexiblecss-breakpoint-key}-ba-#{$background-color-key} { background-color: #{$background-color-val}; }
-        }
-        @else if $flexiblecss-breakpoint-val == "" and $selector-background-color-val == "not-breakpoint-class" {
-          .#{$flexiblecss-breakpoint-key}-ba-#{$background-color-key} { background-color: #{$background-color-val}; }
-        }
-        @else if $flexiblecss-breakpoint-val == "" and $selector-background-color-val != "breakpoint-class" and $selector-background-color-val != "placeholder" and $selector-background-color-val != "selection" {
-          .#{$selector-background-color-key}-ba-#{$background-color-key}:#{$selector-background-color-val} { background-color: #{$background-color-val}; }
-        }
-        @else if $flexiblecss-breakpoint-val == "" and $selector-background-color-val == "placeholder" {
-          .#{$selector-background-color-key}-ba-#{$background-color-key}::-webkit-input-placeholder { background-color: #{$background-color-val}; }
-          .#{$selector-background-color-key}-ba-#{$background-color-key}::-moz-placeholder          { background-color: #{$background-color-val}; }
-          .#{$selector-background-color-key}-ba-#{$background-color-key}:-ms-input-placeholder      { background-color: #{$background-color-val}; }
-          .#{$selector-background-color-key}-ba-#{$background-color-key}:-moz-placeholder           { background-color: #{$background-color-val}; }
-        }
-        @else if $flexiblecss-breakpoint-val == "" and $selector-background-color-val == "selection" {
-          .#{$selector-background-color-key}-ba-#{$background-color-key}::-moz-selection { background-color: #{$background-color-val}; }
-          .#{$selector-background-color-key}-ba-#{$background-color-key}::selection      { background-color: #{$background-color-val}; }
-        }
-      }
-    }
-    @each $selector-border-color-key, $selector-border-color-val in $selector-border-color {
-      @each $border-color-key, $border-color-val in $property-border-color {
-        @if $selector-border-color-val == "breakpoint-class" {
-          .#{$flexiblecss-breakpoint-key}-bo-#{$border-color-key} { border-color: #{$border-color-val}; }
-        }
-        @else if $flexiblecss-breakpoint-val == "" and $selector-border-color-val == "not-breakpoint-class" {
-          .#{$flexiblecss-breakpoint-key}-bo-#{$border-color-key} { border-color: #{$border-color-val}; }
-        }
-        @else if $flexiblecss-breakpoint-val == "" and $selector-border-color-val != "breakpoint-class" and $selector-border-color-val != "placeholder" and $selector-border-color-val != "selection" {
-          .#{$selector-border-color-key}-bo-#{$border-color-key}:#{$selector-border-color-val} { border-color: #{$border-color-val}; }
-        }
-        @else if $flexiblecss-breakpoint-val == "" and $selector-border-color-val == "placeholder" {
-          .#{$selector-border-color-key}-bo-#{$border-color-key}::-webkit-input-placeholder { border-color: #{$border-color-val}; }
-          .#{$selector-border-color-key}-bo-#{$border-color-key}::-moz-placeholder          { border-color: #{$border-color-val}; }
-          .#{$selector-border-color-key}-bo-#{$border-color-key}:-ms-input-placeholder      { border-color: #{$border-color-val}; }
-          .#{$selector-border-color-key}-bo-#{$border-color-key}:-moz-placeholder           { border-color: #{$border-color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}::-moz-selection { background-color: #{$color-val}; }
+          .#{$selector-color-key}-ba-#{$color-key}::selection      { background-color: #{$color-val}; }
         }
       }
     }
@@ -210,150 +184,66 @@
         }
       }
     }
-    @each $selector-left-key, $selector-left-val in $selector-left {
-      @each $left-val in $property-left {
-        @if $selector-left-val == "breakpoint-class" {
-          @if $left-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-l100p { left: #{$left-val}; }
+    @each $selector-position-value-key, $selector-position-value-val in $selector-position-value {
+      @each $position-value-val in $property-position-value {
+        @if $selector-position-value-val == "breakpoint-class" {
+          @if $position-value-val == "100%" {
+            .#{$flexiblecss-breakpoint-key}-l100p { left: #{$position-value-val}; }
+            .#{$flexiblecss-breakpoint-key}-r100p { right: #{$position-value-val}; }
+            .#{$flexiblecss-breakpoint-key}-t100p { top: #{$position-value-val}; }
+            .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$position-value-val}; }
           }
-          @else if $left-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-l50p { left: #{$left-val}; }
+          @else if $position-value-val == "50%" {
+            .#{$flexiblecss-breakpoint-key}-l50p { left: #{$position-value-val}; }
+            .#{$flexiblecss-breakpoint-key}-r50p { right: #{$position-value-val}; }
+            .#{$flexiblecss-breakpoint-key}-t50p { top: #{$position-value-val}; }
+            .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$position-value-val}; }
           }
           @else {
-            .#{$flexiblecss-breakpoint-key}-l#{$left-val} { left: #{$left-val}px; }
+            .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { left: #{$position-value-val}px; }
+            .#{$flexiblecss-breakpoint-key}-r#{$position-value-val} { right: #{$position-value-val}px; }
+            .#{$flexiblecss-breakpoint-key}-t#{$position-value-val} { top: #{$position-value-val}px; }
+            .#{$flexiblecss-breakpoint-key}-b#{$position-value-val} { bottom: #{$position-value-val}px; }
           }
         }
-        @else if $flexiblecss-breakpoint-val == "" and $selector-left-val == "not-breakpoint-class" {
-          @if $left-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-l100p { left: #{$left-val}; }
+        @else if $flexiblecss-breakpoint-val == "" and $selector-position-value-val == "not-breakpoint-class" {
+          @if $position-value-val == "100%" {
+            .#{$flexiblecss-breakpoint-key}-l100p { left: #{$position-value-val}; }
+            .#{$flexiblecss-breakpoint-key}-r100p { right: #{$position-value-val}; }
+            .#{$flexiblecss-breakpoint-key}-t100p { top: #{$position-value-val}; }
+            .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$position-value-val}; }
           }
-          @else if $left-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-l50p { left: #{$left-val}; }
-          }
-          @else {
-            .#{$flexiblecss-breakpoint-key}-l#{$left-val} { left: #{$left-val}px; }
-          }
-        }
-        @else if $flexiblecss-breakpoint-val == "" {
-          @if $left-val == "100%" {
-            .#{$selector-left-key}-l100p:#{$selector-left-val} { left: #{$left-val}; }
-          }
-          @else if $left-val == "50%" {
-            .#{$selector-left-key}-l50p:#{$selector-left-val} { left: #{$left-val}; }
+          @else if $position-value-val == "50%" {
+            .#{$flexiblecss-breakpoint-key}-l50p { left: #{$position-value-val}; }
+            .#{$flexiblecss-breakpoint-key}-r50p { right: #{$position-value-val}; }
+            .#{$flexiblecss-breakpoint-key}-t50p { top: #{$position-value-val}; }
+            .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$position-value-val}; }
           }
           @else {
-            .#{$selector-left-key}-l#{$left-val}:#{$selector-left-val} { left: #{$left-val}px; }
-          }
-        }
-      }
-    }
-    @each $selector-right-key, $selector-right-val in $selector-right {
-      @each $right-val in $property-right {
-        @if $selector-right-val == "breakpoint-class" {
-          @if $right-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-r100p { right: #{$right-val}; }
-          }
-          @else if $right-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-r50p { right: #{$right-val}; }
-          }
-          @else {
-            .#{$flexiblecss-breakpoint-key}-r#{$right-val} { right: #{$right-val}px; }
-          }
-        }
-        @else if $flexiblecss-breakpoint-val == "" and $selector-right-val == "not-breakpoint-class" {
-          @if $right-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-r100p { right: #{$right-val}; }
-          }
-          @else if $right-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-r50p { right: #{$right-val}; }
-          }
-          @else {
-            .#{$flexiblecss-breakpoint-key}-r#{$right-val} { right: #{$right-val}px; }
+            .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { left: #{$position-value-val}px; }
+            .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { right: #{$position-value-val}px; }
+            .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { top: #{$position-value-val}px; }
+            .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { bottom: #{$position-value-val}px; }
           }
         }
         @else if $flexiblecss-breakpoint-val == "" {
-          @if $right-val == "100%" {
-            .#{$selector-right-key}-r100p:#{$selector-right-val} { right: #{$right-val}; }
+          @if $position-value-val == "100%" {
+            .#{$selector-position-value-key}-l100p:#{$selector-position-value-val} { left: #{$position-value-val}; }
+            .#{$selector-position-value-key}-r100p:#{$selector-position-value-val} { right: #{$position-value-val}; }
+            .#{$selector-position-value-key}-t100p:#{$selector-position-value-val} { top: #{$position-value-val}; }
+            .#{$selector-position-value-key}-b100p:#{$selector-position-value-val} { bottom: #{$position-value-val}; }
           }
-          @else if $right-val == "50%" {
-            .#{$selector-right-key}-r50p:#{$selector-right-val} { right: #{$right-val}; }
-          }
-          @else {
-            .#{$selector-right-key}-r#{$right-val}:#{$selector-right-val} { right: #{$right-val}px; }
-          }
-        }
-      }
-    }
-    @each $selector-top-key, $selector-top-val in $selector-top {
-      @each $top-val in $property-top {
-        @if $selector-top-val == "breakpoint-class" {
-          @if $top-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-t100p { top: #{$top-val}; }
-          }
-          @else if $top-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-t50p { top: #{$top-val}; }
+          @else if $position-value-val == "50%" {
+            .#{$selector-position-value-key}-l50p:#{$selector-position-value-val} { left: #{$position-value-val}; }
+            .#{$selector-position-value-key}-r50p:#{$selector-position-value-val} { right: #{$position-value-val}; }
+            .#{$selector-position-value-key}-t50p:#{$selector-position-value-val} { top: #{$position-value-val}; }
+            .#{$selector-position-value-key}-b50p:#{$selector-position-value-val} { bottom: #{$position-value-val}; }
           }
           @else {
-            .#{$flexiblecss-breakpoint-key}-t#{$top-val} { top: #{$top-val}px; }
-          }
-        }
-        @else if $flexiblecss-breakpoint-val == "" and $selector-top-val == "not-breakpoint-class" {
-          @if $top-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-t100p { top: #{$top-val}; }
-          }
-          @else if $top-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-t50p { top: #{$top-val}; }
-          }
-          @else {
-            .#{$flexiblecss-breakpoint-key}-t#{$top-val} { top: #{$top-val}px; }
-          }
-        }
-        @else if $flexiblecss-breakpoint-val == "" {
-          @if $top-val == "100%" {
-            .#{$selector-top-key}-t100p:#{$selector-top-val} { top: #{$top-val}; }
-          }
-          @else if $top-val == "50%" {
-            .#{$selector-top-key}-t50p:#{$selector-top-val} { top: #{$top-val}; }
-          }
-          @else {
-            .#{$selector-top-key}-t#{$top-val}:#{$selector-top-val} { top: #{$top-val}px; }
-          }
-        }
-      }
-    }
-    @each $selector-bottom-key, $selector-bottom-val in $selector-bottom {
-      @each $bottom-val in $property-bottom {
-        @if $selector-bottom-val == "breakpoint-class" {
-          @if $bottom-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$bottom-val}; }
-          }
-          @else if $bottom-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$bottom-val}; }
-          }
-          @else {
-            .#{$flexiblecss-breakpoint-key}-b#{$bottom-val} { bottom: #{$bottom-val}px; }
-          }
-        }
-        @else if $flexiblecss-breakpoint-val == "" and $selector-bottom-val == "not-breakpoint-class" {
-          @if $bottom-val == "100%" {
-            .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$bottom-val}; }
-          }
-          @else if $bottom-val == "50%" {
-            .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$bottom-val}; }
-          }
-          @else {
-            .#{$flexiblecss-breakpoint-key}-b#{$bottom-val} { bottom: #{$bottom-val}px; }
-          }
-        }
-        @else if $flexiblecss-breakpoint-val == "" {
-          @if $bottom-val == "100%" {
-            .#{$selector-bottom-key}-b100p:#{$selector-bottom-val} { bottom: #{$bottom-val}; }
-          }
-          @else if $bottom-val == "50%" {
-            .#{$selector-bottom-key}-b50p:#{$selector-bottom-val} { bottom: #{$bottom-val}; }
-          }
-          @else {
-            .#{$selector-bottom-key}-b#{$bottom-val}:#{$selector-bottom-val} { bottom: #{$bottom-val}px; }
+            .#{$selector-position-value-key}-l#{$position-value-val}:#{$selector-position-value-val} { left: #{$position-value-val}px; }
+            .#{$selector-position-value-key}-r#{$position-value-val}:#{$selector-position-value-val} { right: #{$position-value-val}px; }
+            .#{$selector-position-value-key}-t#{$position-value-val}:#{$selector-position-value-val} { top: #{$position-value-val}px; }
+            .#{$selector-position-value-key}-b#{$position-value-val}:#{$selector-position-value-val} { bottom: #{$position-value-val}px; }
           }
         }
       }
@@ -794,64 +684,38 @@
         @each $color-key, $color-val in $property-color {
           @if $selector-color-val == "breakpoint-class" {
             .#{$flexiblecss-breakpoint-key}-co-#{$color-key} { color: #{$color-val}; }
+            .#{$flexiblecss-breakpoint-key}-ba-#{$color-key} { background-color: #{$color-val}; }
+            .#{$flexiblecss-breakpoint-key}-bo-#{$color-key} { border-color: #{$color-val}; }
           }
           @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "not-breakpoint-class" {
             .#{$flexiblecss-breakpoint-key}-co-#{$color-key} { color: #{$color-val}; }
+            .#{$flexiblecss-breakpoint-key}-ba-#{$color-key} { background-color: #{$color-val}; }
+            .#{$flexiblecss-breakpoint-key}-bo-#{$color-key} { border-color: #{$color-val}; }
           }
           @else if $flexiblecss-breakpoint-val == "" and $selector-color-val != "breakpoint-class" and $selector-color-val != "placeholder" and $selector-color-val != "selection" {
             .#{$selector-color-key}-co-#{$color-key}:#{$selector-color-val} { color: #{$color-val}; }
+            .#{$selector-color-key}-ba-#{$color-key}:#{$selector-color-val} { background-color: #{$color-val}; }
+            .#{$selector-color-key}-bo-#{$color-key}:#{$selector-color-val} { border-color: #{$color-val}; }
           }
           @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "placeholder" {
             .#{$selector-color-key}-co-#{$color-key}::-webkit-input-placeholder { color: #{$color-val}; }
             .#{$selector-color-key}-co-#{$color-key}::-moz-placeholder          { color: #{$color-val}; }
             .#{$selector-color-key}-co-#{$color-key}:-ms-input-placeholder      { color: #{$color-val}; }
             .#{$selector-color-key}-co-#{$color-key}:-moz-placeholder           { color: #{$color-val}; }
+            .#{$selector-color-key}-ba-#{$color-key}::-webkit-input-placeholder { background-color: #{$color-val}; }
+            .#{$selector-color-key}-ba-#{$color-key}::-moz-placeholder          { background-color: #{$color-val}; }
+            .#{$selector-color-key}-ba-#{$color-key}:-ms-input-placeholder      { background-color: #{$color-val}; }
+            .#{$selector-color-key}-ba-#{$color-key}:-moz-placeholder           { background-color: #{$color-val}; }
+            .#{$selector-color-key}-bo-#{$color-key}::-webkit-input-placeholder { border-color: #{$color-val}; }
+            .#{$selector-color-key}-bo-#{$color-key}::-moz-placeholder          { border-color: #{$color-val}; }
+            .#{$selector-color-key}-bo-#{$color-key}:-ms-input-placeholder      { border-color: #{$color-val}; }
+            .#{$selector-color-key}-bo-#{$color-key}:-moz-placeholder           { border-color: #{$color-val}; }
           }
           @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "selection" {
             .#{$selector-color-key}-co-#{$color-key}::-moz-selection { color: #{$color-val}; }
             .#{$selector-color-key}-co-#{$color-key}::selection      { color: #{$color-val}; }
-          }
-        }
-      }
-      @each $selector-background-color-key, $selector-background-color-val in $selector-background-color {
-        @each $background-color-key, $background-color-val in $property-background-color {
-          @if $selector-background-color-val == "breakpoint-class" {
-            .#{$flexiblecss-breakpoint-key}-ba-#{$background-color-key} { background-color: #{$background-color-val}; }
-          }
-          @else if $flexiblecss-breakpoint-val == "" and $selector-background-color-val == "not-breakpoint-class" {
-            .#{$flexiblecss-breakpoint-key}-ba-#{$background-color-key} { background-color: #{$background-color-val}; }
-          }
-          @else if $flexiblecss-breakpoint-val == "" and $selector-background-color-val != "breakpoint-class" and $selector-background-color-val != "placeholder" and $selector-background-color-val != "selection" {
-            .#{$selector-background-color-key}-ba-#{$background-color-key}:#{$selector-background-color-val} { background-color: #{$background-color-val}; }
-          }
-          @else if $flexiblecss-breakpoint-val == "" and $selector-background-color-val == "placeholder" {
-            .#{$selector-background-color-key}-ba-#{$background-color-key}::-webkit-input-placeholder { background-color: #{$background-color-val}; }
-            .#{$selector-background-color-key}-ba-#{$background-color-key}::-moz-placeholder          { background-color: #{$background-color-val}; }
-            .#{$selector-background-color-key}-ba-#{$background-color-key}:-ms-input-placeholder      { background-color: #{$background-color-val}; }
-            .#{$selector-background-color-key}-ba-#{$background-color-key}:-moz-placeholder           { background-color: #{$background-color-val}; }
-          }
-          @else if $flexiblecss-breakpoint-val == "" and $selector-background-color-val == "selection" {
-            .#{$selector-background-color-key}-ba-#{$background-color-key}::-moz-selection { background-color: #{$background-color-val}; }
-            .#{$selector-background-color-key}-ba-#{$background-color-key}::selection      { background-color: #{$background-color-val}; }
-          }
-        }
-      }
-      @each $selector-border-color-key, $selector-border-color-val in $selector-border-color {
-        @each $border-color-key, $border-color-val in $property-border-color {
-          @if $selector-border-color-val == "breakpoint-class" {
-            .#{$flexiblecss-breakpoint-key}-bo-#{$border-color-key} { border-color: #{$border-color-val}; }
-          }
-          @else if $flexiblecss-breakpoint-val == "" and $selector-border-color-val == "not-breakpoint-class" {
-            .#{$flexiblecss-breakpoint-key}-bo-#{$border-color-key} { border-color: #{$border-color-val}; }
-          }
-          @else if $flexiblecss-breakpoint-val == "" and $selector-border-color-val != "breakpoint-class" and $selector-border-color-val != "placeholder" and $selector-border-color-val != "selection" {
-            .#{$selector-border-color-key}-bo-#{$border-color-key}:#{$selector-border-color-val} { border-color: #{$border-color-val}; }
-          }
-          @else if $flexiblecss-breakpoint-val == "" and $selector-border-color-val == "placeholder" {
-            .#{$selector-border-color-key}-bo-#{$border-color-key}::-webkit-input-placeholder { border-color: #{$border-color-val}; }
-            .#{$selector-border-color-key}-bo-#{$border-color-key}::-moz-placeholder          { border-color: #{$border-color-val}; }
-            .#{$selector-border-color-key}-bo-#{$border-color-key}:-ms-input-placeholder      { border-color: #{$border-color-val}; }
-            .#{$selector-border-color-key}-bo-#{$border-color-key}:-moz-placeholder           { border-color: #{$border-color-val}; }
+            .#{$selector-color-key}-ba-#{$color-key}::-moz-selection { background-color: #{$color-val}; }
+            .#{$selector-color-key}-ba-#{$color-key}::selection      { background-color: #{$color-val}; }
           }
         }
       }
@@ -949,150 +813,66 @@
           }
         }
       }
-      @each $selector-left-key, $selector-left-val in $selector-left {
-        @each $left-val in $property-left {
-          @if $selector-left-val == "breakpoint-class" {
-            @if $left-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-l100p { left: #{$left-val}; }
+      @each $selector-position-value-key, $selector-position-value-val in $selector-position-value {
+        @each $position-value-val in $property-position-value {
+          @if $selector-position-value-val == "breakpoint-class" {
+            @if $position-value-val == "100%" {
+              .#{$flexiblecss-breakpoint-key}-l100p { left: #{$position-value-val}; }
+              .#{$flexiblecss-breakpoint-key}-r100p { right: #{$position-value-val}; }
+              .#{$flexiblecss-breakpoint-key}-t100p { top: #{$position-value-val}; }
+              .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$position-value-val}; }
             }
-            @else if $left-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-l50p { left: #{$left-val}; }
+            @else if $position-value-val == "50%" {
+              .#{$flexiblecss-breakpoint-key}-l50p { left: #{$position-value-val}; }
+              .#{$flexiblecss-breakpoint-key}-r50p { right: #{$position-value-val}; }
+              .#{$flexiblecss-breakpoint-key}-t50p { top: #{$position-value-val}; }
+              .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$position-value-val}; }
             }
             @else {
-              .#{$flexiblecss-breakpoint-key}-l#{$left-val} { left: #{$left-val}px; }
+              .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { left: #{$position-value-val}px; }
+              .#{$flexiblecss-breakpoint-key}-r#{$position-value-val} { right: #{$position-value-val}px; }
+              .#{$flexiblecss-breakpoint-key}-t#{$position-value-val} { top: #{$position-value-val}px; }
+              .#{$flexiblecss-breakpoint-key}-b#{$position-value-val} { bottom: #{$position-value-val}px; }
             }
           }
-          @else if $flexiblecss-breakpoint-val == "" and $selector-left-val == "not-breakpoint-class" {
-            @if $left-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-l100p { left: #{$left-val}; }
+          @else if $flexiblecss-breakpoint-val == "" and $selector-position-value-val == "not-breakpoint-class" {
+            @if $position-value-val == "100%" {
+              .#{$flexiblecss-breakpoint-key}-l100p { left: #{$position-value-val}; }
+              .#{$flexiblecss-breakpoint-key}-r100p { right: #{$position-value-val}; }
+              .#{$flexiblecss-breakpoint-key}-t100p { top: #{$position-value-val}; }
+              .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$position-value-val}; }
             }
-            @else if $left-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-l50p { left: #{$left-val}; }
-            }
-            @else {
-              .#{$flexiblecss-breakpoint-key}-l#{$left-val} { left: #{$left-val}px; }
-            }
-          }
-          @else if $flexiblecss-breakpoint-val == "" {
-            @if $left-val == "100%" {
-              .#{$selector-left-key}-l100p:#{$selector-left-val} { left: #{$left-val}; }
-            }
-            @else if $left-val == "50%" {
-              .#{$selector-left-key}-l50p:#{$selector-left-val} { left: #{$left-val}; }
+            @else if $position-value-val == "50%" {
+              .#{$flexiblecss-breakpoint-key}-l50p { left: #{$position-value-val}; }
+              .#{$flexiblecss-breakpoint-key}-r50p { right: #{$position-value-val}; }
+              .#{$flexiblecss-breakpoint-key}-t50p { top: #{$position-value-val}; }
+              .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$position-value-val}; }
             }
             @else {
-              .#{$selector-left-key}-l#{$left-val}:#{$selector-left-val} { left: #{$left-val}px; }
-            }
-          }
-        }
-      }
-      @each $selector-right-key, $selector-right-val in $selector-right {
-        @each $right-val in $property-right {
-          @if $selector-right-val == "breakpoint-class" {
-            @if $right-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-r100p { right: #{$right-val}; }
-            }
-            @else if $right-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-r50p { right: #{$right-val}; }
-            }
-            @else {
-              .#{$flexiblecss-breakpoint-key}-r#{$right-val} { right: #{$right-val}px; }
-            }
-          }
-          @else if $flexiblecss-breakpoint-val == "" and $selector-right-val == "not-breakpoint-class" {
-            @if $right-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-r100p { right: #{$right-val}; }
-            }
-            @else if $right-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-r50p { right: #{$right-val}; }
-            }
-            @else {
-              .#{$flexiblecss-breakpoint-key}-r#{$right-val} { right: #{$right-val}px; }
+              .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { left: #{$position-value-val}px; }
+              .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { right: #{$position-value-val}px; }
+              .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { top: #{$position-value-val}px; }
+              .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { bottom: #{$position-value-val}px; }
             }
           }
           @else if $flexiblecss-breakpoint-val == "" {
-            @if $right-val == "100%" {
-              .#{$selector-right-key}-r100p:#{$selector-right-val} { right: #{$right-val}; }
+            @if $position-value-val == "100%" {
+              .#{$selector-position-value-key}-l100p:#{$selector-position-value-val} { left: #{$position-value-val}; }
+              .#{$selector-position-value-key}-r100p:#{$selector-position-value-val} { right: #{$position-value-val}; }
+              .#{$selector-position-value-key}-t100p:#{$selector-position-value-val} { top: #{$position-value-val}; }
+              .#{$selector-position-value-key}-b100p:#{$selector-position-value-val} { bottom: #{$position-value-val}; }
             }
-            @else if $right-val == "50%" {
-              .#{$selector-right-key}-r50p:#{$selector-right-val} { right: #{$right-val}; }
-            }
-            @else {
-              .#{$selector-right-key}-r#{$right-val}:#{$selector-right-val} { right: #{$right-val}px; }
-            }
-          }
-        }
-      }
-      @each $selector-top-key, $selector-top-val in $selector-top {
-        @each $top-val in $property-top {
-          @if $selector-top-val == "breakpoint-class" {
-            @if $top-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-t100p { top: #{$top-val}; }
-            }
-            @else if $top-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-t50p { top: #{$top-val}; }
+            @else if $position-value-val == "50%" {
+              .#{$selector-position-value-key}-l50p:#{$selector-position-value-val} { left: #{$position-value-val}; }
+              .#{$selector-position-value-key}-r50p:#{$selector-position-value-val} { right: #{$position-value-val}; }
+              .#{$selector-position-value-key}-t50p:#{$selector-position-value-val} { top: #{$position-value-val}; }
+              .#{$selector-position-value-key}-b50p:#{$selector-position-value-val} { bottom: #{$position-value-val}; }
             }
             @else {
-              .#{$flexiblecss-breakpoint-key}-t#{$top-val} { top: #{$top-val}px; }
-            }
-          }
-          @else if $flexiblecss-breakpoint-val == "" and $selector-top-val == "not-breakpoint-class" {
-            @if $top-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-t100p { top: #{$top-val}; }
-            }
-            @else if $top-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-t50p { top: #{$top-val}; }
-            }
-            @else {
-              .#{$flexiblecss-breakpoint-key}-t#{$top-val} { top: #{$top-val}px; }
-            }
-          }
-          @else if $flexiblecss-breakpoint-val == "" {
-            @if $top-val == "100%" {
-              .#{$selector-top-key}-t100p:#{$selector-top-val} { top: #{$top-val}; }
-            }
-            @else if $top-val == "50%" {
-              .#{$selector-top-key}-t50p:#{$selector-top-val} { top: #{$top-val}; }
-            }
-            @else {
-              .#{$selector-top-key}-t#{$top-val}:#{$selector-top-val} { top: #{$top-val}px; }
-            }
-          }
-        }
-      }
-      @each $selector-bottom-key, $selector-bottom-val in $selector-bottom {
-        @each $bottom-val in $property-bottom {
-          @if $selector-bottom-val == "breakpoint-class" {
-            @if $bottom-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$bottom-val}; }
-            }
-            @else if $bottom-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$bottom-val}; }
-            }
-            @else {
-              .#{$flexiblecss-breakpoint-key}-b#{$bottom-val} { bottom: #{$bottom-val}px; }
-            }
-          }
-          @else if $flexiblecss-breakpoint-val == "" and $selector-bottom-val == "not-breakpoint-class" {
-            @if $bottom-val == "100%" {
-              .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$bottom-val}; }
-            }
-            @else if $bottom-val == "50%" {
-              .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$bottom-val}; }
-            }
-            @else {
-              .#{$flexiblecss-breakpoint-key}-b#{$bottom-val} { bottom: #{$bottom-val}px; }
-            }
-          }
-          @else if $flexiblecss-breakpoint-val == "" {
-            @if $bottom-val == "100%" {
-              .#{$selector-bottom-key}-b100p:#{$selector-bottom-val} { bottom: #{$bottom-val}; }
-            }
-            @else if $bottom-val == "50%" {
-              .#{$selector-bottom-key}-b50p:#{$selector-bottom-val} { bottom: #{$bottom-val}; }
-            }
-            @else {
-              .#{$selector-bottom-key}-b#{$bottom-val}:#{$selector-bottom-val} { bottom: #{$bottom-val}px; }
+              .#{$selector-position-value-key}-l#{$position-value-val}:#{$selector-position-value-val} { left: #{$position-value-val}px; }
+              .#{$selector-position-value-key}-r#{$position-value-val}:#{$selector-position-value-val} { right: #{$position-value-val}px; }
+              .#{$selector-position-value-key}-t#{$position-value-val}:#{$selector-position-value-val} { top: #{$position-value-val}px; }
+              .#{$selector-position-value-key}-b#{$position-value-val}:#{$selector-position-value-val} { bottom: #{$position-value-val}px; }
             }
           }
         }
