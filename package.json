@@ -18,5 +18,11 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flexiblegs/flexiblecss-scss.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-csslint": "^0.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0"
   }
 }
