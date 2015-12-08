@@ -1,7 +1,9 @@
 /*! Flexible Front End Framework 0.1.7 | Settings | Scss | MIT License | flexible.gs */
 
 // base
-$flexiblecss-base: ("true");
+$flexiblecss-base: (
+  "true"
+);
 
 // font-family
 $property-font-family: (
@@ -23,6 +25,8 @@ $property-color: (
   "gray-lighter": "#F5F5F5",
   "gray-light":   "#D8D8D8",
   "gray":         "#A1A1A1",
+  "gray":         "#E8E8E8",
+
   "gray-dark":    "#333333",
   "gray-darker":  "#222222",
   "red":          "#EC1561",
