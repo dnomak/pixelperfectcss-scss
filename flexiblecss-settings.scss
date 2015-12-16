@@ -1,4 +1,4 @@
-/*! Flexible Front End Framework 0.1.7 | Settings | Scss | MIT License | flexible.gs */
+/*! Flexible Front End Framework 0.1.8 | Settings | Scss | MIT License | flexible.gs */
 
 // base
 $flexiblecss-base: (
@@ -8,7 +8,7 @@ $flexiblecss-base: (
 // font-family
 $property-font-family: (
   "open-sans": "Open Sans",
-  "source-code-pro": "Source Code Pro"
+  "source-code-pro": "Source Code Pro",
 );
 
 // breakpoint
@@ -16,63 +16,67 @@ $flexiblecss-breakpoint: (
   "xl": "",
   "lg": "(max-width: 1024px)",
   "md": "(max-width: 768px)",
-  "sm": "(max-width: 667px)"
+  "sm": "(max-width: 667px)",
 );
 
 // color, background-color, border-color
 $property-color: (
   "white":        "#FFFFFF",
-  "gray-lighter": "#F5F5F5",
-  "gray-light":   "#D8D8D8",
-  "gray":         "#A1A1A1",
-  "gray":         "#E8E8E8",
 
-  "gray-dark":    "#333333",
-  "gray-darker":  "#222222",
-  "red":          "#EC1561",
+  "gray-lighter": "#F5F5F5",
+  "gray-light":   "#E8E8E8",
+  "gray":         "#D8D8D8",
+  "gray-dark":    "#A1A1A1",
+
+  "black-dark":   "#333333",
+  "black-darker": "#222222",
+
+  "red":          "#F72848",
   "green":        "#12D469",
   "blue":         "#1094F6",
   "purple":       "#973CBD",
-  "yellow":       "#FFCC00"
+  "yellow":       "#FFCC00",
 );
 $selector-color: (
-  "cl": "breakpoint-class",
+  "cl": "not-breakpoint-class",
   "ho": "hover",
   "fo": "focus",
   "pl": "placeholder",
-  "se": "selection"
+  "se": "selection",
 );
 
 // width
 $property-border-width: (
   "0",
   "1",
-  "2"
+  "2",
 );
 $selector-border-width: (
-  "cl": "breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // border-style
 $property-border-style: (
   "bsso": "solid",
   "bsda": "dashed",
-  "bsdo": "dotted"
+  "bsdo": "dotted",
 );
 $selector-border-style: (
-  "cl": "not-breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // border-radius
 $property-border-radius: (
+  "50%",
   "0",
+  "4",
   "8",
   "16",
   "24",
-  "40"
+  "40",
 );
 $selector-border-radius: (
-  "cl": "breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // position
@@ -80,10 +84,10 @@ $property-position: (
   "pr": "relative",
   "pa": "absolute",
   "pf": "fixed",
-  "ps": "static"
+  "ps": "static",
 );
 $selector-position: (
-  "cl": "breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // left, right, top, bottom
@@ -94,165 +98,70 @@ $property-position-value: (
   "8",
   "16",
   "-8",
-  "-16"
+  "-16",
 );
 $selector-position-value: (
-  "cl": "breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // z-index
 $property-z-index: (
   "1",
-  "2"
+  "2",
 );
 $selector-z-index: (
-  "cl": "not-breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // transform
 $property-transform: (
-  "tn": "none"
+  "tn": "none",
 );
 $selector-transform: (
-  "cl": "breakpoint-class"
+  "cl": "breakpoint-class",
 );
 
 // transform-translate
 $property-transform-translate: (
   "50": "50%",
-  "-50": "-50%"
+  "-50": "-50%",
 );
 $selector-transform-translate: (
-  "cl": "not-breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // display
 $property-display: (
   "dn": "none",
   "db": "block",
-  "di": "inline-block"
+  "di": "inline-block",
 );
 $selector-display: (
-  "cl": "breakpoint-class"
+  "cl": "breakpoint-class",
 );
 
 // width
 $property-width: (
-  "1280"
+  "1280",
 );
 $selector-width: (
-  "cl": "not-breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // max-width
 $property-max-width: (
-  "1280"
+  "1280",
 );
 $selector-max-width: (
-  "cl": "not-breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // min-width
 $property-min-width: (
-  "1280"
+  "1280",
 );
 $selector-min-width: (
-  "cl": "not-breakpoint-class"
-);
-
-// height
-$property-height: (
-  "0",
-  "8",
-  "16",
-  "24",
-  "40"
-);
-$selector-height: (
-  "cl": "breakpoint-class"
-);
-
-// max-height
-$property-max-height: (
-  "0",
-  "8",
-  "16",
-  "24",
-  "40"
-);
-$selector-max-height: (
-  "cl": "breakpoint-class"
-);
-
-// min-height
-$property-min-height: (
-  "0",
-  "8",
-  "16",
-  "24",
-  "40"
-);
-$selector-min-height: (
-  "cl": "breakpoint-class"
-);
-
-// margin
-$property-margin: (
-  "auto",
-  "0",
-  "8",
-  "16",
-  "24",
-  "40"
-);
-$selector-margin: (
-  "cl": "breakpoint-class"
-);
-
-// padding
-$property-padding: (
-  "0",
-  "8",
-  "16",
-  "24",
-  "40"
-);
-$selector-padding: (
-  "cl": "breakpoint-class"
-);
-
-// overflow
-$property-overflow: (
-  "ov": "visible",
-  "oh": "hidden",
-  "oa": "auto",
-  "os": "scroll"
-);
-$selector-overflow: (
-  "cl": "breakpoint-class"
-);
-
-// opacity
-$property-opacity: (
-  "50": "0.50"
-);
-$selector-opacity: (
   "cl": "not-breakpoint-class",
-  "ho": "hover"
-);
-
-// font-size
-$property-font-size: (
-  "12",
-  "14",
-  "16",
-  "18",
-  "20",
-  "22",
-  "24"
-);
-$selector-font-size: (
-  "cl": "breakpoint-class"
 );
 
 // line-heigh
@@ -264,10 +173,105 @@ $property-line-height: (
   "18",
   "20",
   "22",
-  "24"
+  "24",
 );
 $selector-line-height: (
-  "cl": "breakpoint-class"
+  "cl": "breakpoint-class",
+);
+
+// height
+$property-height: (
+  "0",
+  "8",
+  "16",
+  "24",
+  "40",
+);
+$selector-height: (
+  "cl": "not-breakpoint-class",
+);
+
+// max-height
+$property-max-height: (
+  "0",
+  "8",
+  "16",
+  "24",
+  "40",
+);
+$selector-max-height: (
+  "cl": "not-breakpoint-class",
+);
+
+// min-height
+$property-min-height: (
+  "0",
+  "8",
+  "16",
+  "24",
+  "40",
+);
+$selector-min-height: (
+  "cl": "not-breakpoint-class",
+);
+
+// margin
+$property-margin: (
+  "auto",
+  "0",
+  "8",
+  "16",
+  "24",
+  "40",
+);
+$selector-margin: (
+  "cl": "breakpoint-class",
+);
+
+// padding
+$property-padding: (
+  "0",
+  "8",
+  "16",
+  "24",
+  "40",
+);
+$selector-padding: (
+  "cl": "breakpoint-class",
+);
+
+// overflow
+$property-overflow: (
+  "ov": "visible",
+  "oh": "hidden",
+  "oa": "auto",
+  "os": "scroll",
+);
+$selector-overflow: (
+  "cl": "breakpoint-class",
+);
+
+// opacity
+$property-opacity: (
+  "50": "0.50",
+);
+$selector-opacity: (
+  "cl": "not-breakpoint-class",
+  "ho": "hover",
+);
+
+// font-size
+$property-font-size: (
+  "12",
+  "14",
+  "16",
+  "18",
+  "20",
+  "22",
+  "24",
+);
+$selector-font-size: (
+  "cl": "not-breakpoint-class",
 );
 
 // text-align
@@ -275,16 +279,16 @@ $property-text-align: (
   "tal": "left",
   "tar": "right",
   "tac": "center",
-  "taj": "justify"
+  "taj": "justify",
 );
 $selector-text-align: (
-  "cl": "breakpoint-class"
+  "cl": "breakpoint-class",
 );
 
 // letter-spacing
 $property-letter-spacing: (
   "1",
-  "2"
+  "2",
 );
 $selector-letter-spacing: (
   "cl": "not-breakpoint-class"
@@ -299,7 +303,7 @@ $property-font-weight: (
   "600",
   "700",
   "800",
-  "900"
+  "900",
 );
 $selector-font-weight: (
   "cl": "not-breakpoint-class"
@@ -307,17 +311,17 @@ $selector-font-weight: (
 
 // font-style
 $property-font-style: (
-  "fsi": "italic"
+  "fsi": "italic",
 );
 $selector-font-style: (
-  "cl": "not-breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // vertical-align
 $property-vertical-align: (
   "vat": "top",
   "vam": "middle",
-  "vab": "bottom"
+  "vab": "bottom",
 );
 $selector-vertical-align: (
   "cl": "not-breakpoint-class"
@@ -327,45 +331,45 @@ $selector-vertical-align: (
 $property-text-transform: (
   "ttu": "uppercase",
   "ttl": "lowercase",
-  "ttc": "capitalize"
+  "ttc": "capitalize",
 );
 $selector-text-transform: (
-  "cl": "not-breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // text-decoration
 $property-text-decoration: (
   "tdu": "underline",
-  "tdlt": "line-through"
+  "tdlt": "line-through",
 );
 $selector-text-decoration: (
   "cl": "not-breakpoint-class",
-  "ho": "hover"
+  "ho": "hover",
 );
 
 // text-overflow
 $property-text-overflow: (
-  "toe": "ellipsis"
+  "toe": "ellipsis",
 );
 $selector-text-overflow: (
-  "cl": "not-breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // white-space
 $property-white-space: (
   "wsnw": "nowrap",
-  "wspw": "pre-wrap"
+  "wspw": "pre-wrap",
 );
 $selector-white-space: (
-  "cl": "not-breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // word-break
 $property-word-break: (
-  "wbbw": "break-word"
+  "wbbw": "break-word",
 );
 $selector-word-break: (
-  "cl": "not-breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // cursor
@@ -374,28 +378,28 @@ $property-cursor: (
   "cd": "default",
   "cp": "pointer",
   "ct": "text",
-  "cn": "not-allowed"
+  "cn": "not-allowed",
 );
 $selector-cursor: (
-  "cl": "not-breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // user-select
 $property-user-select: (
   "usn": "none",
-  "ust": "text"
+  "ust": "text",
 );
 $selector-user-select: (
-  "cl": "not-breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 // pointer-events
 $property-pointer-events: (
   "pen": "none",
-  "pea": "auto"
+  "pea": "auto",
 );
 $selector-pointer-events: (
-  "cl": "not-breakpoint-class"
+  "cl": "not-breakpoint-class",
 );
 
 @import "flexiblecss-scss";

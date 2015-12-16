@@ -1,4 +1,4 @@
-/*! Flexible Front End Framework 0.1.7 | Scss | MIT License | flexible.gs */
+/*! Flexible Front End Framework 0.1.8 | Scss | MIT License | flexible.gs */
 
 @if $flexiblecss-base == "true" {
   *, *:before, *:after {
@@ -62,39 +62,39 @@
   @each $selector-color-key, $selector-color-val in $selector-color {
     @each $color-key, $color-val in $property-color {
       @if $selector-color-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-co-#{$color-key} { color: #{$color-val}; }
-        .#{$flexiblecss-breakpoint-key}-ba-#{$color-key} { background-color: #{$color-val}; }
-        .#{$flexiblecss-breakpoint-key}-bo-#{$color-key} { border-color: #{$color-val}; }
+        .#{$flexiblecss-breakpoint-key}-#{$color-key}        { color: #{$color-val}; }
+        .#{$flexiblecss-breakpoint-key}-bg-#{$color-key}     { background-color: #{$color-val}; }
+        .#{$flexiblecss-breakpoint-key}-border-#{$color-key} { border-color: #{$color-val}; }
       }
       @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-co-#{$color-key} { color: #{$color-val}; }
-        .#{$flexiblecss-breakpoint-key}-ba-#{$color-key} { background-color: #{$color-val}; }
-        .#{$flexiblecss-breakpoint-key}-bo-#{$color-key} { border-color: #{$color-val}; }
+        .#{$flexiblecss-breakpoint-key}-#{$color-key}        { color: #{$color-val}; }
+        .#{$flexiblecss-breakpoint-key}-bg-#{$color-key}     { background-color: #{$color-val}; }
+        .#{$flexiblecss-breakpoint-key}-border-#{$color-key} { border-color: #{$color-val}; }
       }
       @else if $flexiblecss-breakpoint-val == "" and $selector-color-val != "breakpoint-class" and $selector-color-val != "placeholder" and $selector-color-val != "selection" {
-        .#{$selector-color-key}-co-#{$color-key}:#{$selector-color-val} { color: #{$color-val}; }
-        .#{$selector-color-key}-ba-#{$color-key}:#{$selector-color-val} { background-color: #{$color-val}; }
-        .#{$selector-color-key}-bo-#{$color-key}:#{$selector-color-val} { border-color: #{$color-val}; }
+        .#{$selector-color-key}-#{$color-key}:#{$selector-color-val}        { color: #{$color-val}; }
+        .#{$selector-color-key}-bg-#{$color-key}:#{$selector-color-val}     { background-color: #{$color-val}; }
+        .#{$selector-color-key}-border-#{$color-key}:#{$selector-color-val} { border-color: #{$color-val}; }
       }
       @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "placeholder" {
-        .#{$selector-color-key}-co-#{$color-key}::-webkit-input-placeholder { color: #{$color-val}; }
-        .#{$selector-color-key}-co-#{$color-key}::-moz-placeholder          { color: #{$color-val}; }
-        .#{$selector-color-key}-co-#{$color-key}:-ms-input-placeholder      { color: #{$color-val}; }
-        .#{$selector-color-key}-co-#{$color-key}:-moz-placeholder           { color: #{$color-val}; }
-        .#{$selector-color-key}-ba-#{$color-key}::-webkit-input-placeholder { background-color: #{$color-val}; }
-        .#{$selector-color-key}-ba-#{$color-key}::-moz-placeholder          { background-color: #{$color-val}; }
-        .#{$selector-color-key}-ba-#{$color-key}:-ms-input-placeholder      { background-color: #{$color-val}; }
-        .#{$selector-color-key}-ba-#{$color-key}:-moz-placeholder           { background-color: #{$color-val}; }
-        .#{$selector-color-key}-bo-#{$color-key}::-webkit-input-placeholder { border-color: #{$color-val}; }
-        .#{$selector-color-key}-bo-#{$color-key}::-moz-placeholder          { border-color: #{$color-val}; }
-        .#{$selector-color-key}-bo-#{$color-key}:-ms-input-placeholder      { border-color: #{$color-val}; }
-        .#{$selector-color-key}-bo-#{$color-key}:-moz-placeholder           { border-color: #{$color-val}; }
+        .#{$selector-color-key}-#{$color-key}::-webkit-input-placeholder        { color: #{$color-val}; }
+        .#{$selector-color-key}-#{$color-key}::-moz-placeholder                 { color: #{$color-val}; }
+        .#{$selector-color-key}-#{$color-key}:-ms-input-placeholder             { color: #{$color-val}; }
+        .#{$selector-color-key}-#{$color-key}:-moz-placeholder                  { color: #{$color-val}; }
+        .#{$selector-color-key}-bg-#{$color-key}::-webkit-input-placeholder     { background-color: #{$color-val}; }
+        .#{$selector-color-key}-bg-#{$color-key}::-moz-placeholder              { background-color: #{$color-val}; }
+        .#{$selector-color-key}-bg-#{$color-key}:-ms-input-placeholder          { background-color: #{$color-val}; }
+        .#{$selector-color-key}-bg-#{$color-key}:-moz-placeholder               { background-color: #{$color-val}; }
+        .#{$selector-color-key}-border-#{$color-key}::-webkit-input-placeholder { border-color: #{$color-val}; }
+        .#{$selector-color-key}-border-#{$color-key}::-moz-placeholder          { border-color: #{$color-val}; }
+        .#{$selector-color-key}-border-#{$color-key}:-ms-input-placeholder      { border-color: #{$color-val}; }
+        .#{$selector-color-key}-border-#{$color-key}:-moz-placeholder           { border-color: #{$color-val}; }
       }
       @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "selection" {
-        .#{$selector-color-key}-co-#{$color-key}::-moz-selection { color: #{$color-val}; }
-        .#{$selector-color-key}-co-#{$color-key}::selection      { color: #{$color-val}; }
-        .#{$selector-color-key}-ba-#{$color-key}::-moz-selection { background-color: #{$color-val}; }
-        .#{$selector-color-key}-ba-#{$color-key}::selection      { background-color: #{$color-val}; }
+        .#{$selector-color-key}-#{$color-key}::-moz-selection    { color: #{$color-val}; }
+        .#{$selector-color-key}-#{$color-key}::selection         { color: #{$color-val}; }
+        .#{$selector-color-key}-bg-#{$color-key}::-moz-selection { background-color: #{$color-val}; }
+        .#{$selector-color-key}-bg-#{$color-key}::selection      { background-color: #{$color-val}; }
       }
     }
   }
@@ -154,7 +154,10 @@
   @each $selector-border-radius-key, $selector-border-radius-val in $selector-border-radius {
     @each $border-radius-val in $property-border-radius {
       @if $selector-border-radius-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-br#{$border-radius-val}   { border-radius: #{$border-radius-val}px; }
+        @if $border-radius-val == "50%" {
+          .#{$flexiblecss-breakpoint-key}-br50p { border-radius: #{$border-radius-val}; }
+        }
+        .#{$flexiblecss-breakpoint-key}-br#{$border-radius-val}   { border-radius:              #{$border-radius-val}px; }
         .#{$flexiblecss-breakpoint-key}-brtl#{$border-radius-val} { border-top-left-radius:     #{$border-radius-val}px; }
         .#{$flexiblecss-breakpoint-key}-brtr#{$border-radius-val} { border-top-right-radius:    #{$border-radius-val}px; }
         .#{$flexiblecss-breakpoint-key}-brbl#{$border-radius-val} { border-bottom-left-radius:  #{$border-radius-val}px; }
@@ -165,7 +168,10 @@
         .#{$flexiblecss-breakpoint-key}-brb#{$border-radius-val}  { border-bottom-left-radius:  #{$border-radius-val}px; border-bottom-right-radius: #{$border-radius-val}px; }
       }
       @else if $flexiblecss-breakpoint-val == "" and $selector-border-radius-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-br#{$border-radius-val}   { border-radius: #{$border-radius-val}px; }
+        @if $border-radius-val == "50%" {
+          .#{$flexiblecss-breakpoint-key}-br50p { border-radius: #{$border-radius-val}; }
+        }
+        .#{$flexiblecss-breakpoint-key}-br#{$border-radius-val}   { border-radius:              #{$border-radius-val}px; }
         .#{$flexiblecss-breakpoint-key}-brtl#{$border-radius-val} { border-top-left-radius:     #{$border-radius-val}px; }
         .#{$flexiblecss-breakpoint-key}-brtr#{$border-radius-val} { border-top-right-radius:    #{$border-radius-val}px; }
         .#{$flexiblecss-breakpoint-key}-brbl#{$border-radius-val} { border-bottom-left-radius:  #{$border-radius-val}px; }
@@ -176,7 +182,10 @@
         .#{$flexiblecss-breakpoint-key}-brb#{$border-radius-val}  { border-bottom-left-radius:  #{$border-radius-val}px; border-bottom-right-radius: #{$border-radius-val}px; }
       }
       @else if $flexiblecss-breakpoint-val == "" {
-        .#{$selector-border-radius-key}-br#{$border-radius-val}:#{$selector-border-radius-val}   { border-radius: #{$border-radius-val}px; }
+        @if $border-radius-val == "50%" {
+          .#{$selector-border-radius-key}-br50p:#{$selector-border-radius-val} { border-radius: #{$border-radius-val}; }
+        }
+        .#{$selector-border-radius-key}-br#{$border-radius-val}:#{$selector-border-radius-val}   { border-radius:              #{$border-radius-val}px; }
         .#{$selector-border-radius-key}-brtl#{$border-radius-val}:#{$selector-border-radius-val} { border-top-left-radius:     #{$border-radius-val}px; }
         .#{$selector-border-radius-key}-brtr#{$border-radius-val}:#{$selector-border-radius-val} { border-top-right-radius:    #{$border-radius-val}px; }
         .#{$selector-border-radius-key}-brbl#{$border-radius-val}:#{$selector-border-radius-val} { border-bottom-left-radius:  #{$border-radius-val}px; }
@@ -389,6 +398,22 @@
   }
 }
 
+@mixin property-line-height() {
+  @each $selector-line-height-key, $selector-line-height-val in $selector-line-height {
+    @each $line-height-val in $property-line-height {
+      @if $selector-line-height-val == "breakpoint-class" {
+        .#{$flexiblecss-breakpoint-key}-lh#{$line-height-val} { line-height: #{$line-height-val}px; }
+      }
+      @else if $flexiblecss-breakpoint-val == "" and $selector-line-height-val == "not-breakpoint-class" {
+        .#{$flexiblecss-breakpoint-key}-lh#{$line-height-val} { line-height: #{$line-height-val}px; }
+      }
+      @else if $flexiblecss-breakpoint-val == "" {
+        .#{$selector-line-height-key}-lh#{$line-height-val}:#{$selector-line-height-val} { line-height: #{$line-height-val}px; }
+      }
+    }
+  }
+}
+
 @mixin property-height() {
   @each $selector-height-key, $selector-height-val in $selector-height {
     @each $height-val in $property-height {
@@ -558,22 +583,6 @@
       }
       @else if $flexiblecss-breakpoint-val == "" {
         .#{$selector-font-size-key}-fs#{$font-size-val}:#{$selector-font-size-val} { font-size: #{$font-size-val}px; }
-      }
-    }
-  }
-}
-
-@mixin property-line-height() {
-  @each $selector-line-height-key, $selector-line-height-val in $selector-line-height {
-    @each $line-height-val in $property-line-height {
-      @if $selector-line-height-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-lh#{$line-height-val} { line-height: #{$line-height-val}px; }
-      }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-line-height-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-lh#{$line-height-val} { line-height: #{$line-height-val}px; }
-      }
-      @else if $flexiblecss-breakpoint-val == "" {
-        .#{$selector-line-height-key}-lh#{$line-height-val}:#{$selector-line-height-val} { line-height: #{$line-height-val}px; }
       }
     }
   }
@@ -802,6 +811,7 @@
     @include property-width();
     @include property-max-width();
     @include property-min-width();
+    @include property-line-height();
     @include property-height();
     @include property-max-height();
     @include property-min-height();
@@ -810,7 +820,6 @@
     @include property-overflow();
     @include property-opacity();
     @include property-font-size();
-    @include property-line-height();
     @include property-text-align();
     @include property-letter-spacing();
     @include property-font-weight();
@@ -840,6 +849,7 @@
       @include property-width();
       @include property-max-width();
       @include property-min-width();
+      @include property-line-height();
       @include property-height();
       @include property-max-height();
       @include property-min-height();
@@ -848,7 +858,6 @@
       @include property-overflow();
       @include property-opacity();
       @include property-font-size();
-      @include property-line-height();
       @include property-text-align();
       @include property-letter-spacing();
       @include property-font-weight();
