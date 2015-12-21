@@ -1,4 +1,4 @@
-/*! Flexible Front End Framework 0.1.9 | Settings | Scss | MIT License | flexible.gs */
+/*! Flexible Front End Framework 0.2.0 | Settings | Scss | MIT License | flexible.gs */
 
 // base
 $flexiblecss-base: (
@@ -21,28 +21,35 @@ $flexiblecss-breakpoint: (
 
 // color, background-color, border-color
 $property-color: (
-  "white":        "#FFFFFF",
+  "transparent": "transparent",
+  "white":       "#FFFFFF",
 
-  "gray-lighter": "#F5F5F5",
-  "gray-light":   "#E8E8E8",
-  "gray":         "#D8D8D8",
-  "gray-dark":    "#A1A1A1",
+  "gray-100":    "#F5F5F5",
+  "gray-200":    "#E8E8E8",
+  "gray-300":    "#D8D8D8",
+  "gray-400":    "#B1B1B1",
+  "gray-500":    "#A1A1A1",
 
-  "black-dark":   "#333333",
-  "black-darker": "#222222",
+  "red-300":     "#F72848",
 
-  "red":          "#F72848",
-  "green":        "#12D469",
-  "blue":         "#1094F6",
-  "purple":       "#973CBD",
-  "yellow":       "#FFCC00",
+  "green-300":   "#12D469",
+
+  "blue-300":    "#1094F6",
+
+  "purple-300":  "#973CBD",
+
+  "yellow-300":  "#FFCC00",
+
+  "black-100":   "#666666",
+  "black-200":   "#555555",
+  "black-300":   "#444444",
+  "black-400":   "#333333",
+  "black-500":   "#222222",
 );
 $selector-color: (
   "cl": "not-breakpoint-class",
   "ho": "hover",
   "fo": "focus",
-  "pl": "placeholder",
-  "se": "selection",
 );
 
 // width

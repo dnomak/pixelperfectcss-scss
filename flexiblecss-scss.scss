@@ -1,7 +1,11 @@
-/*! Flexible Front End Framework 0.1.9 | Scss | MIT License | flexible.gs */
+/*! Flexible Front End Framework 0.2.0 | Scss | MIT License | flexible.gs */
 
 @if $flexiblecss-base == "true" {
   *, *:before, *:after {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -11,14 +15,11 @@
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    background: transparent;
     resize: none;
     outline: 0;
+    background: transparent;
     border: 0;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+    border-style: solid;
   }
   p {
     margin-top: 0;
@@ -62,39 +63,39 @@
   @each $selector-color-key, $selector-color-val in $selector-color {
     @each $color-key, $color-val in $property-color {
       @if $selector-color-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$color-key}        { color: #{$color-val}; }
-        .#{$flexiblecss-breakpoint-key}-bg-#{$color-key}     { background-color: #{$color-val}; }
-        .#{$flexiblecss-breakpoint-key}-border-#{$color-key} { border-color: #{$color-val}; }
+        .#{$flexiblecss-breakpoint-key}-co-#{$color-key} { color: #{$color-val}; }
+        .#{$flexiblecss-breakpoint-key}-ba-#{$color-key} { background-color: #{$color-val}; }
+        .#{$flexiblecss-breakpoint-key}-bo-#{$color-key} { border-color: #{$color-val}; }
       }
       @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$color-key}        { color: #{$color-val}; }
-        .#{$flexiblecss-breakpoint-key}-bg-#{$color-key}     { background-color: #{$color-val}; }
-        .#{$flexiblecss-breakpoint-key}-border-#{$color-key} { border-color: #{$color-val}; }
+        .#{$flexiblecss-breakpoint-key}-co-#{$color-key} { color: #{$color-val}; }
+        .#{$flexiblecss-breakpoint-key}-ba-#{$color-key} { background-color: #{$color-val}; }
+        .#{$flexiblecss-breakpoint-key}-bo-#{$color-key} { border-color: #{$color-val}; }
       }
       @else if $flexiblecss-breakpoint-val == "" and $selector-color-val != "breakpoint-class" and $selector-color-val != "placeholder" and $selector-color-val != "selection" {
-        .#{$selector-color-key}-#{$color-key}:#{$selector-color-val}        { color: #{$color-val}; }
-        .#{$selector-color-key}-bg-#{$color-key}:#{$selector-color-val}     { background-color: #{$color-val}; }
-        .#{$selector-color-key}-border-#{$color-key}:#{$selector-color-val} { border-color: #{$color-val}; }
+        .#{$selector-color-key}-co-#{$color-key}:#{$selector-color-val} { color: #{$color-val}; }
+        .#{$selector-color-key}-ba-#{$color-key}:#{$selector-color-val} { background-color: #{$color-val}; }
+        .#{$selector-color-key}-bo-#{$color-key}:#{$selector-color-val} { border-color: #{$color-val}; }
       }
       @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "placeholder" {
-        .#{$selector-color-key}-#{$color-key}::-webkit-input-placeholder        { color: #{$color-val}; }
-        .#{$selector-color-key}-#{$color-key}::-moz-placeholder                 { color: #{$color-val}; }
-        .#{$selector-color-key}-#{$color-key}:-ms-input-placeholder             { color: #{$color-val}; }
-        .#{$selector-color-key}-#{$color-key}:-moz-placeholder                  { color: #{$color-val}; }
-        .#{$selector-color-key}-bg-#{$color-key}::-webkit-input-placeholder     { background-color: #{$color-val}; }
-        .#{$selector-color-key}-bg-#{$color-key}::-moz-placeholder              { background-color: #{$color-val}; }
-        .#{$selector-color-key}-bg-#{$color-key}:-ms-input-placeholder          { background-color: #{$color-val}; }
-        .#{$selector-color-key}-bg-#{$color-key}:-moz-placeholder               { background-color: #{$color-val}; }
-        .#{$selector-color-key}-border-#{$color-key}::-webkit-input-placeholder { border-color: #{$color-val}; }
-        .#{$selector-color-key}-border-#{$color-key}::-moz-placeholder          { border-color: #{$color-val}; }
-        .#{$selector-color-key}-border-#{$color-key}:-ms-input-placeholder      { border-color: #{$color-val}; }
-        .#{$selector-color-key}-border-#{$color-key}:-moz-placeholder           { border-color: #{$color-val}; }
+        .#{$selector-color-key}-co-#{$color-key}::-webkit-input-placeholder { color: #{$color-val}; }
+        .#{$selector-color-key}-co-#{$color-key}::-moz-placeholder          { color: #{$color-val}; }
+        .#{$selector-color-key}-co-#{$color-key}:-ms-input-placeholder      { color: #{$color-val}; }
+        .#{$selector-color-key}-co-#{$color-key}:-moz-placeholder           { color: #{$color-val}; }
+        .#{$selector-color-key}-ba-#{$color-key}::-webkit-input-placeholder { background-color: #{$color-val}; }
+        .#{$selector-color-key}-ba-#{$color-key}::-moz-placeholder          { background-color: #{$color-val}; }
+        .#{$selector-color-key}-ba-#{$color-key}:-ms-input-placeholder      { background-color: #{$color-val}; }
+        .#{$selector-color-key}-ba-#{$color-key}:-moz-placeholder           { background-color: #{$color-val}; }
+        .#{$selector-color-key}-bo-#{$color-key}::-webkit-input-placeholder { border-color: #{$color-val}; }
+        .#{$selector-color-key}-bo-#{$color-key}::-moz-placeholder          { border-color: #{$color-val}; }
+        .#{$selector-color-key}-bo-#{$color-key}:-ms-input-placeholder      { border-color: #{$color-val}; }
+        .#{$selector-color-key}-bo-#{$color-key}:-moz-placeholder           { border-color: #{$color-val}; }
       }
       @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "selection" {
-        .#{$selector-color-key}-#{$color-key}::-moz-selection    { color: #{$color-val}; }
-        .#{$selector-color-key}-#{$color-key}::selection         { color: #{$color-val}; }
-        .#{$selector-color-key}-bg-#{$color-key}::-moz-selection { background-color: #{$color-val}; }
-        .#{$selector-color-key}-bg-#{$color-key}::selection      { background-color: #{$color-val}; }
+        .#{$selector-color-key}-co-#{$color-key}::-moz-selection { color: #{$color-val}; }
+        .#{$selector-color-key}-co-#{$color-key}::selection      { color: #{$color-val}; }
+        .#{$selector-color-key}-ba-#{$color-key}::-moz-selection { background-color: #{$color-val}; }
+        .#{$selector-color-key}-ba-#{$color-key}::selection      { background-color: #{$color-val}; }
       }
     }
   }
