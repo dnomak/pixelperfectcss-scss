@@ -21,7 +21,6 @@ $flexiblecss-breakpoint: (
 
 // color, background-color, border-color
 $property-color: (
-  "transparent": "transparent",
   "white":       "#FFFFFF",
 
   "gray-100":    "#F5F5F5",
@@ -30,15 +29,35 @@ $property-color: (
   "gray-400":    "#B1B1B1",
   "gray-500":    "#A1A1A1",
 
+  "red-100":     "#F72848",
+  "red-200":     "#F72848",
   "red-300":     "#F72848",
+  "red-400":     "#F72848",
+  "red-500":     "#F72848",
 
+  "green-100":   "#12D469",
+  "green-200":   "#12D469",
   "green-300":   "#12D469",
+  "green-400":   "#12D469",
+  "green-500":   "#12D469",
 
+  "blue-100":    "#1094F6",
+  "blue-200":    "#1094F6",
   "blue-300":    "#1094F6",
+  "blue-400":    "#1094F6",
+  "blue-500":    "#1094F6",
 
+  "purple-100":  "#973CBD",
+  "purple-200":  "#973CBD",
   "purple-300":  "#973CBD",
+  "purple-400":  "#973CBD",
+  "purple-500":  "#973CBD",
 
+  "yellow-100":  "#FFCC00",
+  "yellow-200":  "#FFCC00",
   "yellow-300":  "#FFCC00",
+  "yellow-400":  "#FFCC00",
+  "yellow-500":  "#FFCC00",
 
   "black-100":   "#666666",
   "black-200":   "#555555",
