@@ -29,35 +29,35 @@ $property-color: (
   "gray-400":    "#B1B1B1",
   "gray-500":    "#A1A1A1",
 
-  "red-100":     "#F72848",
-  "red-200":     "#F72848",
+  "red-100":     "#FCA9B6",
+  "red-200":     "#F9536D",
   "red-300":     "#F72848",
-  "red-400":     "#F72848",
-  "red-500":     "#F72848",
+  "red-400":     "#C6203A",
+  "red-500":     "#94182B",
 
-  "green-100":   "#12D469",
-  "green-200":   "#12D469",
+  "green-100":   "#A0EEC3",
+  "green-200":   "#41DD87",
   "green-300":   "#12D469",
-  "green-400":   "#12D469",
-  "green-500":   "#12D469",
+  "green-400":   "#0EAA54",
+  "green-500":   "#0B7F3F",
 
-  "blue-100":    "#1094F6",
-  "blue-200":    "#1094F6",
+  "blue-100":    "#9FD4FB",
+  "blue-200":    "#40A9F8",
   "blue-300":    "#1094F6",
-  "blue-400":    "#1094F6",
-  "blue-500":    "#1094F6",
+  "blue-400":    "#0D76C5",
+  "blue-500":    "#0A5994",
 
-  "purple-100":  "#973CBD",
-  "purple-200":  "#973CBD",
+  "purple-100":  "#D5B1E5",
+  "purple-200":  "#AC63CA",
   "purple-300":  "#973CBD",
-  "purple-400":  "#973CBD",
-  "purple-500":  "#973CBD",
+  "purple-400":  "#793097",
+  "purple-500":  "#5B2471",
 
-  "yellow-100":  "#FFCC00",
-  "yellow-200":  "#FFCC00",
+  "yellow-100":  "#FFEB99",
+  "yellow-200":  "#FFD633",
   "yellow-300":  "#FFCC00",
-  "yellow-400":  "#FFCC00",
-  "yellow-500":  "#FFCC00",
+  "yellow-400":  "#CCA300",
+  "yellow-500":  "#997A00",
 
   "black-100":   "#666666",
   "black-200":   "#555555",
@@ -69,6 +69,7 @@ $selector-color: (
   "cl": "not-breakpoint-class",
   "ho": "hover",
   "fo": "focus",
+  "ac": "active",
 );
 
 // width
@@ -202,7 +203,7 @@ $property-line-height: (
   "24",
 );
 $selector-line-height: (
-  "cl": "breakpoint-class",
+  "cl": "not-breakpoint-class",
 );
 
 // height
@@ -288,6 +289,7 @@ $selector-opacity: (
 
 // font-size
 $property-font-size: (
+  "0",
   "12",
   "14",
   "16",
