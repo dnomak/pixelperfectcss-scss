@@ -1,4 +1,4 @@
-# [flexiblecss-scss](http://flexible.gs/)
+# [flexiblecss-scss](http://flexible.gs/future/#future)
 
 Flexible Front End Framework Scss
 
