@@ -1,4 +1,4 @@
-/*! Flexible Front End Framework 0.2.0 | Scss | MIT License | flexible.gs */
+/*! Flexible Front End Framework 0.2.1 | Scss | MIT License | flexible.gs */
 
 @if $flexiblecss-base == "true" {
   *, *:before, *:after {
@@ -38,7 +38,7 @@
   a {
     text-decoration: none;
   }
-  select::-ms-expand {
+  input::-ms-clear, input::-ms-reveal, select::-ms-expand {
     display: none;
   }
   input[type="radio"] {
