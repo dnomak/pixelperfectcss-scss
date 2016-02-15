@@ -1,23 +1,23 @@
-# [flexiblecss-scss](http://flexible.gs/future/#future)
+# [pixelperfectcss-scss](http://pixelperfectcss.com)
 
-Flexible Front End Framework Scss
+Pixel Perfect CSS (Scss)
 
 ## Install
 
-### [npm](https://www.npmjs.com/package/flexiblecss-scss)
+### [npm](https://www.npmjs.com/package/pixelperfectcss-scss)
 ```
-$ npm install --save flexiblecss-scss
-```
-
-### [bower](http://bower.io/search/?q=flexiblecss-scss)
-```
-$ bower install --save flexiblecss-scss
+$ npm install --save pixelperfectcss-scss
 ```
 
-### [Download](https://raw.githubusercontent.com/flexiblegs/flexiblecss-scss/master/flexiblecss-scss.scss)
+### [bower](http://bower.io/search/?q=pixelperfectcss-scss)
+```
+$ bower install --save pixelperfectcss-scss
+```
+
+### [Download](https://raw.githubusercontent.com/pixelperfectcss/pixelperfectcss-scss/master/pixelperfectcss-scss.scss)
 ```scss
 // base
-$flexiblecss-base: (
+$pixelperfectcss-base: (
   "true"
 );
 
@@ -28,7 +28,7 @@ $property-font-family: (
 );
 
 // breakpoint
-$flexiblecss-breakpoint: (
+$pixelperfectcss-breakpoint: (
   "xl": "",
   "lg": "(max-width: 1024px)",
   "md": "(max-width: 768px)",
@@ -446,11 +446,11 @@ $selector-pointer-events: (
   "cl": "not-breakpoint-class",
 );
 
-@import "flexiblecss-scss";
+@import "pixelperfectcss-scss";
 ```
 
 ## License
-- Flexible Front End Framework is licensed under the MIT license.
+- Pixel Perfect CSS is licensed under the MIT license.
   - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)
 - Flexible Front End Framework documentation is licensed under a Creative Commons Attribution 4.0 International License.
   - [http://creativecommons.org/licenses/by/4.0](http://creativecommons.org/licenses/by/4.0)

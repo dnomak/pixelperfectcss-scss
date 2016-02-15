@@ -1,6 +1,6 @@
 /*! Pixel Perfect CSS 1.0.0 | Scss | MIT License | pixelperfectcss.com */
 
-@if $flexiblecss-base == "true" {
+@if $pixelperfectcss-base == "true" {
   *, *:before, *:after {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-font-smoothing: antialiased;
@@ -64,21 +64,21 @@
   @each $selector-color-key, $selector-color-val in $selector-color {
     @each $color-key, $color-val in $property-color {
       @if $selector-color-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-co-#{$color-key} { color: #{$color-val}; }
-        .#{$flexiblecss-breakpoint-key}-ba-#{$color-key} { background-color: #{$color-val}; }
-        .#{$flexiblecss-breakpoint-key}-bo-#{$color-key} { border-color: #{$color-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-co-#{$color-key} { color: #{$color-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-ba-#{$color-key} { background-color: #{$color-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-bo-#{$color-key} { border-color: #{$color-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-co-#{$color-key} { color: #{$color-val}; }
-        .#{$flexiblecss-breakpoint-key}-ba-#{$color-key} { background-color: #{$color-val}; }
-        .#{$flexiblecss-breakpoint-key}-bo-#{$color-key} { border-color: #{$color-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-color-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-co-#{$color-key} { color: #{$color-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-ba-#{$color-key} { background-color: #{$color-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-bo-#{$color-key} { border-color: #{$color-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-color-val != "breakpoint-class" and $selector-color-val != "placeholder" and $selector-color-val != "selection" {
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-color-val != "breakpoint-class" and $selector-color-val != "placeholder" and $selector-color-val != "selection" {
         .#{$selector-color-key}-co-#{$color-key}:#{$selector-color-val} { color: #{$color-val}; }
         .#{$selector-color-key}-ba-#{$color-key}:#{$selector-color-val} { background-color: #{$color-val}; }
         .#{$selector-color-key}-bo-#{$color-key}:#{$selector-color-val} { border-color: #{$color-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "placeholder" {
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-color-val == "placeholder" {
         .#{$selector-color-key}-co-#{$color-key}::-webkit-input-placeholder { color: #{$color-val}; }
         .#{$selector-color-key}-co-#{$color-key}::-moz-placeholder          { color: #{$color-val}; }
         .#{$selector-color-key}-co-#{$color-key}:-ms-input-placeholder      { color: #{$color-val}; }
@@ -92,7 +92,7 @@
         .#{$selector-color-key}-bo-#{$color-key}:-ms-input-placeholder      { border-color: #{$color-val}; }
         .#{$selector-color-key}-bo-#{$color-key}:-moz-placeholder           { border-color: #{$color-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-color-val == "selection" {
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-color-val == "selection" {
         .#{$selector-color-key}-co-#{$color-key}::-moz-selection { color: #{$color-val}; }
         .#{$selector-color-key}-co-#{$color-key}::selection      { color: #{$color-val}; }
         .#{$selector-color-key}-ba-#{$color-key}::-moz-selection { background-color: #{$color-val}; }
@@ -106,24 +106,24 @@
   @each $selector-border-width-key, $selector-border-width-val in $selector-border-width {
     @each $border-width-val in $property-border-width {
       @if $selector-border-width-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-bw#{$border-width-val}  { border-width:        #{$border-width-val}px; }
-        .#{$flexiblecss-breakpoint-key}-bwl#{$border-width-val} { border-left-width:   #{$border-width-val}px; }
-        .#{$flexiblecss-breakpoint-key}-bwr#{$border-width-val} { border-right-width:  #{$border-width-val}px; }
-        .#{$flexiblecss-breakpoint-key}-bwt#{$border-width-val} { border-top-width:    #{$border-width-val}px; }
-        .#{$flexiblecss-breakpoint-key}-bwb#{$border-width-val} { border-bottom-width: #{$border-width-val}px; }
-        .#{$flexiblecss-breakpoint-key}-bwx#{$border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
-        .#{$flexiblecss-breakpoint-key}-bwy#{$border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-bw#{$border-width-val}  { border-width:        #{$border-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-bwl#{$border-width-val} { border-left-width:   #{$border-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-bwr#{$border-width-val} { border-right-width:  #{$border-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-bwt#{$border-width-val} { border-top-width:    #{$border-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-bwb#{$border-width-val} { border-bottom-width: #{$border-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-bwx#{$border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-bwy#{$border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-border-width-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-bw#{$border-width-val}  { border-width:        #{$border-width-val}px; }
-        .#{$flexiblecss-breakpoint-key}-bwl#{$border-width-val} { border-left-width:   #{$border-width-val}px; }
-        .#{$flexiblecss-breakpoint-key}-bwr#{$border-width-val} { border-right-width:  #{$border-width-val}px; }
-        .#{$flexiblecss-breakpoint-key}-bwt#{$border-width-val} { border-top-width:    #{$border-width-val}px; }
-        .#{$flexiblecss-breakpoint-key}-bwb#{$border-width-val} { border-bottom-width: #{$border-width-val}px; }
-        .#{$flexiblecss-breakpoint-key}-bwx#{$border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
-        .#{$flexiblecss-breakpoint-key}-bwy#{$border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-border-width-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-bw#{$border-width-val}  { border-width:        #{$border-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-bwl#{$border-width-val} { border-left-width:   #{$border-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-bwr#{$border-width-val} { border-right-width:  #{$border-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-bwt#{$border-width-val} { border-top-width:    #{$border-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-bwb#{$border-width-val} { border-bottom-width: #{$border-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-bwx#{$border-width-val} { border-left-width:   #{$border-width-val}px; border-right-width:  #{$border-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-bwy#{$border-width-val} { border-top-width:    #{$border-width-val}px; border-bottom-width: #{$border-width-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-border-width-key}-bw#{$border-width-val}:#{$selector-border-width-val}  { border-width:        #{$border-width-val}px; }
         .#{$selector-border-width-key}-bwl#{$border-width-val}:#{$selector-border-width-val} { border-left-width:   #{$border-width-val}px; }
         .#{$selector-border-width-key}-bwr#{$border-width-val}:#{$selector-border-width-val} { border-right-width:  #{$border-width-val}px; }
@@ -140,12 +140,12 @@
   @each $selector-border-style-key, $selector-border-style-val in $selector-border-style {
     @each $border-style-key, $border-style-val in $property-border-style {
       @if $selector-border-style-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$border-style-key} { border-style: #{$border-style-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$border-style-key} { border-style: #{$border-style-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-border-style-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$border-style-key} { border-style: #{$border-style-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-border-style-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$border-style-key} { border-style: #{$border-style-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-border-style-key}-#{$border-style-key}:#{$selector-border-style-val} { border-style: #{$border-style-val}; }
       }
     }
@@ -157,33 +157,33 @@
     @each $border-radius-val in $property-border-radius {
       @if $selector-border-radius-val == "breakpoint-class" {
         @if $border-radius-val == "50%" {
-          .#{$flexiblecss-breakpoint-key}-br50p { border-radius: #{$border-radius-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-br50p { border-radius: #{$border-radius-val}; }
         }
-        .#{$flexiblecss-breakpoint-key}-br#{$border-radius-val}   { border-radius:              #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brtl#{$border-radius-val} { border-top-left-radius:     #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brtr#{$border-radius-val} { border-top-right-radius:    #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brbl#{$border-radius-val} { border-bottom-left-radius:  #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brbr#{$border-radius-val} { border-bottom-right-radius: #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brl#{$border-radius-val}  { border-top-left-radius:     #{$border-radius-val}px; border-bottom-left-radius:  #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brr#{$border-radius-val}  { border-top-right-radius:    #{$border-radius-val}px; border-bottom-right-radius: #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brt#{$border-radius-val}  { border-top-left-radius:     #{$border-radius-val}px; border-top-right-radius:    #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brb#{$border-radius-val}  { border-bottom-left-radius:  #{$border-radius-val}px; border-bottom-right-radius: #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-br#{$border-radius-val}   { border-radius:              #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brtl#{$border-radius-val} { border-top-left-radius:     #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brtr#{$border-radius-val} { border-top-right-radius:    #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brbl#{$border-radius-val} { border-bottom-left-radius:  #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brbr#{$border-radius-val} { border-bottom-right-radius: #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brl#{$border-radius-val}  { border-top-left-radius:     #{$border-radius-val}px; border-bottom-left-radius:  #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brr#{$border-radius-val}  { border-top-right-radius:    #{$border-radius-val}px; border-bottom-right-radius: #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brt#{$border-radius-val}  { border-top-left-radius:     #{$border-radius-val}px; border-top-right-radius:    #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brb#{$border-radius-val}  { border-bottom-left-radius:  #{$border-radius-val}px; border-bottom-right-radius: #{$border-radius-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-border-radius-val == "not-breakpoint-class" {
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-border-radius-val == "not-breakpoint-class" {
         @if $border-radius-val == "50%" {
-          .#{$flexiblecss-breakpoint-key}-br50p { border-radius: #{$border-radius-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-br50p { border-radius: #{$border-radius-val}; }
         }
-        .#{$flexiblecss-breakpoint-key}-br#{$border-radius-val}   { border-radius:              #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brtl#{$border-radius-val} { border-top-left-radius:     #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brtr#{$border-radius-val} { border-top-right-radius:    #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brbl#{$border-radius-val} { border-bottom-left-radius:  #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brbr#{$border-radius-val} { border-bottom-right-radius: #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brl#{$border-radius-val}  { border-top-left-radius:     #{$border-radius-val}px; border-bottom-left-radius:  #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brr#{$border-radius-val}  { border-top-right-radius:    #{$border-radius-val}px; border-bottom-right-radius: #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brt#{$border-radius-val}  { border-top-left-radius:     #{$border-radius-val}px; border-top-right-radius:    #{$border-radius-val}px; }
-        .#{$flexiblecss-breakpoint-key}-brb#{$border-radius-val}  { border-bottom-left-radius:  #{$border-radius-val}px; border-bottom-right-radius: #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-br#{$border-radius-val}   { border-radius:              #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brtl#{$border-radius-val} { border-top-left-radius:     #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brtr#{$border-radius-val} { border-top-right-radius:    #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brbl#{$border-radius-val} { border-bottom-left-radius:  #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brbr#{$border-radius-val} { border-bottom-right-radius: #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brl#{$border-radius-val}  { border-top-left-radius:     #{$border-radius-val}px; border-bottom-left-radius:  #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brr#{$border-radius-val}  { border-top-right-radius:    #{$border-radius-val}px; border-bottom-right-radius: #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brt#{$border-radius-val}  { border-top-left-radius:     #{$border-radius-val}px; border-top-right-radius:    #{$border-radius-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-brb#{$border-radius-val}  { border-bottom-left-radius:  #{$border-radius-val}px; border-bottom-right-radius: #{$border-radius-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         @if $border-radius-val == "50%" {
           .#{$selector-border-radius-key}-br50p:#{$selector-border-radius-val} { border-radius: #{$border-radius-val}; }
         }
@@ -205,12 +205,12 @@
   @each $selector-position-key, $selector-position-val in $selector-position {
     @each $position-key, $position-val in $property-position {
       @if $selector-position-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$position-key} { position: #{$position-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$position-key} { position: #{$position-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-position-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$position-key} { position: #{$position-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-position-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$position-key} { position: #{$position-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-position-key}-#{$position-key}:#{$selector-position-val} { position: #{$position-val}; }
       }
     }
@@ -222,45 +222,45 @@
     @each $position-value-val in $property-position-value {
       @if $selector-position-value-val == "breakpoint-class" {
         @if $position-value-val == "100%" {
-          .#{$flexiblecss-breakpoint-key}-l100p { left: #{$position-value-val}; }
-          .#{$flexiblecss-breakpoint-key}-r100p { right: #{$position-value-val}; }
-          .#{$flexiblecss-breakpoint-key}-t100p { top: #{$position-value-val}; }
-          .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-l100p { left: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-r100p { right: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-t100p { top: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-b100p { bottom: #{$position-value-val}; }
         }
         @else if $position-value-val == "50%" {
-          .#{$flexiblecss-breakpoint-key}-l50p { left: #{$position-value-val}; }
-          .#{$flexiblecss-breakpoint-key}-r50p { right: #{$position-value-val}; }
-          .#{$flexiblecss-breakpoint-key}-t50p { top: #{$position-value-val}; }
-          .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-l50p { left: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-r50p { right: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-t50p { top: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-b50p { bottom: #{$position-value-val}; }
         }
         @else {
-          .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { left: #{$position-value-val}px; }
-          .#{$flexiblecss-breakpoint-key}-r#{$position-value-val} { right: #{$position-value-val}px; }
-          .#{$flexiblecss-breakpoint-key}-t#{$position-value-val} { top: #{$position-value-val}px; }
-          .#{$flexiblecss-breakpoint-key}-b#{$position-value-val} { bottom: #{$position-value-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-l#{$position-value-val} { left: #{$position-value-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-r#{$position-value-val} { right: #{$position-value-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-t#{$position-value-val} { top: #{$position-value-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-b#{$position-value-val} { bottom: #{$position-value-val}px; }
         }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-position-value-val == "not-breakpoint-class" {
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-position-value-val == "not-breakpoint-class" {
         @if $position-value-val == "100%" {
-          .#{$flexiblecss-breakpoint-key}-l100p { left: #{$position-value-val}; }
-          .#{$flexiblecss-breakpoint-key}-r100p { right: #{$position-value-val}; }
-          .#{$flexiblecss-breakpoint-key}-t100p { top: #{$position-value-val}; }
-          .#{$flexiblecss-breakpoint-key}-b100p { bottom: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-l100p { left: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-r100p { right: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-t100p { top: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-b100p { bottom: #{$position-value-val}; }
         }
         @else if $position-value-val == "50%" {
-          .#{$flexiblecss-breakpoint-key}-l50p { left: #{$position-value-val}; }
-          .#{$flexiblecss-breakpoint-key}-r50p { right: #{$position-value-val}; }
-          .#{$flexiblecss-breakpoint-key}-t50p { top: #{$position-value-val}; }
-          .#{$flexiblecss-breakpoint-key}-b50p { bottom: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-l50p { left: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-r50p { right: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-t50p { top: #{$position-value-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-b50p { bottom: #{$position-value-val}; }
         }
         @else {
-          .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { left: #{$position-value-val}px; }
-          .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { right: #{$position-value-val}px; }
-          .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { top: #{$position-value-val}px; }
-          .#{$flexiblecss-breakpoint-key}-l#{$position-value-val} { bottom: #{$position-value-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-l#{$position-value-val} { left: #{$position-value-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-l#{$position-value-val} { right: #{$position-value-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-l#{$position-value-val} { top: #{$position-value-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-l#{$position-value-val} { bottom: #{$position-value-val}px; }
         }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         @if $position-value-val == "100%" {
           .#{$selector-position-value-key}-l100p:#{$selector-position-value-val} { left: #{$position-value-val}; }
           .#{$selector-position-value-key}-r100p:#{$selector-position-value-val} { right: #{$position-value-val}; }
@@ -288,12 +288,12 @@
   @each $selector-z-index-key, $selector-z-index-val in $selector-z-index {
     @each $z-index-val in $property-z-index {
       @if $selector-z-index-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-zi#{$z-index-val} { z-index: #{$z-index-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-zi#{$z-index-val} { z-index: #{$z-index-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-z-index-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-zi#{$z-index-val} { z-index: #{$z-index-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-z-index-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-zi#{$z-index-val} { z-index: #{$z-index-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-z-index-key}-zi#{$z-index-val}:#{$selector-z-index-val} { z-index: #{$z-index-val}; }
       }
     }
@@ -304,13 +304,13 @@
   @each $selector-transform-key, $selector-transform-val in $selector-transform {
     @each $transform-key, $transform-val in $property-transform {
       @if $selector-transform-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$transform-key} { -webkit-transform: #{$transform-val}; -moz-transform: #{$transform-val}; -ms-transform: #{$transform-val}; -o-transform: #{$transform-val}; transform: #{$transform-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$transform-key} { -webkit-transform: #{$transform-val}; -moz-transform: #{$transform-val}; -ms-transform: #{$transform-val}; -o-transform: #{$transform-val}; transform: #{$transform-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-transform-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$transform-key} { -webkit-transform: #{$transform-val}; -moz-transform: #{$transform-val}; -ms-transform: #{$transform-val}; -o-transform: #{$transform-val}; transform: #{$transform-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-transform-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$transform-key} { -webkit-transform: #{$transform-val}; -moz-transform: #{$transform-val}; -ms-transform: #{$transform-val}; -o-transform: #{$transform-val}; transform: #{$transform-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
-        .#{$flexiblecss-breakpoint-key}-#{$transform-key}:#{$selector-transform-val} { -webkit-transform: #{$transform-val}; -moz-transform: #{$transform-val}; -ms-transform: #{$transform-val}; -o-transform: #{$transform-val}; transform: #{$transform-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$transform-key}:#{$selector-transform-val} { -webkit-transform: #{$transform-val}; -moz-transform: #{$transform-val}; -ms-transform: #{$transform-val}; -o-transform: #{$transform-val}; transform: #{$transform-val}; }
         .#{$selector-transform-key}-#{$transform-key} { transform: #{$transform-val}; }
       }
     }
@@ -321,16 +321,16 @@
   @each $selector-transform-translate-key, $selector-transform-translate-val in $selector-transform-translate {
     @each $transform-translate-key, $transform-translate-val in $property-transform-translate {
       @if $selector-transform-translate-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key}p { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
-        .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key}p { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
+        .#{$pixelperfectcss-breakpoint-key}-ttx#{$transform-translate-key}p { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
+        .#{$pixelperfectcss-breakpoint-key}-tty#{$transform-translate-key}p { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-transform-translate-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key}p { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
-        .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key}p { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-transform-translate-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-ttx#{$transform-translate-key}p { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
+        .#{$pixelperfectcss-breakpoint-key}-tty#{$transform-translate-key}p { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
-        .#{$flexiblecss-breakpoint-key}-ttx#{$transform-translate-key}p:#{$selector-transform-translate-val} { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
-        .#{$flexiblecss-breakpoint-key}-tty#{$transform-translate-key}p:#{$selector-transform-translate-val} { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
+      @else if $pixelperfectcss-breakpoint-val == "" {
+        .#{$pixelperfectcss-breakpoint-key}-ttx#{$transform-translate-key}p:#{$selector-transform-translate-val} { -webkit-transform: translateX(#{$transform-translate-val}); -moz-transform: translateX(#{$transform-translate-val}); -ms-transform: translateX(#{$transform-translate-val}); -o-transform: translateX(#{$transform-translate-val}); transform: translateX(#{$transform-translate-val}); }
+        .#{$pixelperfectcss-breakpoint-key}-tty#{$transform-translate-key}p:#{$selector-transform-translate-val} { -webkit-transform: translateY(#{$transform-translate-val}); -moz-transform: translateY(#{$transform-translate-val}); -ms-transform: translateY(#{$transform-translate-val}); -o-transform: translateY(#{$transform-translate-val}); transform: translateY(#{$transform-translate-val}); }
       }
     }
   }
@@ -340,12 +340,12 @@
   @each $selector-display-key, $selector-display-val in $selector-display {
     @each $display-key, $display-val in $property-display {
       @if $selector-display-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$display-key} { display: #{$display-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$display-key} { display: #{$display-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-display-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$display-key} { display: #{$display-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-display-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$display-key} { display: #{$display-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-display-key}-#{$display-key}:#{$selector-display-val} { display: #{$display-val}; }
       }
     }
@@ -356,12 +356,12 @@
   @each $selector-width-key, $selector-width-val in $selector-width {
     @each $width-val in $property-width {
       @if $selector-width-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-w#{$width-val} { width: #{$width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-w#{$width-val} { width: #{$width-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-width-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-w#{$width-val} { width: #{$width-val}px; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-width-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-w#{$width-val} { width: #{$width-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-width-key}-w#{$width-val}:#{$selector-width-val} { width: #{$width-val}px; }
       }
     }
@@ -372,12 +372,12 @@
   @each $selector-max-width-key, $selector-max-width-val in $selector-max-width {
     @each $max-width-val in $property-max-width {
       @if $selector-max-width-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-maw#{$max-width-val} { max-width: #{$max-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-maw#{$max-width-val} { max-width: #{$max-width-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-max-width-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-maw#{$max-width-val} { max-width: #{$max-width-val}px; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-max-width-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-maw#{$max-width-val} { max-width: #{$max-width-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-max-width-key}-maw#{$max-width-val}:#{$selector-max-width-val} { max-width: #{$max-width-val}px; }
       }
     }
@@ -388,12 +388,12 @@
   @each $selector-min-width-key, $selector-min-width-val in $selector-min-width {
     @each $min-width-val in $property-min-width {
       @if $selector-min-width-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-miw#{$min-width-val} { min-width: #{$min-width-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-miw#{$min-width-val} { min-width: #{$min-width-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-min-width-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-miw#{$min-width-val} { min-width: #{$min-width-val}px; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-min-width-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-miw#{$min-width-val} { min-width: #{$min-width-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-min-width-key}-miw#{$min-width-val}:#{$selector-min-width-val} { min-width: #{$min-width-val}px; }
       }
     }
@@ -404,12 +404,12 @@
   @each $selector-line-height-key, $selector-line-height-val in $selector-line-height {
     @each $line-height-val in $property-line-height {
       @if $selector-line-height-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-lh#{$line-height-val} { line-height: #{$line-height-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-lh#{$line-height-val} { line-height: #{$line-height-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-line-height-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-lh#{$line-height-val} { line-height: #{$line-height-val}px; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-line-height-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-lh#{$line-height-val} { line-height: #{$line-height-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-line-height-key}-lh#{$line-height-val}:#{$selector-line-height-val} { line-height: #{$line-height-val}px; }
       }
     }
@@ -420,12 +420,12 @@
   @each $selector-height-key, $selector-height-val in $selector-height {
     @each $height-val in $property-height {
       @if $selector-height-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-h#{$height-val} { height: #{$height-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-h#{$height-val} { height: #{$height-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-height-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-h#{$height-val} { height: #{$height-val}px; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-height-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-h#{$height-val} { height: #{$height-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-height-key}-h#{$height-val}:#{$selector-height-val} { height: #{$height-val}px; }
       }
     }
@@ -436,12 +436,12 @@
   @each $selector-max-height-key, $selector-max-height-val in $selector-max-height {
     @each $max-height-val in $property-max-height {
       @if $selector-max-height-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-mah#{$max-height-val} { max-height: #{$max-height-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-mah#{$max-height-val} { max-height: #{$max-height-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-max-height-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-mah#{$max-height-val} { max-height: #{$max-height-val}px; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-max-height-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-mah#{$max-height-val} { max-height: #{$max-height-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-max-height-key}-mah#{$max-height-val}:#{$selector-max-height-val} { max-height: #{$max-height-val}px; }
       }
     }
@@ -452,12 +452,12 @@
   @each $selector-min-height-key, $selector-min-height-val in $selector-min-height {
     @each $min-height-val in $property-min-height {
       @if $selector-min-height-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-mih#{$min-height-val} { min-height: #{$min-height-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-mih#{$min-height-val} { min-height: #{$min-height-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-min-height-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-mih#{$min-height-val} { min-height: #{$min-height-val}px; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-min-height-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-mih#{$min-height-val} { min-height: #{$min-height-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-min-height-key}-mih#{$min-height-val}:#{$selector-min-height-val} { min-height: #{$min-height-val}px; }
       }
     }
@@ -469,33 +469,33 @@
     @each $margin-val in $property-margin {
       @if $selector-margin-val == "breakpoint-class" {
         @if $margin-val == "auto" {
-          .#{$flexiblecss-breakpoint-key}-ma { margin-left: #{$margin-val}; margin-right: #{$margin-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-ma { margin-left: #{$margin-val}; margin-right: #{$margin-val}; }
         }
         @else {
-          .#{$flexiblecss-breakpoint-key}-m#{$margin-val}  { margin:        #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-ml#{$margin-val} { margin-left:   #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mr#{$margin-val} { margin-right:  #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mt#{$margin-val} { margin-top:    #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mb#{$margin-val} { margin-bottom: #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mx#{$margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-my#{$margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-m#{$margin-val}  { margin:        #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-ml#{$margin-val} { margin-left:   #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-mr#{$margin-val} { margin-right:  #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-mt#{$margin-val} { margin-top:    #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-mb#{$margin-val} { margin-bottom: #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-mx#{$margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-my#{$margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
         }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-margin-val == "not-breakpoint-class" {
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-margin-val == "not-breakpoint-class" {
         @if $margin-val == "auto" {
-          .#{$flexiblecss-breakpoint-key}-ma { margin-left: #{$margin-val}; margin-right: #{$margin-val}; }
+          .#{$pixelperfectcss-breakpoint-key}-ma { margin-left: #{$margin-val}; margin-right: #{$margin-val}; }
         }
         @else {
-          .#{$flexiblecss-breakpoint-key}-m#{$margin-val}  { margin:        #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-ml#{$margin-val} { margin-left:   #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mr#{$margin-val} { margin-right:  #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mt#{$margin-val} { margin-top:    #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mb#{$margin-val} { margin-bottom: #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-mx#{$margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
-          .#{$flexiblecss-breakpoint-key}-my#{$margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-m#{$margin-val}  { margin:        #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-ml#{$margin-val} { margin-left:   #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-mr#{$margin-val} { margin-right:  #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-mt#{$margin-val} { margin-top:    #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-mb#{$margin-val} { margin-bottom: #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-mx#{$margin-val} { margin-left:   #{$margin-val}px; margin-right:  #{$margin-val}px; }
+          .#{$pixelperfectcss-breakpoint-key}-my#{$margin-val} { margin-top:    #{$margin-val}px; margin-bottom: #{$margin-val}px; }
         }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-margin-key}-m#{$margin-val}:#{$selector-margin-val}  { margin:        #{$margin-val}px; }
         .#{$selector-margin-key}-ml#{$margin-val}:#{$selector-margin-val} { margin-left:   #{$margin-val}px; }
         .#{$selector-margin-key}-mr#{$margin-val}:#{$selector-margin-val} { margin-right:  #{$margin-val}px; }
@@ -512,24 +512,24 @@
   @each $selector-padding-key, $selector-padding-val in $selector-padding {
     @each $padding-val in $property-padding {
       @if $selector-padding-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-p#{$padding-val}  { padding:        #{$padding-val}px; }
-        .#{$flexiblecss-breakpoint-key}-pl#{$padding-val} { padding-left:   #{$padding-val}px; }
-        .#{$flexiblecss-breakpoint-key}-pr#{$padding-val} { padding-right:  #{$padding-val}px; }
-        .#{$flexiblecss-breakpoint-key}-pt#{$padding-val} { padding-top:    #{$padding-val}px; }
-        .#{$flexiblecss-breakpoint-key}-pb#{$padding-val} { padding-bottom: #{$padding-val}px; }
-        .#{$flexiblecss-breakpoint-key}-px#{$padding-val} { padding-left:   #{$padding-val}px; padding-right:  #{$padding-val}px; }
-        .#{$flexiblecss-breakpoint-key}-py#{$padding-val} { padding-top:    #{$padding-val}px; padding-bottom: #{$padding-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-p#{$padding-val}  { padding:        #{$padding-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-pl#{$padding-val} { padding-left:   #{$padding-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-pr#{$padding-val} { padding-right:  #{$padding-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-pt#{$padding-val} { padding-top:    #{$padding-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-pb#{$padding-val} { padding-bottom: #{$padding-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-px#{$padding-val} { padding-left:   #{$padding-val}px; padding-right:  #{$padding-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-py#{$padding-val} { padding-top:    #{$padding-val}px; padding-bottom: #{$padding-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-padding-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-p#{$padding-val}  { padding:        #{$padding-val}px; }
-        .#{$flexiblecss-breakpoint-key}-pl#{$padding-val} { padding-left:   #{$padding-val}px; }
-        .#{$flexiblecss-breakpoint-key}-pr#{$padding-val} { padding-right:  #{$padding-val}px; }
-        .#{$flexiblecss-breakpoint-key}-pt#{$padding-val} { padding-top:    #{$padding-val}px; }
-        .#{$flexiblecss-breakpoint-key}-pb#{$padding-val} { padding-bottom: #{$padding-val}px; }
-        .#{$flexiblecss-breakpoint-key}-px#{$padding-val} { padding-left:   #{$padding-val}px; padding-right:  #{$padding-val}px; }
-        .#{$flexiblecss-breakpoint-key}-py#{$padding-val} { padding-top:    #{$padding-val}px; padding-bottom: #{$padding-val}px; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-padding-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-p#{$padding-val}  { padding:        #{$padding-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-pl#{$padding-val} { padding-left:   #{$padding-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-pr#{$padding-val} { padding-right:  #{$padding-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-pt#{$padding-val} { padding-top:    #{$padding-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-pb#{$padding-val} { padding-bottom: #{$padding-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-px#{$padding-val} { padding-left:   #{$padding-val}px; padding-right:  #{$padding-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-py#{$padding-val} { padding-top:    #{$padding-val}px; padding-bottom: #{$padding-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-padding-key}-p#{$padding-val}:#{$selector-padding-val}  { padding:        #{$padding-val}px; }
         .#{$selector-padding-key}-pl#{$padding-val}:#{$selector-padding-val} { padding-left:   #{$padding-val}px; }
         .#{$selector-padding-key}-pr#{$padding-val}:#{$selector-padding-val} { padding-right:  #{$padding-val}px; }
@@ -546,12 +546,12 @@
   @each $selector-overflow-key, $selector-overflow-val in $selector-overflow {
     @each $overflow-key, $overflow-val in $property-overflow {
       @if $selector-overflow-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$overflow-key} { overflow: #{$overflow-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$overflow-key} { overflow: #{$overflow-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-overflow-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$overflow-key} { overflow: #{$overflow-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-overflow-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$overflow-key} { overflow: #{$overflow-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-overflow-key}-#{$overflow-key}:#{$selector-overflow-val} { overflow: #{$overflow-val}; }
       }
     }
@@ -562,12 +562,12 @@
   @each $selector-opacity-key, $selector-opacity-val in $selector-opacity {
     @each $opacity-key, $opacity-val in $property-opacity {
       @if $selector-opacity-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-o#{$opacity-key} { opacity: #{$opacity-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-o#{$opacity-key} { opacity: #{$opacity-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-opacity-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-o#{$opacity-key} { opacity: #{$opacity-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-opacity-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-o#{$opacity-key} { opacity: #{$opacity-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-opacity-key}-o#{$opacity-key}:#{$selector-opacity-val} { opacity: #{$opacity-val}; }
       }
     }
@@ -578,12 +578,12 @@
   @each $selector-font-size-key, $selector-font-size-val in $selector-font-size {
     @each $font-size-val in $property-font-size {
       @if $selector-font-size-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-fs#{$font-size-val} { font-size: #{$font-size-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-fs#{$font-size-val} { font-size: #{$font-size-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-font-size-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-fs#{$font-size-val} { font-size: #{$font-size-val}px; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-font-size-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-fs#{$font-size-val} { font-size: #{$font-size-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-font-size-key}-fs#{$font-size-val}:#{$selector-font-size-val} { font-size: #{$font-size-val}px; }
       }
     }
@@ -594,12 +594,12 @@
   @each $selector-text-align-key, $selector-text-align-val in $selector-text-align {
     @each $text-align-key, $text-align-val in $property-text-align {
       @if $selector-text-align-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$text-align-key} { text-align: #{$text-align-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$text-align-key} { text-align: #{$text-align-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-text-align-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$text-align-key} { text-align: #{$text-align-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-text-align-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$text-align-key} { text-align: #{$text-align-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-text-align-key}-#{$text-align-key}:#{$selector-text-align-val} { text-align: #{$text-align-val}; }
       }
     }
@@ -610,12 +610,12 @@
   @each $selector-letter-spacing-key, $selector-letter-spacing-val in $selector-letter-spacing {
     @each $letter-spacing-val in $property-letter-spacing {
       @if $selector-letter-spacing-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-ls#{$letter-spacing-val} { letter-spacing: #{$letter-spacing-val}px; }
+        .#{$pixelperfectcss-breakpoint-key}-ls#{$letter-spacing-val} { letter-spacing: #{$letter-spacing-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-letter-spacing-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-ls#{$letter-spacing-val} { letter-spacing: #{$letter-spacing-val}px; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-letter-spacing-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-ls#{$letter-spacing-val} { letter-spacing: #{$letter-spacing-val}px; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-letter-spacing-key}-ls#{$letter-spacing-val}:#{$selector-letter-spacing-val} { letter-spacing: #{$letter-spacing-val}px; }
       }
     }
@@ -626,12 +626,12 @@
   @each $selector-font-weight-key, $selector-font-weight-val in $selector-font-weight {
     @each $font-weight-val in $property-font-weight {
       @if $selector-font-weight-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-fw#{$font-weight-val} { font-style: normal; font-weight: #{$font-weight-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-fw#{$font-weight-val} { font-style: normal; font-weight: #{$font-weight-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-font-weight-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-fw#{$font-weight-val} { font-style: normal; font-weight: #{$font-weight-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-font-weight-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-fw#{$font-weight-val} { font-style: normal; font-weight: #{$font-weight-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-font-weight-key}-fw#{$font-weight-val}:#{$selector-font-weight-val} { font-style: normal; font-weight: #{$font-weight-val}; }
       }
     }
@@ -642,12 +642,12 @@
   @each $selector-font-style-key, $selector-font-style-val in $selector-font-style {
     @each $font-style-key, $font-style-val in $property-font-style {
       @if $selector-font-style-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$font-style-key} { font-style: #{$font-style-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$font-style-key} { font-style: #{$font-style-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-font-style-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$font-style-key} { font-style: #{$font-style-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-font-style-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$font-style-key} { font-style: #{$font-style-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-font-style-key}-#{$font-style-key}:#{$selector-font-style-val} { font-style: #{$font-style-val}; }
       }
     }
@@ -658,12 +658,12 @@
   @each $selector-vertical-align-key, $selector-vertical-align-val in $selector-vertical-align {
     @each $vertical-align-key, $vertical-align-val in $property-vertical-align {
       @if $selector-vertical-align-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$vertical-align-key} { vertical-align: #{$vertical-align-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$vertical-align-key} { vertical-align: #{$vertical-align-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-vertical-align-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$vertical-align-key} { vertical-align: #{$vertical-align-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-vertical-align-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$vertical-align-key} { vertical-align: #{$vertical-align-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-vertical-align-key}-#{$vertical-align-key}:#{$selector-vertical-align-val} { vertical-align: #{$vertical-align-val}; }
       }
     }
@@ -674,12 +674,12 @@
   @each $selector-text-transform-key, $selector-text-transform-val in $selector-text-transform {
     @each $text-transform-key, $text-transform-val in $property-text-transform {
       @if $selector-text-transform-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$text-transform-key} { text-transform: #{$text-transform-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$text-transform-key} { text-transform: #{$text-transform-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-text-transform-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$text-transform-key} { text-transform: #{$text-transform-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-text-transform-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$text-transform-key} { text-transform: #{$text-transform-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-text-transform-key}-#{$text-transform-key}:#{$selector-text-transform-val} { text-transform: #{$text-transform-val}; }
       }
     }
@@ -690,12 +690,12 @@
   @each $selector-text-decoration-key, $selector-text-decoration-val in $selector-text-decoration {
     @each $text-decoration-key, $text-decoration-val in $property-text-decoration {
       @if $selector-text-decoration-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$text-decoration-key} { text-decoration: #{$text-decoration-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$text-decoration-key} { text-decoration: #{$text-decoration-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-text-decoration-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$text-decoration-key} { text-decoration: #{$text-decoration-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-text-decoration-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$text-decoration-key} { text-decoration: #{$text-decoration-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-text-decoration-key}-#{$text-decoration-key}:#{$selector-text-decoration-val} { text-decoration: #{$text-decoration-val}; }
       }
     }
@@ -706,12 +706,12 @@
   @each $selector-text-overflow-key, $selector-text-overflow-val in $selector-text-overflow {
     @each $text-overflow-key, $text-overflow-val in $property-text-overflow {
       @if $selector-text-overflow-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$text-overflow-key} { text-overflow: #{$text-overflow-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$text-overflow-key} { text-overflow: #{$text-overflow-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-text-overflow-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$text-overflow-key} { text-overflow: #{$text-overflow-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-text-overflow-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$text-overflow-key} { text-overflow: #{$text-overflow-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-text-overflow-key}-#{$text-overflow-key}:#{$selector-text-overflow-val} { text-overflow: #{$text-overflow-val}; }
       }
     }
@@ -722,12 +722,12 @@
   @each $selector-white-space-key, $selector-white-space-val in $selector-white-space {
     @each $white-space-key, $white-space-val in $property-white-space {
       @if $selector-white-space-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$white-space-key} { white-space: #{$white-space-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$white-space-key} { white-space: #{$white-space-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-white-space-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$white-space-key} { white-space: #{$white-space-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-white-space-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$white-space-key} { white-space: #{$white-space-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-white-space-key}-#{$white-space-key}:#{$selector-white-space-val} { white-space: #{$white-space-val}; }
       }
     }
@@ -738,12 +738,12 @@
   @each $selector-word-break-key, $selector-word-break-val in $selector-word-break {
     @each $word-break-key, $word-break-val in $property-word-break {
       @if $selector-word-break-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$word-break-key} { word-break: #{$word-break-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$word-break-key} { word-break: #{$word-break-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-word-break-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$word-break-key} { word-break: #{$word-break-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-word-break-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$word-break-key} { word-break: #{$word-break-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-word-break-key}-#{$word-break-key}:#{$selector-word-break-val} { word-break: #{$word-break-val}; }
       }
     }
@@ -754,12 +754,12 @@
   @each $selector-cursor-key, $selector-cursor-val in $selector-cursor {
     @each $cursor-key, $cursor-val in $property-cursor {
       @if $selector-cursor-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$cursor-key} { cursor: #{$cursor-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$cursor-key} { cursor: #{$cursor-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-cursor-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$cursor-key} { cursor: #{$cursor-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-cursor-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$cursor-key} { cursor: #{$cursor-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-cursor-key}-#{$cursor-key}:#{$selector-cursor-val} { cursor: #{$cursor-val}; }
       }
     }
@@ -770,12 +770,12 @@
   @each $selector-user-select-key, $selector-user-select-val in $selector-user-select {
     @each $user-select-key, $user-select-val in $property-user-select {
       @if $selector-user-select-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$user-select-key} { -webkit-user-select: #{$user-select-val}; -moz-user-select: #{$user-select-val}; -ms-user-select: #{$user-select-val}; user-select: #{$user-select-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$user-select-key} { -webkit-user-select: #{$user-select-val}; -moz-user-select: #{$user-select-val}; -ms-user-select: #{$user-select-val}; user-select: #{$user-select-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-user-select-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$user-select-key} { -webkit-user-select: #{$user-select-val}; -moz-user-select: #{$user-select-val}; -ms-user-select: #{$user-select-val}; user-select: #{$user-select-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-user-select-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$user-select-key} { -webkit-user-select: #{$user-select-val}; -moz-user-select: #{$user-select-val}; -ms-user-select: #{$user-select-val}; user-select: #{$user-select-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-user-select-key}-#{$user-select-key}:#{$selector-user-select-val} { -webkit-user-select: #{$user-select-val}; -moz-user-select: #{$user-select-val}; -ms-user-select: #{$user-select-val}; user-select: #{$user-select-val}; }
       }
     }
@@ -786,20 +786,20 @@
   @each $selector-pointer-events-key, $selector-pointer-events-val in $selector-pointer-events {
     @each $pointer-events-key, $pointer-events-val in $property-pointer-events {
       @if $selector-pointer-events-val == "breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$pointer-events-key} { pointer-events: #{$pointer-events-val}; }
+        .#{$pixelperfectcss-breakpoint-key}-#{$pointer-events-key} { pointer-events: #{$pointer-events-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" and $selector-pointer-events-val == "not-breakpoint-class" {
-        .#{$flexiblecss-breakpoint-key}-#{$pointer-events-key} { pointer-events: #{$pointer-events-val}; }
+      @else if $pixelperfectcss-breakpoint-val == "" and $selector-pointer-events-val == "not-breakpoint-class" {
+        .#{$pixelperfectcss-breakpoint-key}-#{$pointer-events-key} { pointer-events: #{$pointer-events-val}; }
       }
-      @else if $flexiblecss-breakpoint-val == "" {
+      @else if $pixelperfectcss-breakpoint-val == "" {
         .#{$selector-pointer-events-key}-#{$pointer-events-key}:#{$selector-pointer-events-val} { pointer-events: #{$pointer-events-val}; }
       }
     }
   }
 }
 
-@each $flexiblecss-breakpoint-key, $flexiblecss-breakpoint-val in $flexiblecss-breakpoint {
-  @if $flexiblecss-breakpoint-val == "" {
+@each $pixelperfectcss-breakpoint-key, $pixelperfectcss-breakpoint-val in $pixelperfectcss-breakpoint {
+  @if $pixelperfectcss-breakpoint-val == "" {
     @include property-color();
     @include property-border-width();
     @include property-border-style();
@@ -836,8 +836,8 @@
     @include property-user-select();
     @include property-pointer-events();
   }
-  @else if $flexiblecss-breakpoint-val != "" {
-    @media #{$flexiblecss-breakpoint-val} {
+  @else if $pixelperfectcss-breakpoint-val != "" {
+    @media #{$pixelperfectcss-breakpoint-val} {
       @include property-color();
       @include property-border-width();
       @include property-border-style();
