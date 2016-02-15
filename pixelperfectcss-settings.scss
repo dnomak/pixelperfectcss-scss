@@ -1,7 +1,7 @@
-/*! Flexible Front End Framework 0.2.1 | Settings | Scss | MIT License | flexible.gs */
+/*! Pixel Perfect CSS 1.0.0 | Settings | Scss | MIT License | pixelperfectcss.com */
 
 // base
-$flexiblecss-base: (
+$pixelperfectcss-base: (
   "true"
 );
 
@@ -12,7 +12,7 @@ $property-font-family: (
 );
 
 // breakpoint
-$flexiblecss-breakpoint: (
+$pixelperfectcss-breakpoint: (
   "xl": "",
   "lg": "(max-width: 1024px)",
   "md": "(max-width: 768px)",
@@ -430,4 +430,4 @@ $selector-pointer-events: (
   "cl": "not-breakpoint-class",
 );
 
-@import "flexiblecss-scss";
+@import "pixelperfectcss-scss";

@@ -1,8 +1,8 @@
 {
-  "name": "flexiblecss-scss",
-  "version": "0.2.1",
-  "homepage": "http://flexible.gs",
-  "description": "Flexible Front End Framework Scss",
+  "name": "pixelperfectcss-scss",
+  "version": "1.0.0",
+  "homepage": "http://pixelperfectcss.com",
+  "description": "Pixel Perfect CSS (Scss)",
   "keywords": [
     "css",
     "html",
@@ -12,12 +12,12 @@
     "selectors",
     "properties"
   ],
-  "main": "flexiblecss-scss.scss",
+  "main": "pixelperfectcss-scss.scss",
   "author": "@dnomak",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flexiblegs/flexiblecss-scss.git"
+    "url": "git+https://github.com/flexiblegs/pixelperfectcss-scss.git"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

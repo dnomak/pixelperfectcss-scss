@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 
 var tasks = {
   sass: function () {
-    return gulp.src('flexiblecss-settings.scss')
+    return gulp.src('pixelperfectcss-settings.scss')
       .pipe(sass({
         outputStyle: 'expanded'
       }))
