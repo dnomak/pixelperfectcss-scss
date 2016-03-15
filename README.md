@@ -23,8 +23,8 @@ $pixelperfectcss-base: (
 
 // font-family
 $property-font-family: (
-  "open-sans": "Open Sans",
-  "source-code-pro": "Source Code Pro",
+  "xl-ffos": "Open Sans",
+  "xl-ffscp": "Source Code Pro",
 );
 
 // breakpoint
@@ -86,6 +86,7 @@ $selector-color: (
   "ho": "hover",
   "fo": "focus",
   "ac": "active",
+  "pl": "placeholder",
 );
 
 // width
@@ -177,7 +178,8 @@ $selector-transform-translate: (
 $property-display: (
   "dn": "none",
   "db": "block",
-  "di": "inline-block",
+  "di": "inline",
+  "dib": "inline-block",
 );
 $selector-display: (
   "cl": "breakpoint-class",
@@ -185,6 +187,7 @@ $selector-display: (
 
 // width
 $property-width: (
+  "128",
   "1280",
 );
 $selector-width: (
@@ -217,6 +220,7 @@ $property-line-height: (
   "20",
   "22",
   "24",
+  "40",
 );
 $selector-line-height: (
   "cl": "not-breakpoint-class",
@@ -229,6 +233,7 @@ $property-height: (
   "16",
   "24",
   "40",
+  "128",
 );
 $selector-height: (
   "cl": "not-breakpoint-class",
@@ -313,6 +318,7 @@ $property-font-size: (
   "20",
   "22",
   "24",
+  "32",
 );
 $selector-font-size: (
   "cl": "not-breakpoint-class",
@@ -411,6 +417,7 @@ $selector-white-space: (
 // word-break
 $property-word-break: (
   "wbbw": "break-word",
+  "wbba": "break-all",
 );
 $selector-word-break: (
   "cl": "not-breakpoint-class",
@@ -432,6 +439,7 @@ $selector-cursor: (
 $property-user-select: (
   "usn": "none",
   "ust": "text",
+  "usa": "all",
 );
 $selector-user-select: (
   "cl": "not-breakpoint-class",
