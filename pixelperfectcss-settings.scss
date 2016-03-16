@@ -1,4 +1,4 @@
-/*! Pixel Perfect CSS 1.0.0 | Settings | Scss | MIT License | pixelperfectcss.com */
+/*! Pixel Perfect CSS 1.0.1 | Settings | Scss | MIT License | pixelperfectcss.com */
 
 // base
 $pixelperfectcss-base: (
@@ -170,26 +170,19 @@ $selector-display: (
 );
 
 // width
-$property-width: (
-  "128",
-  "1280",
-);
+$property-width: ();
 $selector-width: (
   "cl": "not-breakpoint-class",
 );
 
 // max-width
-$property-max-width: (
-  "1280",
-);
+$property-max-width: ();
 $selector-max-width: (
   "cl": "not-breakpoint-class",
 );
 
 // min-width
-$property-min-width: (
-  "1280",
-);
+$property-min-width: ();
 $selector-min-width: (
   "cl": "not-breakpoint-class",
 );
@@ -197,12 +190,8 @@ $selector-min-width: (
 // line-height
 $property-line-height: (
   "0",
-  "12",
-  "14",
+  "8",
   "16",
-  "18",
-  "20",
-  "22",
   "24",
   "40",
 );
@@ -217,32 +206,19 @@ $property-height: (
   "16",
   "24",
   "40",
-  "128",
 );
 $selector-height: (
   "cl": "not-breakpoint-class",
 );
 
 // max-height
-$property-max-height: (
-  "0",
-  "8",
-  "16",
-  "24",
-  "40",
-);
+$property-max-height: ();
 $selector-max-height: (
   "cl": "not-breakpoint-class",
 );
 
 // min-height
-$property-min-height: (
-  "0",
-  "8",
-  "16",
-  "24",
-  "40",
-);
+$property-min-height: ();
 $selector-min-height: (
   "cl": "not-breakpoint-class",
 );
@@ -285,7 +261,9 @@ $selector-overflow: (
 
 // opacity
 $property-opacity: (
+  "0": "0",
   "50": "0.50",
+  "100": "1",
 );
 $selector-opacity: (
   "cl": "not-breakpoint-class",
@@ -302,6 +280,9 @@ $property-font-size: (
   "20",
   "22",
   "24",
+  "26",
+  "28",
+  "30",
   "32",
 );
 $selector-font-size: (
