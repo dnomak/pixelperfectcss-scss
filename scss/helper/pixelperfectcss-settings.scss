@@ -1,15 +1,4 @@
-/*! Pixel Perfect CSS 1.0.1 | Settings | Scss | MIT License | pixelperfectcss.com */
-
-// base
-$pixelperfectcss-base: (
-  "true"
-);
-
-// font-family
-$property-font-family: (
-  "xl-ffos": "Open Sans",
-  "xl-ffscp": "Source Code Pro",
-);
+/*! Pixel Perfect CSS 1.0.2 | Settings | Scss | MIT License | pixelperfectcss.com */
 
 // breakpoint
 $pixelperfectcss-breakpoint: (
@@ -418,5 +407,3 @@ $property-pointer-events: (
 $selector-pointer-events: (
   "cl": "not-breakpoint-class",
 );
-
-@import "pixelperfectcss-scss";

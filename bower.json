@@ -1,6 +1,6 @@
 {
   "name": "pixelperfectcss-scss",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "http://pixelperfectcss.com",
   "description": "Pixel Perfect CSS (Scss)",
   "keywords": [
@@ -13,7 +13,7 @@
     "selectors",
     "properties"
   ],
-  "main": "pixelperfectcss-scss.scss",
+  "main": "scss/helper/pixelperfectcss-scss.scss",
   "author": "@dnomak",
   "license": "MIT",
   "ignore": [

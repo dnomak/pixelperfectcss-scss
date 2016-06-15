@@ -1,6 +1,6 @@
 {
   "name": "pixelperfectcss-scss",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "http://pixelperfectcss.com",
   "description": "Pixel Perfect CSS (Scss)",
   "keywords": [
@@ -13,7 +13,7 @@
     "selectors",
     "properties"
   ],
-  "main": "pixelperfectcss-scss.scss",
+  "main": "scss/helper/pixelperfectcss-scss.scss",
   "author": "@dnomak",
   "license": "MIT",
   "repository": {
@@ -21,9 +21,12 @@
     "url": "git+https://github.com/pixelperfectcss/pixelperfectcss-scss.git"
   },
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-csslint": "^0.2.0",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.1.0"
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "build": "npm install && bower install && gulp"
   }
 }
