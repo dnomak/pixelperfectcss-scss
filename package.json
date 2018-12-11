@@ -1,6 +1,6 @@
 {
   "name": "pixelperfectcss-scss",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "https://dnomak.com/pixelperfectcss/",
   "description": "Pixel Perfect CSS (Scss)",
   "author": "@dnomak <me@dnomak.com>",
@@ -9,6 +9,7 @@
   "scripts": {
     "build": "node-sass main.scss pixelperfectcss.css --output-style expanded; node-sass main.scss pixelperfectcss.min.css --output-style compressed"
   },
+  "keywords": ["css", "sass", "scss"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pixelperfectcss/pixelperfectcss-scss.git"
