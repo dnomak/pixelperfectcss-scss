@@ -4,15 +4,15 @@ Pixel Perfect CSS (Scss)
 
 ## Install
 
-### [npm](https://www.npmjs.com/package/pixelperfectcss-scss)
-```bash
-$ npm install --save pixelperfectcss-scss
-```
-
 ### [Settings download](https://raw.githubusercontent.com/pixelperfectcss/pixelperfectcss-scss/master/pixelperfectcss-settings.scss)
 ```scss
 @import "pixelperfectcss-settings";
 @import "node_modules/pixelperfectcss-scss/pixelperfectcss-scss";
+```
+
+### [npm](https://www.npmjs.com/package/pixelperfectcss-scss)
+```bash
+$ npm install --save pixelperfectcss-scss
 ```
 
 ## Build
