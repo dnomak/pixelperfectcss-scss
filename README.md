@@ -24,5 +24,4 @@ $ npm run build
 ```
 
 ## License
-- Pixel Perfect CSS is licensed under the MIT license.
-  - [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)
+Pixel Perfect CSS is licensed under the [MIT](LICENSE) license.
